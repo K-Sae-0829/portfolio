@@ -11,7 +11,7 @@ $headerSP: 6rem;
 */
 // 追従ヘッダー用の余白
 .headerPad {
-  padding-top: $headerPC;
+  padding-top: 6rem;
   // ↓SP相当幅
   @media #{$media-sp} {
     padding-top: $headerSP;
@@ -36,9 +36,13 @@ $headerSP: 6rem;
   box-shadow: 0 0 10px rgba(#000, 0.1);
   &__frame {
     padding: 0 0 0 2rem;
-    background: #000;
+    //background: #000;
   }
   &__base {
+  }
+  &__mailform {
+    font-size: 3.2rem;
+    color: #fff;
   }
   /*
                ######  ########
@@ -150,10 +154,10 @@ $headerSP: 6rem;
 // グローバルナビ
 .gNavBtn {
   $btnSize: $headerSP; //ボタン一辺の長さ
-  $bar: 3px; //バーの太さ
+  $bar: 2px; //バーの太さ
   $posX: 1.5rem; //バーの左右の余白
   $posY: 1.75rem; //1,3本目のバーの上下の余白
-  $barRadius: 0; //バーの角丸
+  $barRadius: 50%; //バーの角丸
   $barOffBG: #fff; //バーの背景OFF時
   $barOnBG: #fff; //バーの背景ON時
   $time: 0.5s; //アニメ時間　0.1s以上
@@ -163,13 +167,13 @@ $headerSP: 6rem;
   width: $btnSize;
   height: $btnSize;
   vertical-align: middle;
-  background: $siteColor;
+  //background: $siteColor;
+  z-index: 5;
   cursor: pointer;
   &__box {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
     width: 100%;
     height: 100%;
   }
@@ -230,15 +234,16 @@ $headerSP: 6rem;
 .gNav {
   position: fixed;
   top: $headerSP;
-  left: 0;
+  right: 0;
   z-index: 1000;
-  width: 100%;
+  width: 30%;
+  padding-top: 6rem;
   max-height: calc(100% - #{$headerSP});
   overflow-y: auto;
-
+  z-index: 3;
   background: #00f;
   transition-duration: 0.5s;
-  transform-origin: 0 0;
+  transform-origin: 100% 100%;
   &::after {
     // 下の余白用疑似要素
     display: block;
@@ -247,11 +252,11 @@ $headerSP: 6rem;
   }
   // ↓SP以外の幅
   @media #{$media-notsp} {
-    top: $headerPC;
+    top: 0;
   }
   // ↑SP以外の幅
   &:not(.active) {
-    transform: rotateX(90deg);
+    transform: rotateY(-90deg);
     visibility: hidden;
   }
   &__menu {

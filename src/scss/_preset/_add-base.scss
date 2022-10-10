@@ -1,0 +1,71 @@
+$yellow: #d8b732;
+$pale-white: rgba(#ffffff, 0.3);
+
+@mixin main-border {
+  border: 2px solid $pale-white;
+}
+
+@mixin over-ray-navy {
+  background-color: rgba($siteColor, 0.6);
+  background-blend-mode: overlay;
+}
+
+.bright {
+  box-shadow: 0px 0px 20px $yellow;
+}
+
+.bright-pale {
+  box-shadow: 0px 0px 10px rgba($yellow, 0.5), 0px 0px 10px rgba($yellow, 0.5) inset;
+}
+
+.txt-bright {
+  text-shadow: 0px 0px 20px $yellow;
+}
+@font-face {
+  font-family: "virna";
+  src: url(./font/Virna-Regular.woff2) format("woff2");
+}
+
+.virna {
+  font-family: "virna";
+}
+
+@font-face {
+  font-family: "aquatico";
+  src: url(./font/Aquatico-Regular.woff2) format("woff2");
+}
+
+.aquatico {
+  font-family: "aquatico";
+}
+
+.common-bg {
+  position: relative;
+  min-height: 100vh;
+  //height: 100%;
+  background-image: url(../img/common-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /*--背景画像の固定--*/
+  z-index: 1;
+}
+
+.double-border-box {
+  border: 2px solid $pale-white;
+  outline: 2px solid $pale-white;
+  outline-offset: 9px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.common {
+  &__h2 {
+    font-family: "virna";
+    text-shadow: 0px 0px 20px rgba($yellow, 0.5);
+    font-size: 8rem;
+    color: rgba(#fff, 0);
+    -webkit-text-stroke: 1px #fff;
+    letter-spacing: 0.18em;
+  }
+}

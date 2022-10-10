@@ -27,6 +27,7 @@
         &copy; <span itemprop="copyrightYear">2020</span> <span itemprop="copyrightHolder name">会社名会社名会社名会社名</span>
     </div>
 </footer>
+</div>
 <script>
     {
         var tUrl = '<?php echo T_URL; ?>'

@@ -2,3 +2,36 @@
 }
 .topIntro {
 }
+.top {
+  //height: 200rem;
+  &__mv {
+    text-align: center;
+    position: relative;
+    margin-top: 2rem;
+    height: 100vh;
+  }
+  &__mv-city {
+    position: absolute;
+    top: 5%;
+    z-index: -1;
+  }
+  &__about {
+    margin: 20rem 0;
+  }
+  &About {
+    padding: 6rem;
+    margin: 4rem;
+    @include over-ray-navy;
+    &__head {
+      text-align: center;
+    }
+    &__image {
+      border-radius: 50%;
+      border: 1px solid #fff;
+      width: 100%;
+      max-width: 30.6rem;
+      margin-left: 2rem;
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+}
