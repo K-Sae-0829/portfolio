@@ -1,7 +1,7 @@
 // 全体設定ファイル
 // 必須設定項目
-const pathDest = './Template/' // destパス（テーマ名）
-const bsProxy = 'http://template.lo/' // ローカル環境のURL　静的サイトなら空欄
+const pathDest = './portfolio2022/' // destパス（テーマ名）
+const bsProxy = 'http://kimurasae.lo/' // ローカル環境のURL　静的サイトなら空欄
 
 const php2html = false // 静的サイト構築用　PHPをHTMLに変換する
 
