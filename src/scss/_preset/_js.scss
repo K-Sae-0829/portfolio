@@ -1,0 +1,149 @@
+// node_modules内のJSライブラリ用CSSをインポート
+
+// Swiper
+// @import "../../../node_modules/swiper/swiper.scss";
+// その他、使用したい機能のSCSSを追加でインポートする
+// @import "../../../node_modules/swiper/components/effect-fade/effect-fade.scss";
+// @import "../../../node_modules/swiper/components/effect-coverflow/effect-coverflow.scss";
+// @import "../../../node_modules/swiper/components/effect-cube/effect-cube.scss";
+// @import "../../../node_modules/swiper/components/effect-flip/effect-flip.scss";
+// @import "../../../node_modules/swiper/components/controller/controller.scss";
+// @import "../../../node_modules/swiper/components/navigation/navigation.scss";
+// @import "../../../node_modules/swiper/components/pagination/pagination.scss";
+// @import "../../../node_modules/swiper/components/scrollbar/scrollbar.scss";
+// @import "../../../node_modules/swiper/components/a11y/a11y.scss";
+// @import "../../../node_modules/swiper/components/lazy/lazy.scss";
+// @import "../../../node_modules/swiper/components/thumbs/thumbs.scss";
+// @import "../../../node_modules/swiper/components/zoom/zoom.scss";
+
+// Slick
+// @import "../../../node_modules/slick-carousel/slick/slick.scss";
+
+// baguetteBox
+// @import "CSS:../../../node_modules/baguettebox.js/dist/baguetteBox.min";
+
+// flatpickr
+// @import "CSS:../../../node_modules/flatpickr/dist/flatpickr";
+// // 土日祝の着色
+// .flatpickr-weekday:nth-child(1) {
+//   color: rgba(#ff0000, 0.6);
+// }
+// .flatpickr-weekday:nth-child(7) {
+//   color: rgba(#0000ff, 0.6);
+// }
+
+// .flatpickr-day:nth-child(7n + 1),
+// .flatpickr-day.jp-holiday {
+//   color: rgba(#ff0000, 0.6);
+//   &.prevMonthDay,
+//   &.nextMonthDay {
+//     color: rgba(#ff0000, 0.3);
+//   }
+//   &.flatpickr-disabled {
+//     color: rgba(#ff0000, 0.2);
+//   }
+// }
+// .flatpickr-day:nth-child(7n + 7) {
+//   color: rgba(#0000ff, 0.6);
+//   &.prevMonthDay,
+//   &.nextMonthDay {
+//     color: rgba(#0000ff, 0.3);
+//   }
+//   &.flatpickr-disabled {
+//     color: rgba(#0000ff, 0.2);
+//   }
+// }
+
+/*
+######## ########  ##     ## ##    ## ##    ##  #######
+   ##    ##     ## ##     ## ####  ## ##  ##   ##     ##
+   ##    ########  ##     ## ## ## ## #####     #######
+   ##    ##   ##   ##     ## ##  #### ##  ##   ##     ##
+   ##    ##     ##  #######  ##    ## ##    ##  #######
+
+  IE以外のブラウザでは以下のline-clampで対応できるので通常必要ない
+*/
+// @supports (-webkit-line-clamp: 2) {
+//   .js-t8 {
+//     display: -webkit-box;
+//     overflow: hidden;
+//     -webkit-line-clamp: 2;
+//     -webkit-box-orient: vertical;
+//     &.line3 {
+//       -webkit-line-clamp: 3;
+//     }
+//   }
+// }
+
+/*
+IEをJSで保管する場合は以下を記述する　（isBrowser.jsをインポートすること）
+
+if (isBrowser === 'ie') {
+  if (document.getElementsByClassName('js-t8')[0]) {
+    // 要素を検出したら実行
+    trunk8()
+    $(window).on('load resize ', function () {
+      trunk8()
+    })
+  }
+}
+function trunk8() {
+  // 指定要素に行数制限をかける
+  $('.js-t8.line2').trunk8({
+    lines: 2,
+    fill: '...',
+  })
+  $('.js-t8.line3').trunk8({
+    lines: 3,
+    fill: '...',
+  })
+}
+
+*/
+
+/*
+##     ##    ###    ##       #### ########     ###    ######## ########
+##     ##  ##   ##  ##        ##  ##     ##  ##   ##     ##    ##
+##     ## ##     ## ##        ##  ##     ## ##     ##    ##    ######
+ ##   ##  ######### ##        ##  ##     ## #########    ##    ##
+   ###    ##     ## ######## #### ########  ##     ##    ##    ########
+jQuery Validate-Engine
+*/
+// .formError {
+//   //JSバリデーション用
+//   // top: auto !important;
+//   $baseColor: #cc0615;
+//   display: block;
+//   position: absolute;
+//   top: auto !important;
+//   bottom: 100%;
+//   left: auto !important;
+//   z-index: 990;
+//   margin: 0 0 0 1rem !important;
+//   line-height: 1.5;
+//   cursor: pointer;
+//   .formErrorContent {
+//     position: relative;
+//     z-index: 991;
+//     padding: 0.5rem 1rem;
+//     border-radius: 0.5rem;
+//     width: 100%;
+//     min-width: 120px;
+//     font-size: 1rem;
+//     color: #fff;
+//     letter-spacing: 0.05em;
+//     background: $baseColor;
+//   }
+//   .formErrorArrow {
+//     position: relative;
+//     z-index: 996;
+//     &::before {
+//       position: absolute;
+//       top: 100%;
+//       left: 1.5rem;
+//       z-index: 2;
+//       content: "";
+//       @include delta(5px, 5px, 5px, $baseColor, "bottom"); //三角形　（高さ,左辺,右辺,色,向き）
+//     }
+//   }
+// }

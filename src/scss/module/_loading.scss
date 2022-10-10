@@ -1,0 +1,49 @@
+.md-loading {
+  $size: 4rem; // 円の直径
+  $lineSize: 3px; // 線の太さ
+  $lineSizeSP: 5px; // 線の太さSP
+  $time: 0.5s; //1ループの時間
+  $colorMain: $siteColor; // メインカラー
+  $colorSub: rgba($colorMain, 0.5); // サブカラー
+  position: relative;
+  min-height: $size + 5rem;
+  max-height: 60vh;
+  &::before {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    margin: #{$size / -2} 0 0 #{$size / -2};
+    border: $lineSize solid $colorMain;
+    border-bottom-color: $colorSub;
+    border-radius: 50%;
+    width: $size;
+    height: $size;
+    animation-name: mdLoading; //アニメーション名
+    animation-duration: $time; //1ループの時間
+    animation-timing-function: linear; //アニメーションタイプ
+    animation-iteration-count: infinite; //実行回数
+    content: "";
+  }
+  &:not(.active) {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes mdLoading {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*
+#styleguide
+ローディングアニメ .md-loading
+
+円形のローディングアニメを出す。「.active」を消すと非表示になる。
+```
+<div class="md-loading active"></div>
+
+```
+*/

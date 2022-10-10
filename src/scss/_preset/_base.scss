@@ -1,0 +1,115 @@
+/*
+ ##     ## ######## ##     ## ##
+ ##     ##    ##    ###   ### ##
+ #########    ##    ## ### ## ##
+ ##     ##    ##    ##     ## ##
+ ##     ##    ##    ##     ## ########
+*/
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+/*
+ #### ##     ##  ######
+  ##  #### #### ##
+  ##  ## ### ## ##   ####
+  ##  ##     ## ##    ##
+ #### ##     ##  ######
+*/
+img {
+  box-sizing: content-box;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle; //インライン画像のベースライン余白除去
+}
+
+/*
+ ######## ######## ##     ## ########
+    ##    ##         ## ##      ##
+    ##    ######      ###       ##
+    ##    ##         ## ##      ##
+    ##    ######## ##     ##    ##
+*/
+
+a {
+  transition-duration: 0.5s;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+sup {
+  font-size: 0.7em;
+  vertical-align: super;
+}
+
+/*
+########  #####  ######  ##      #######
+   ##    ##   ## ##   ## ##      ##
+   ##    ####### ######  ##      #####
+   ##    ##   ## ##   ## ##      ##
+   ##    ##   ## ######  ####### #######
+*/
+table {
+  width: 100%;
+  max-width: 100%;
+  p:not([class]):not(:last-child) {
+    margin-bottom: 1em;
+  }
+}
+td,
+th {
+  min-height: 1em;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+/*
+#######  ######  ######  ###    ###
+##      ##    ## ##   ## ####  ####
+#####   ##    ## ######  ## #### ##
+##      ##    ## ##   ## ##  ##  ##
+##       ######  ##   ## ##      ##
+*/
+// プレースホルダー（テキストフォームの例文）の設定
+input,
+textarea {
+  &::placeholder {
+    color: #c1c1c1;
+  }
+}
+
+// アウトラインを消して背景を初期化
+[type="email"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="url"],
+textarea,
+button,
+select {
+  border: 0;
+  background: 0;
+  outline: none;
+}
+// ボタン・ラベル上のマウスカーソルを指カーソルに
+a,
+area,
+[type="checkbox"],
+[type="radio"],
+button,
+select,
+label {
+  cursor: pointer;
+}

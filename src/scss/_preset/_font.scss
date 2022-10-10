@@ -1,0 +1,57 @@
+/*================================
+
+各種Webフォント
+@include addFontClassのコメントアウトを外すか、新規追加して適用
+@include addFontClass('フォント名', '適用するセレクタ名', '代替表示するフォント: [sans-serif] もしくは [serif]');
+
+//================================*/
+
+// Bebas Neue https://fonts.google.com/specimen/Bebas+Neue
+// @include addFontClass("Bebas Neue", ".bebas", "sans-serif");
+
+// Lato https://fonts.google.com/specimen/Lato
+// @include addFontClass("Lato", ".lato", "sans-serif");
+
+// Montserrat https://fonts.google.com/specimen/Montserrat
+// @include addFontClass("Montserrat", ".mont", "sans-serif");
+
+// Noto Sans JP https://fonts.google.com/specimen/Noto+Sans+JP
+// @include addFontClass("Noto Sans JP", ".noto", "sans-serif");
+
+// Open Sans https://fonts.google.com/specimen/Open+Sans
+// @include addFontClass("Open Sans", ".opens", "sans-serif");
+
+// Oswald https://fonts.google.com/specimen/Oswald
+// @include addFontClass("Oswald", ".oswald", "sans-serif");
+
+// Passion One https://fonts.google.com/specimen/Passion+One
+// @include addFontClass("Passion One", ".passion", "sans-serif");
+
+// Raleway https://fonts.google.com/specimen/Raleway
+// @include addFontClass("Raleway", ".rale", "sans-serif");
+
+// Roboto Slab https://fonts.google.com/specimen/Roboto+Slab
+// @include addFontClass("Roboto Slab", ".robos", "sans-serif");
+
+// Teko https://fonts.google.com/specimen/Teko
+// @include addFontClass("Teko", ".teko", "sans-serif");
+
+/*
+          ######  ######## ########  #### ########
+         ##       ##       ##     ##  ##  ##
+ #######  ######  ######   ########   ##  ######   #######
+               ## ##       ##   ##    ##  ##
+          ######  ######## ##     ## #### ##
+*/
+
+// Cormorant Garamond https://fonts.google.com/specimen/Cormorant+Garamond
+// @include addFontClass("Cormorant Garamond", ".corm", "serif");
+
+// Libre Baskerville https://fonts.google.com/specimen/Libre+Baskerville
+// @include addFontClass("Libre Baskerville", ".bask", "serif");
+
+// Lora https://fonts.google.com/specimen/Lora
+// @include addFontClass("Lora", ".lora", "serif");
+
+// Noto Serif JP https://fonts.google.com/specimen/Noto+Serif+JP
+// @include addFontClass("Noto Serif JP", ".notos", "serif");

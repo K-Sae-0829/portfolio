@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "box-of-hats.bemhelper",
+    "mrmlnc.vscode-apache",
+    "editorconfig.editorconfig",
+    "mhutchie.git-graph",
+    "stylelint.vscode-stylelint",
+    "esbenp.prettier-vscode",
+    "oderwat.indent-rainbow",
+    "dbaeumer.vscode-eslint",
+    "bmewburn.vscode-intelephense-client"
+  ]
+}
