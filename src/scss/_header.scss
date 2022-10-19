@@ -163,12 +163,12 @@ $headerSP: 6rem;
   $time: 0.5s; //アニメ時間　0.1s以上
   display: inline-block;
   position: relative;
+  //background: $siteColor;
+  //z-index: 1005;
   border: 0;
   width: $btnSize;
   height: $btnSize;
   vertical-align: middle;
-  //background: $siteColor;
-  z-index: 5;
   cursor: pointer;
   &__box {
     position: absolute;
@@ -201,6 +201,7 @@ $headerSP: 6rem;
   }
   &.active {
     .gNavBtn {
+      z-index: 1005;
       &__bar {
         background: $barOnBG;
         &:nth-of-type(1) {
@@ -233,14 +234,14 @@ $headerSP: 6rem;
 */
 .gNav {
   position: fixed;
-  top: $headerSP;
+  //top: $headerSP;
   right: 0;
-  z-index: 1000;
-  width: 30%;
+  //z-index: 1000;
   padding-top: 6rem;
-  max-height: calc(100% - #{$headerSP});
+  width: 30%;
+  height: 100vh;
+  //max-height: calc(100% - #{$headerSP});
   overflow-y: auto;
-  z-index: 3;
   background: #00f;
   transition-duration: 0.5s;
   transform-origin: 100% 100%;

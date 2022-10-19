@@ -41,31 +41,68 @@ $pale-white: rgba(#ffffff, 0.3);
 
 .common-bg {
   position: relative;
+  z-index: 1;
   min-height: 100vh;
   //height: 100%;
   background-image: url(../img/common-bg.png);
-  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
   background-attachment: fixed; /*--背景画像の固定--*/
-  z-index: 1;
+  background-position: center;
+  background-size: cover;
 }
 
 .double-border-box {
+  margin: 10px;
   border: 2px solid $pale-white;
+  border-radius: 10px;
   outline: 2px solid $pale-white;
   outline-offset: 9px;
-  margin: 10px;
-  border-radius: 10px;
 }
 
 .common {
   &__h2 {
     font-family: "virna";
-    text-shadow: 0px 0px 20px rgba($yellow, 0.5);
     font-size: 8rem;
     color: rgba(#fff, 0);
-    -webkit-text-stroke: 1px #fff;
+    text-shadow: 0px 0px 20px rgba($yellow, 0.5);
     letter-spacing: 0.18em;
+    -webkit-text-stroke: 1px #fff;
+  }
+}
+
+.mainBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem 0 3rem;
+  border-radius: 1000px;
+  width: 100%;
+  max-width: 26rem;
+  font-family: "aquatico";
+  line-height: 6rem;
+  letter-spacing: 3px;
+  box-shadow: 0px 0px 20px rgba($yellow, 0.3), 0px 0px 10px rgba($yellow, 0.3) inset;
+  border: 2px solid rgba(#fff, 0.8);
+  text-shadow: 0px 0px 20px rgba($yellow, 0.8);
+  &__icon {
+    font-size: 2rem;
+    text-shadow: 0px 0px 20px $yellow;
+  }
+}
+
+.bottom-city {
+  position: relative;
+  background-image: url(../img/bg-bottom-city.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-bottom: 20rem;
+  &::after {
+    position: absolute;
+    bottom: 0;
+    height: 15rem;
+    width: 100%;
+    content: "";
+    background: linear-gradient(rgba(#010112, 0), rgba(#010112, 0.7), rgba(#010112, 1));
   }
 }

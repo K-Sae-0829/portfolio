@@ -1,14 +1,14 @@
 .footer {
-  background-color: $siteColor;
   padding: 4rem 0;
+  background-color: $siteColor;
   &Logo {
     &__img {
-      width: 10.9rem;
       margin-right: 2rem;
+      width: 10.9rem;
     }
     &__text {
-      color: #fff;
       font-size: 1.2rem;
+      color: #fff;
     }
     &Link {
       &__link {

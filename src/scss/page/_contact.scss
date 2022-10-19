@@ -1,0 +1,16 @@
+.commonContact {
+  text-align: center;
+  margin: 10rem 0;
+  padding: 6rem;
+  @include over-ray-navy;
+
+  &__head {
+    margin-bottom: 4rem;
+  }
+  &__txt {
+    margin-bottom: 4rem;
+  }
+  &__link {
+    margin: 0 auto;
+  }
+}
