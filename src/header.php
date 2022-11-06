@@ -68,7 +68,7 @@
                             <a class="headerLogo" href="<?php echo H_URL; ?>">
                                 <?php echo IS_HOME ? '<h1 class="headerLogo__in flex vcenter">' : '<span class="headerLogo__in flex vcenter">'; ?>
                                 <img class="headerLogo__img" src="<?php echo T_URL; ?>img/logo.png" alt="KIMURASAE's Portpoliosite" />
-                                <span class="headerLogo__text">サイト名</span>
+                                <span class="headerLogo__text aquatico">KIMURA SAE<br>DESIGN & ILLUSTRATION<br>PORTFOLIO SITE</span>
                                 <?php echo IS_HOME ?  '</h1>' : '</span>'; ?>
                             </a>
                         </div>

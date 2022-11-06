@@ -238,3 +238,7 @@ flatpickrによるデートピッカー
 //     element.appendChild(datepickerBtn)
 //   }
 // })
+
+$('.contact__input--agree[type=checkbox]').onclick(function () {
+  $('.contact__agree-label::after').css('opacity', '1')
+})

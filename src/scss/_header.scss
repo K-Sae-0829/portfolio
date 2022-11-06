@@ -74,8 +74,13 @@ $headerSP: 6rem;
 .headerLogo {
   &__img {
     display: block;
+    width: auto;
+    height: 5rem;
   }
   &__text {
+    margin-left: 2rem;
+    font-size: 1rem;
+    line-height: 1.7em;
   }
 
   // ↓ SP相当幅
@@ -164,7 +169,7 @@ $headerSP: 6rem;
   display: inline-block;
   position: relative;
   //background: $siteColor;
-  //z-index: 1005;
+  z-index: 10000;
   border: 0;
   width: $btnSize;
   height: $btnSize;
@@ -181,7 +186,7 @@ $headerSP: 6rem;
     display: block;
     position: absolute;
     left: $posX;
-    z-index: 2;
+    z-index: 100000;
     border-radius: $barRadius;
     width: calc(100% - #{$posX} * 2);
     height: $bar;
@@ -201,7 +206,7 @@ $headerSP: 6rem;
   }
   &.active {
     .gNavBtn {
-      z-index: 1005;
+      z-index: 10050;
       &__bar {
         background: $barOnBG;
         &:nth-of-type(1) {
@@ -236,7 +241,7 @@ $headerSP: 6rem;
   position: fixed;
   //top: $headerSP;
   right: 0;
-  //z-index: 1000;
+  z-index: 1000;
   padding-top: 6rem;
   width: 30%;
   height: 100vh;

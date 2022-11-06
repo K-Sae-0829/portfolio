@@ -1,16 +1,177 @@
-.commonContact {
-  text-align: center;
-  margin: 10rem 0;
-  padding: 6rem;
-  @include over-ray-navy;
-
+.contact {
+  &__main {
+    margin: 5rem auto 1.1rem;
+  }
   &__head {
-    margin-bottom: 4rem;
+    text-align: center;
   }
-  &__txt {
-    margin-bottom: 4rem;
+  &__lead {
+    margin: 0 auto 4rem;
+    text-align: center;
   }
-  &__link {
-    margin: 0 auto;
+  &__input-area {
+    padding: 4rem;
+    @include over-ray-navy;
+  }
+  &__item {
+    margin-bottom: 3rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__required {
+    margin-left: 1rem;
+    padding: 0.1rem 1.2rem 0.2rem;
+    border-radius: 1000px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    background: linear-gradient(#a61165, #530951);
+  }
+  &__headline {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  &__input {
+    padding: 0.8rem 1rem;
+    border-radius: 3px;
+    width: 100%;
+    color: #040617;
+    background-color: #fff;
+    &--name {
+      max-width: 25rem;
+    }
+    &--kana {
+      max-width: 30rem;
+    }
+    &--company {
+      max-width: 40rem;
+    }
+    &--mail {
+      max-width: 40rem;
+    }
+    &--tel {
+      max-width: 13.9rem;
+    }
+    &--detail {
+      padding: 1.5rem;
+      width: 100%;
+      max-width: 110rem;
+      height: 25rem;
+    }
+    &--agree {
+      //display: none;
+      &:checked + .contact__agree-label::after {
+        opacity: 1;
+      }
+      &::before {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        border: 1px solid rgba(0, 0, 0, 0.16);
+        //border-radius: 2px;
+        width: 1em;
+        height: 1em;
+        background: #fff;
+        transform: translateY(-50%);
+        transform: translateY(-50%);
+        content: "";
+      }
+      &::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-top: -0.2em;
+        border-bottom: 3px solid rgba(0, 0, 0, 0.32);
+        border-left: 3px solid rgba(0, 0, 0, 0.32);
+        width: 1em;
+        height: 0.6em;
+        opacity: 0;
+        transition: all 0.3s ease 0s;
+        transform: translateY(-50%) rotate(-45deg);
+        transform: translateY(-50%) rotate(-45deg);
+        content: "";
+      }
+    }
+  }
+  .contact__agree-label::after {
+    //opacity: 1;
+  }
+
+  &__agree-label {
+    display: inline-block;
+    position: relative;
+    //margin: 0 1rem;
+    padding: 0 0 0 2rem;
+    //cursor: pointer;
+    &::before {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      border: 1px solid rgba(0, 0, 0, 0.16);
+      //border-radius: 2px;
+      width: 1em;
+      height: 1em;
+      background: #fff;
+      transform: translateY(-50%);
+      transform: translateY(-50%);
+      content: "";
+    }
+    &::after {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-top: -0.2em;
+      border-bottom: 3px solid rgba(0, 0, 0, 0.32);
+      border-left: 3px solid rgba(0, 0, 0, 0.32);
+      width: 1em;
+      height: 0.6em;
+      opacity: 0;
+      transition: all 0.3s ease 0s;
+      transform: translateY(-50%) rotate(-45deg);
+      transform: translateY(-50%) rotate(-45deg);
+      content: "";
+    }
+  }
+  &__agree-detail {
+    padding: 1rem;
+    border-radius: 3px;
+    height: 20rem;
+    overflow-y: scroll;
+    font-size: 1.4rem;
+    color: #040617;
+    background-color: #fff;
+  }
+  &__comfirm-btn {
+    margin: 5rem auto 0;
+    @include over-ray-navy;
+  }
+  &__submit-btn {
+    margin: 5rem auto 0;
+    @include over-ray-navy;
+    cursor: pointer;
+  }
+}
+.mw_wp_form_input {
+  .input-hidden {
+    display: none;
+  }
+}
+.mw_wp_form_confirm {
+  .confirm-hidden {
+    display: none;
+  }
+  .contact {
+    &__headline {
+      margin-bottom: 0.5rem;
+    }
+  }
+  .submit {
+    display: none;
   }
 }

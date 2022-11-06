@@ -10,7 +10,7 @@
     </div>
     <section class="top__about wrap w1200 sp-wrap">
         <div class="topAbout double-border-box">
-            <h2 class="common__h2 topAbout__head">
+            <h2 class="common__h2 topAbout__head pulsate">
                 About
             </h2>
             <div class="pc-flex bet vcenter">
@@ -24,7 +24,7 @@
                     </p>
                     <div class="topAbout__btn-area">
                         <a href="#" class="mainBtn">
-                            MORE<i class="icon icon-up-arrow mainBtn__icon"></i>
+                            <span class="blink-2">MORE</span><i class="icon icon-up-arrow mainBtn__icon blink"></i>
                         </a>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
             <div class="topWorks__bg02"><img src="<?php echo T_URL; ?>img/top_work_bg02.png" alt=""></div>
             <div class="topWorks__content">
                 <div class="wrap w1200 sp-wrap">
-                    <h2 class="common__h2 topWorks__head">
+                    <h2 class="common__h2 topWorks__head pulsate">
                         works
                     </h2>
                     <p class="topWorks__txt">
@@ -50,7 +50,7 @@
                     </p>
                     <div class="topAbout__btn-area">
                         <a href="#" class="mainBtn">
-                            MORE<i class="icon icon-up-arrow mainBtn__icon"></i>
+                            <span class="blink-2">MORE</span><i class="icon icon-up-arrow mainBtn__icon blink"></i>
                         </a>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
     <section class="top__original">
         <div class="topOriginal">
             <div class="topOriginal__content wrap w1200 sp-wrap">
-                <h2 class="common__h2 topOriginal__head">
+                <h2 class="common__h2 topOriginal__head pulsate">
                     Original works
                 </h2>
                 <div class="pc-flex vend">
@@ -75,7 +75,7 @@
                         </p>
                         <div class="topOriginal__btn-area">
                             <a href="#" class="mainBtn">
-                                MORE<i class="icon icon-up-arrow mainBtn__icon"></i>
+                                <span class="blink-2">MORE</span><i class="icon icon-up-arrow mainBtn__icon blink"></i>
                             </a>
                         </div>
                     </div>
