@@ -29,6 +29,7 @@
 </script>
 <script src="<?php echo T_URL; ?>js/lib.min.js?<?php echo filemtime(T_PATH . 'js/lib.min.js'); ?>"></script>
 <script src="<?php echo T_URL; ?>js/main.min.js?<?php echo filemtime(T_PATH . 'js/main.min.js'); ?>"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"></script>
 <?php wp_footer(); ?>
 </body>
 

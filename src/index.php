@@ -8,16 +8,16 @@
             <img src="<?php echo T_URL; ?>img/mv-city.png" alt="">
         </div>
     </div>
-    <section class="top__about wrap w1200 sp-wrap">
+    <section class="top__about wrap w1200 sp-wrap js-box" id="js-box1">
         <div class="topAbout double-border-box">
             <h2 class="common__h2 topAbout__head pulsate">
-                About
+                Abo<span class="">u</span>t
             </h2>
             <div class="pc-flex bet vcenter">
                 <div class="">
                     <p>
-                        こんにちは。ご覧いただきありがとうございます。<br>
-                        元来絵を描くこと、何かを生み出すことが大好きで、高校から美術を専攻し勉強を続けてきました。<br>
+                        ご覧いただきありがとうございます。<br>
+                        元来絵を描くこと、何かを生み出すことが大好きで、高校から美術科に進学し勉強を続けてきました。<br>
                         その後桑沢デザイン研究所にてファッションデザインを専攻したのち、紆余曲折を経て、<br>
                         現在はWebデザイナー・フロントエンドエンジニアとしてキャリアを積んでいる最中です。<br>
                         詳しい経歴やスキルは下記からご覧いただけます。
@@ -34,7 +34,7 @@
             </div>
         </div>
     </section>
-    <section class="top__works">
+    <section class="top__works js-box">
         <div class="topWorks">
             <div class="topWorks__bg01"><img src="<?php echo T_URL; ?>img/top_work_bg.png" alt=""></div>
             <div class="topWorks__bg02"><img src="<?php echo T_URL; ?>img/top_work_bg02.png" alt=""></div>
@@ -57,7 +57,7 @@
             </div>
         </div>
     </section>
-    <section class="top__original">
+    <section class="top__original js-box">
         <div class="topOriginal">
             <div class="topOriginal__content wrap w1200 sp-wrap">
                 <h2 class="common__h2 topOriginal__head pulsate">
@@ -74,7 +74,7 @@
                             作品の世界観を通して”きむらさえ”という人物像により深みを与えることができたら嬉しいです。
                         </p>
                         <div class="topOriginal__btn-area">
-                            <a href="#" class="mainBtn">
+                            <a href="<?php echo H_URL; ?>" class="mainBtn">
                                 <span class="blink-2">MORE</span><i class="icon icon-up-arrow mainBtn__icon blink"></i>
                             </a>
                         </div>
