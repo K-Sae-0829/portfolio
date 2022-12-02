@@ -17,9 +17,9 @@
   }
   &__search {
     @include main-border;
-    border-radius: 1rem;
-    padding: 2.5rem;
     margin: 10rem 0 8.4rem;
+    padding: 2.5rem;
+    border-radius: 1rem;
   }
   .search {
     &__ttl {
@@ -41,8 +41,8 @@
       position: absolute;
       top: 0;
       left: 0;
-      background-color: #040617;
       padding: 0.6rem 1rem;
+      background-color: #040617;
     }
     &__txt-area {
       padding: 1.5rem 1rem;
@@ -50,11 +50,11 @@
     }
     &__tag {
       display: inline-block;
-      border-radius: 1000px;
-      font-size: 1.1rem;
+      margin-bottom: 1rem;
       padding: 0.4rem 1rem;
       border: 1px solid rgba(#040617, 0.3);
-      margin-bottom: 1rem;
+      border-radius: 1000px;
+      font-size: 1.1rem;
     }
     &__ttl {
       font-size: 1.8rem;
