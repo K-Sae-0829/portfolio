@@ -68,7 +68,7 @@
                             <a class="headerLogo" href="<?php echo H_URL; ?>">
                                 <?php echo IS_HOME ? '<h1 class="headerLogo__in flex vcenter">' : '<span class="headerLogo__in flex vcenter">'; ?>
                                 <img class="headerLogo__img" src="<?php echo T_URL; ?>img/logo.png" alt="KIMURASAE's Portpoliosite" />
-                                <span class="headerLogo__text aquatico">KIMURA SAE<br>DESIGN & ILLUSTRATION<br>PORTFOLIO SITE</span>
+                                <span class="headerLogo__text aquatico">KIMURA SAE<br>PORTFOLIO SITE</span>
                                 <?php echo IS_HOME ?  '</h1>' : '</span>'; ?>
                             </a>
                         </div>
@@ -133,50 +133,48 @@
 */
         ?>
         <nav id="gNav" class="gNav" itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+            <div class="gNav__close">
+                <button type="button" id="gNav-open" class="gNavBtn">
+                    <div class="gNavBtn__box">
+                        <span class="gNavBtn__bar bright"></span>
+                        <span class="gNavBtn__bar bright"></span>
+                        <span class="gNavBtn__bar bright"></span>
+                    </div>
+                </button>
+            </div>
             <div class="gNav__menu md-acc">
                 <div class="gNav__box">
                     <input id="gNav1" class="acc-check" type="checkbox" value="" />
-                    <label for="gNav1" class="acc-btn gNav__item flex vcenter hcenter">
-                        アコーディオン1
+                    <label for="gNav1" class="acc-btn gNav__item flex vcenter aquatico">
+                        <a href="<?php echo H_URL; ?>about/">ABOUT</a>
                         <i class="gNav__icon gNav__icon icon-down"></i>
                     </label>
                     <div class="acc-body">
                         <div class="acc-in">
-                            <a href="" class="acc-hide gNav__item gNav__item--sub flex vcenter hcenter">
-                                テキスト1
+                            <a href="<?php echo H_URL; ?>about/#career" class="acc-hide gNav__item gNav__item--sub flex vcenter">
+                                経歴
                             </a>
-                            <a href="" class="acc-hide gNav__item gNav__item--sub flex vcenter hcenter">
-                                テキスト2
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="gNav__box">
-                    <input id="gNav2" class="acc-check" type="checkbox" value="" />
-                    <label for="gNav2" class="acc-btn gNav__item flex vcenter hcenter">
-                        アコーディオン2
-                        <i class="gNav__icon gNav__icon icon-down"></i>
-                    </label>
-                    <div class="acc-body">
-                        <div class="acc-in">
-                            <a href="" class="acc-hide gNav__item gNav__item--sub flex vcenter hcenter">
-                                テキスト3
-                            </a>
-                            <a href="" class="acc-hide gNav__item gNav__item--sub flex vcenter hcenter">
-                                テキスト4
+                            <a href="<?php echo H_URL; ?>about/#skills" class="acc-hide gNav__item gNav__item--sub flex vcenter">
+                                スキルマップ
                             </a>
                         </div>
                     </div>
                 </div>
-                <a href="" class="gNav__item flex vcenter hcenter">
-                    リンク1
+                <a href="<?php echo H_URL; ?>works/" class="gNav__item flex vcenter aquatico">
+                    WORKS
+                </a>
+                <a href="<?php echo H_URL; ?>" class="gNav__item flex vcenter aquatico">
+                    original WORKS
+                </a>
+                <a href="<?php echo H_URL; ?>" class="gNav__item flex vcenter aquatico">
+                    CONCEPT
                 </a>
             </div>
-            <div class="gNav__contact">
+            <!--<div class="gNav__contact">
                 <a href="<?php echo H_URL; ?>contact/" class="gNav__btn gNav__btn--mail md-btn black">
                     お問い合わせ
                 </a>
-            </div>
+            </div>-->
         </nav>
 
         <div class="headerPad"></div>

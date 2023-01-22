@@ -25,6 +25,23 @@ function scf_meta_box($settings, $post_type, $post_id)
         }
     */
     return $settings;
+
+    if (in_array($post_type, array('update'))) {
+        $Setting = SCF::add_setting('content', 'ひとこと');
+        $Setting->add_group('content', false, array(
+            array(
+                'type'      => 'textarea', //テキスト
+                'name'        => 'comment',
+                'instruction' => '', //説明文
+                'notes'       => '', //注釈
+                'label'       => '', //nameの代替文字
+                'default'     => '',    //初期値
+            ),
+        ));
+        $settings[] = $Setting;
+    }
+
+    return $settings;
 }
 add_filter('smart-cf-register-fields', 'scf_meta_box', 10, 3);
 

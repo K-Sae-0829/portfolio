@@ -1,0 +1,174 @@
+.about {
+  &__head {
+    text-align: center;
+  }
+  &__lead {
+    text-align: center;
+  }
+  &__profile {
+    margin: 11rem 0 13rem;
+    padding: 6rem;
+    @include over-ray-navy;
+  }
+  &Profile {
+    &__head {
+      font-size: 2.4rem;
+    }
+    &__lit {
+      margin: 0 3rem;
+    }
+    &__eng {
+      padding-top: 0.2rem;
+    }
+    &__image {
+      margin-left: 2rem;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      width: 100%;
+      max-width: 30.6rem;
+      background-color: rgba(0, 0, 0, 0);
+    }
+    &__table {
+      margin-top: 2rem;
+    }
+    &__tr {
+      display: block;
+      margin: 1rem 0;
+    }
+    &__th {
+      width: 14rem;
+    }
+  }
+  &__career {
+    margin-bottom: 13rem;
+  }
+  &Career {
+    position: relative;
+    margin-top: 6rem;
+    &__line {
+      position: absolute;
+      left: 7px;
+      border-radius: 1000px;
+      width: 2px;
+      height: 100%;
+      background-color: #fff;
+    }
+    &__table {
+      margin-top: 2.6rem;
+    }
+    &__tr {
+      margin-bottom: 5rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__dot {
+      display: inline-block;
+      margin-right: 5rem;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      background-color: #fff;
+    }
+    &__th {
+      display: inline-block;
+      margin-right: 5rem;
+      width: 100%;
+      max-width: 22rem;
+      font-size: 2rem;
+    }
+    &__td {
+      &--head {
+        margin-bottom: 1.2rem;
+        font-size: 2rem;
+      }
+    }
+  }
+  &__skills {
+    margin-bottom: 26rem;
+  }
+  &Skills {
+    margin-top: 6rem;
+    &Introduction {
+      padding: 4rem;
+      border: 2px solid $pale-white;
+      border-radius: 10px;
+      &__head {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        font-weight: 500;
+      }
+      &__dot {
+        margin-right: 1rem;
+      }
+    }
+    &__para {
+      display: inline-block;
+      margin-right: 4rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &Map {
+      margin-top: 8rem;
+      &__circle {
+        position: relative;
+        margin-right: 6rem;
+        border: 2px solid #fff;
+        border-radius: 1000px;
+        width: 18rem;
+        min-width: 18rem;
+        height: 18rem;
+        text-align: center;
+        background-color: #040617;
+      }
+      &__inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &__icon {
+        margin-bottom: 1rem;
+        width: 5rem;
+        height: auto;
+      }
+      &__head {
+        font-size: 2rem;
+        font-weight: 500;
+        text-align: center;
+      }
+      &__gragh {
+        width: 100%;
+      }
+      &__dot {
+        margin: 0 1rem;
+        &:first-child {
+          margin: 0 1rem 0 0;
+        }
+        &:last-child {
+          margin: 0 0 0 1rem;
+        }
+        &--normal {
+          display: inline-block;
+          border-radius: 1000px;
+          width: 2rem;
+          min-width: 2rem;
+          height: 2rem;
+          background-color: #fff;
+          &:not(:first-child) {
+          }
+        }
+        &--mark {
+          font-size: 6rem;
+        }
+      }
+      &__line {
+        width: 100%;
+        height: 2px;
+        //min-width: 100%;
+        background-color: #fff;
+      }
+    }
+  }
+}

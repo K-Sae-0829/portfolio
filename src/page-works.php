@@ -9,7 +9,7 @@
             <p class="search__ttl">絞り込み<i class="icon icon-down search__down"></i></p>
         </div>
         <div class="container">
-            <div class="works__list row">
+            <div class="works__list row pc-flex break bet">
                 <a class="worksItem col-lg-4">
                     <div class="worksItem__thumb">
                         <p class="worksItem__cat">WEB</p>

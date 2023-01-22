@@ -1,9 +1,10 @@
 <?php get_header(); ?>
 <article class="contents top bottom-city">
     <div class="top__mv">
+        <div class="top__infomation">
+            <p class="aquatico txt-bright blink-2">2023.1.9 | NEW POST ADDED</p>
+        </div>
         <img src="<?php echo T_URL; ?>img/logo.png" alt="KIMURASAE's Portpoliosite" class="top__logo">
-        <p class="virna">AAAAAAAAAAA</p>
-        <p class="aquatico">AAAAAAAAAAA</p>
         <div class="top__mv-city">
             <img src="<?php echo T_URL; ?>img/mv-city.png" alt="">
         </div>
@@ -17,7 +18,7 @@
                 <div class="">
                     <p>
                         ご覧いただきありがとうございます。<br>
-                        元来絵を描くこと、何かを生み出すことが大好きで、高校から美術科に進学し勉強を続けてきました。<br>
+                        元来絵を描くこと、何かを生み出すことが大好きで、高校から美術科に進学し専門的な勉強を続けてきました。<br>
                         その後桑沢デザイン研究所にてファッションデザインを専攻したのち、紆余曲折を経て、<br>
                         現在はWebデザイナー・フロントエンドエンジニアとしてキャリアを積んでいる最中です。<br>
                         詳しい経歴やスキルは下記からご覧いただけます。
@@ -36,8 +37,37 @@
     </section>
     <section class="top__works js-box">
         <div class="topWorks">
-            <div class="topWorks__bg01"><img src="<?php echo T_URL; ?>img/top_work_bg.png" alt=""></div>
-            <div class="topWorks__bg02"><img src="<?php echo T_URL; ?>img/top_work_bg02.png" alt=""></div>
+            <div class="topWorks__slider flex">
+                <div class="swiper js-topWorkSlide" id="js-topWorkSlide">
+                    <div class="swiper-wrapper js-topWorkSlide__wrap">
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv01.png" alt=""></div>
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv02.png" alt=""></div>
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv03.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="swiper js-topWorkSlide" id="js-topWorkSlide--return">
+                    <div class="swiper-wrapper js-topWorkSlide__wrap">
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv01.png" alt=""></div>
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv02.png" alt=""></div>
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv03.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="swiper js-topWorkSlide" id="js-topWorkSlide">
+                    <div class="swiper-wrapper js-topWorkSlide__wrap">
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv01.png" alt=""></div>
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv02.png" alt=""></div>
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv03.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="swiper js-topWorkSlide" id="js-topWorkSlide--return">
+                    <div class="swiper-wrapper js-topWorkSlide__wrap">
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv01.png" alt=""></div>
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv02.png" alt=""></div>
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv03.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="topWorks__bg"><img src="<?php echo T_URL; ?>img/top_work_bg.png" alt=""></div>
             <div class="topWorks__content">
                 <div class="wrap w1200 sp-wrap">
                     <h2 class="common__h2 topWorks__head pulsate">

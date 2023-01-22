@@ -21,7 +21,33 @@
 //     true, // 詳細ページ
 //     '' // 親階層
 // );
-
+new add_custompost(
+    'update', // Name
+    '新着情報', // 表示名
+    //     array( // タクソノミー
+    //         array(
+    //             'occupation' // Name
+    //            ,'職種', // 表示名
+    //             true, // 階層
+    //             true // 一覧のカラムに表示
+    //         )
+    //     ),
+    false, // エディタ
+    false, // アイキャッチ
+    false, // アーカイブ
+    false, // 詳細ページ
+    '' // 親階層
+);
+new add_custompost(
+    'works', // Name
+    'お仕事で制作したもの', // 表示名
+    array(array('works-cat', '制作物カテゴリ', 'false', 'false')),
+    false, // エディタ
+    true, // アイキャッチ
+    true, // アーカイブ
+    true, // プレビュー
+    '' // 親階層
+);
 
 /*
 ######## ######## ########  ##     ##

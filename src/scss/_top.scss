@@ -5,7 +5,7 @@
 .top {
   //height: 200rem;
   &__logo {
-    animation: 3s linear infinite rotation;
+    //animation: 3s linear infinite rotation;
   }
   @keyframes rotation {
     0% {
@@ -25,6 +25,14 @@
     position: absolute;
     top: 5%;
     z-index: -1;
+  }
+  &__infomation {
+    position: absolute;
+    top: 20vh;
+    left: 2.5rem;
+    text-align: center;
+    letter-spacing: 0.2em;
+    writing-mode: vertical-rl;
   }
   &__about {
     margin: 20rem 0 15rem;
@@ -53,10 +61,11 @@
     height: 100%;
     min-height: 74rem;
     overflow: hidden;
-    &__bg01 {
+    &__bg {
       position: absolute;
-      z-index: 1;
+      z-index: 4;
       width: 100%;
+      height: 100%;
       img {
         width: 100%;
         height: 100%;
@@ -64,18 +73,33 @@
     }
     &__bg02 {
       position: absolute;
-      z-index: 2;
+      z-index: 4;
       width: 100%;
       img {
         width: 100%;
         height: 100%;
       }
     }
+    &__slider {
+      position: absolute;
+      top: -10%;
+      right: -15%;
+      z-index: 3;
+      height: 150%;
+      overflow: hidden;
+      transform: skew(-20deg, 20deg);
+    }
+    .js-topWorkSlide {
+      padding-right: 2rem;
+      &__wrap {
+        transition-timing-function: linear;
+      }
+    }
     &__content {
       position: absolute;
       top: 50%;
       left: 50%;
-      z-index: 3;
+      z-index: 5;
       padding: 10rem 2rem;
       width: 100%;
       max-width: 120rem;
@@ -99,8 +123,6 @@
     &__tv {
       margin-right: 10rem;
       width: 70%;
-    }
-    &__img {
     }
     &__right {
       margin-bottom: 10%;
