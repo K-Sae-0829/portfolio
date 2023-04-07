@@ -25,8 +25,8 @@ if (document.getElementById('js-topWorkSlide')) {
     direction: 'vertical',
     loop: true,
     slidesPerView: 'auto',
-    loopedSlides: 3,
-    speed: 30000,
+    loopedSlides: 6,
+    speed: 5000,
     spaceBetween: 10,
     allowTouchMove: false,
     autoplay: {
@@ -37,6 +37,21 @@ if (document.getElementById('js-topWorkSlide')) {
   })
 }
 
+/*if (document.getElementById('js-mvNewsSlide')) {
+  const swiper = new Swiper('.js-mvNewsSlide', {
+    loop: true,
+    slidesPerView: 1,
+    speed: 600,
+    allowTouchMove: false,
+    autoplay: {
+      delay: 3000,
+      stopOnLastSlide: false,
+      disableOnInteraction: false,
+    },
+  })
+}
+
+/*
 if (document.getElementById('js-topWorkSlide--return')) {
   const swiper = new Swiper('.js-topWorkSlide--return', {
     direction: 'vertical',
@@ -54,3 +69,4 @@ if (document.getElementById('js-topWorkSlide--return')) {
     },
   })
 }
+*/

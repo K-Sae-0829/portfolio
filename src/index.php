@@ -2,7 +2,28 @@
 <article class="contents top bottom-city">
     <div class="top__mv">
         <div class="top__infomation">
-            <p class="aquatico txt-bright blink-2">2023.1.9 | NEW POST ADDED</p>
+            <?php
+            $query = array(  // クエリー初期設定
+                'post_type' => 'update', // 投稿タイプ
+                'post_status' => 'publish', // 公開済みの記事
+                'posts_per_page' => 1, // 出力数　-1で全件
+                'order' => 'ASC', // ソート　ASC/DESC
+            );
+            $query = new WP_Query($query);
+
+            if ($query->have_posts()) {
+            ?>
+                <div class="swiper js-mvNewsSlide" id="js-mvNewsSlide">
+                    <div class="swiper-wrapper js-mvNewsSlide__wrap">
+                        <?php while ($query->have_posts()) {
+                            $query->the_post(); ?>
+                            <p class="aquatico txt-bright blink-2 swiper-slide"><?php echo get_the_date('y.m.d'); ?> | <?php echo get_the_title(); ?></p>
+                        <?php } ?>
+                    </div>
+                </div>
+            <?php }
+            wp_reset_postdata();
+            ?>
         </div>
         <img src="<?php echo T_URL; ?>img/logo.png" alt="KIMURASAE's Portpoliosite" class="top__logo">
         <div class="top__mv-city">
@@ -43,13 +64,21 @@
                         <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv01.png" alt=""></div>
                         <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv02.png" alt=""></div>
                         <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv03.png" alt=""></div>
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv01.png" alt=""></div>
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv02.png" alt=""></div>
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv03.png" alt=""></div>
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv01.png" alt=""></div>
                     </div>
                 </div>
-                <div class="swiper js-topWorkSlide" id="js-topWorkSlide--return">
+                <div class="swiper js-topWorkSlide js-topWorkSlide--return" id="js-topWorkSlide">
                     <div class="swiper-wrapper js-topWorkSlide__wrap">
                         <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv01.png" alt=""></div>
                         <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv02.png" alt=""></div>
                         <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv03.png" alt=""></div>
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv01.png" alt=""></div>
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv02.png" alt=""></div>
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv03.png" alt=""></div>
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv01.png" alt=""></div>
                     </div>
                 </div>
                 <div class="swiper js-topWorkSlide" id="js-topWorkSlide">
@@ -57,13 +86,21 @@
                         <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv01.png" alt=""></div>
                         <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv02.png" alt=""></div>
                         <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv03.png" alt=""></div>
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv01.png" alt=""></div>
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv02.png" alt=""></div>
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv03.png" alt=""></div>
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv01.png" alt=""></div>
                     </div>
                 </div>
-                <div class="swiper js-topWorkSlide" id="js-topWorkSlide--return">
+                <div class="swiper js-topWorkSlide  js-topWorkSlide--return" id="js-topWorkSlide">
                     <div class="swiper-wrapper js-topWorkSlide__wrap">
                         <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv01.png" alt=""></div>
                         <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv02.png" alt=""></div>
                         <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv03.png" alt=""></div>
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv01.png" alt=""></div>
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv02.png" alt=""></div>
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv03.png" alt=""></div>
+                        <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work_mv01.png" alt=""></div>
                     </div>
                 </div>
             </div>

@@ -24,7 +24,6 @@ function scf_meta_box($settings, $post_type, $post_id)
             $settings[] = $Setting;
         }
     */
-    return $settings;
 
     if (in_array($post_type, array('update'))) {
         $Setting = SCF::add_setting('content', 'ひとこと');
@@ -40,7 +39,64 @@ function scf_meta_box($settings, $post_type, $post_id)
         ));
         $settings[] = $Setting;
     }
-
+    if (in_array($post_type, array('works'))) {
+        $Setting = SCF::add_setting('works-lead', 'リード文');
+        $Setting->add_group('works-lead', false, array(
+            array(
+                'type'      => 'textarea', //テキスト
+                'name'        => 'lead-txt',
+                'instruction' => '概要文', //説明文
+                'notes'       => '', //注釈
+                'label'       => '', //nameの代替文字
+                'default'     => '',    //初期値
+            ),
+        ));
+        $settings[] = $Setting;
+        $Setting = SCF::add_setting('works-pc', 'PC画像');
+        $Setting->add_group('works-pc', true, array(
+            array(
+                'type'      => 'image', //テキスト
+                'name'        => 'pc-img',
+                'instruction' => 'PC画像', //説明文
+                'notes'       => '幅1920px', //注釈
+                'label'       => '', //nameの代替文字
+                'default'     => '',    //初期値
+            ),
+        ));
+        $settings[] = $Setting;
+        $Setting = SCF::add_setting('works-sp', 'SP画像');
+        $Setting->add_group('works-sp', true, array(
+            array(
+                'type'      => 'image', //テキスト
+                'name'        => 'sp-img',
+                'instruction' => 'SP画像', //説明文
+                'notes'       => '幅750px', //注釈
+                'label'       => '', //nameの代替文字
+                'default'     => '',    //初期値
+            ),
+        ));
+        $settings[] = $Setting;
+        $Setting = SCF::add_setting('works-point', 'ポイント');
+        $Setting->add_group('works-point', true, array(
+            array(
+                'type'      => 'textarea', //テキスト
+                'name'        => 'point-txt',
+                'instruction' => 'ポイント', //説明文
+                'notes'       => '幅750px', //注釈
+                'label'       => '', //nameの代替文字
+                'default'     => '',    //初期値
+            ),
+            array(
+                'type'      => 'image', //テキスト
+                'name'        => 'point-img',
+                'instruction' => 'ポイント画像', //説明文
+                'notes'       => '幅800px×縦250px', //注釈
+                'label'       => '', //nameの代替文字
+                'default'     => '',    //初期値
+            ),
+        ));
+        $settings[] = $Setting;
+    }
     return $settings;
 }
 add_filter('smart-cf-register-fields', 'scf_meta_box', 10, 3);

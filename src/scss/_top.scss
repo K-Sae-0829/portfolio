@@ -34,6 +34,8 @@
     letter-spacing: 0.2em;
     writing-mode: vertical-rl;
   }
+  .js-mvNewsSlide {
+  }
   &__about {
     margin: 20rem 0 15rem;
   }
@@ -91,8 +93,20 @@
     }
     .js-topWorkSlide {
       padding-right: 2rem;
+      &--return {
+        padding-right: 0rem;
+        padding-left: 2rem;
+        transform: rotate(180deg);
+      }
       &__wrap {
         transition-timing-function: linear;
+      }
+      &__img {
+        height: auto !important;
+        img {
+          //width: auto;
+          height: 100%;
+        }
       }
     }
     &__content {

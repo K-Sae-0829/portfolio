@@ -41,7 +41,10 @@ new add_custompost(
 new add_custompost(
     'works', // Name
     'お仕事で制作したもの', // 表示名
-    array(array('works-cat', '制作物カテゴリ', 'false', 'false')),
+    array(
+        array('works-cat', '制作物カテゴリ', 'false', 'true'),
+        array('works-tag', '制作物タグ', 'false', 'true')
+    ),
     false, // エディタ
     true, // アイキャッチ
     true, // アーカイブ

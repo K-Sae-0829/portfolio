@@ -1,5 +1,5 @@
 <footer id="footer" class="footer" itemscope itemtype="http://schema.org/WPFooter">
-    <div class="wrap sp-wrap">
+    <div class="wrap w1200 sp-wrap">
         <div class="footer__frame flex bet sp-break vcenter">
             <div class="footerData">
                 <a href="<?php echo H_URL; ?>" class="footerLogo flex vcenter">
@@ -30,6 +30,7 @@
 <script src="<?php echo T_URL; ?>js/lib.min.js?<?php echo filemtime(T_PATH . 'js/lib.min.js'); ?>"></script>
 <script src="<?php echo T_URL; ?>js/main.min.js?<?php echo filemtime(T_PATH . 'js/main.min.js'); ?>"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
 <?php wp_footer(); ?>
 </body>
 

@@ -44,6 +44,7 @@
     width: 100%;
     max-width: 36rem;
     background-color: #fff;
+    box-shadow: 0px 0px 40px rgba($yellow, 0.25);
     &__thumb {
       position: relative;
     }
@@ -55,7 +56,7 @@
       background-color: #040617;
     }
     &__txt-area {
-      padding: 1.5rem 1rem;
+      padding: 1.5rem;
       color: #040617;
     }
     &__tag {
