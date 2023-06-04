@@ -22,21 +22,21 @@ $pale-white: rgba(#ffffff, 0.2);
   text-shadow: 0px 0px 20px $yellow;
 }
 @font-face {
-  font-family: "virna";
+  font-family: "virna" !important;
   src: url(./font/Virna-Regular.woff2) format("woff2");
 }
 
 .virna {
-  font-family: "virna";
+  font-family: "virna" !important;
 }
 
 @font-face {
-  font-family: "aquatico";
+  font-family: "aquatico" !important;
   src: url(./font/Aquatico-Regular.woff2) format("woff2");
 }
 
 .aquatico {
-  font-family: "aquatico";
+  font-family: "aquatico" !important;
 }
 
 .common-bg {
@@ -64,9 +64,10 @@ $pale-white: rgba(#ffffff, 0.2);
     font-family: "virna";
     font-size: 8rem;
     color: rgba(#fff, 0);
-    text-shadow: 0px 0px 20px rgba($yellow, 0.5);
+    //text-shadow: 0px 0px 20px rgba($yellow, 0.5);
     letter-spacing: 0.18em;
     -webkit-text-stroke: 1px #fff;
+    filter: drop-shadow (0px 0px 20px #fff);
   }
   &__h3 {
     text-align: center;
@@ -94,6 +95,39 @@ $pale-white: rgba(#ffffff, 0.2);
       }
       &::after {
         margin-left: 1.2rem;
+      }
+    }
+  }
+  @media #{$media-sp} {
+    &__h2 {
+      font-size: 3.5rem;
+    }
+    &__h3 {
+      &--main {
+        display: block;
+        font-family: "aquatico";
+        font-size: 6rem;
+        text-shadow: 0px 0px 20px rgba($yellow, 0.8);
+      }
+      &--sub {
+        position: relative;
+        &::before,
+        &::after {
+          display: inline-block;
+          position: absolute;
+          top: 50%;
+          width: 1.5rem;
+          height: 1px;
+          background-color: #fff;
+          content: "";
+        }
+        &::before {
+          left: -2.7rem;
+          margin-right: 1.2rem;
+        }
+        &::after {
+          margin-left: 1.2rem;
+        }
       }
     }
   }

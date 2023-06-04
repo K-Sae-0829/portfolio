@@ -47,6 +47,7 @@
     "baguettebox.js": "^1.11.1",
     "flatpickr": "^4.6.9",
     "jquery": "^3.6.0",
+    "luxy.js": "^0.1.0",
     "swiper": "^6.7.5",
     "trunk8": "0.0.1"
   },

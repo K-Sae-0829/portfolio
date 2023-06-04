@@ -4,9 +4,9 @@
 //}
 .top {
   //height: 200rem;
-  &__logo {
-    //animation: 3s linear infinite rotation;
-  }
+  //&__logo {
+  //animation: 3s linear infinite rotation;
+  //}
   @keyframes rotation {
     0% {
       transform: rotateY(0);
@@ -23,19 +23,27 @@
   }
   &__mv-city {
     position: absolute;
-    top: 5%;
+    top: 5rem;
     z-index: -1;
+    mix-blend-mode: color-dodge;
+    &--bg {
+      top: -8rem;
+      z-index: -2;
+      mix-blend-mode: normal;
+      opacity: 0.6;
+    }
   }
   &__infomation {
     position: absolute;
-    top: 20vh;
-    left: 2.5rem;
+    bottom: 15vh;
+    left: 50%;
     text-align: center;
     letter-spacing: 0.2em;
-    writing-mode: vertical-rl;
+    transform: translateX(-50%);
+    //writing-mode: vertical-rl;
   }
-  .js-mvNewsSlide {
-  }
+  //.js-mvNewsSlide {
+  //}
   &__about {
     margin: 20rem 0 15rem;
   }
@@ -136,7 +144,7 @@
     }
     &__tv {
       margin-right: 10rem;
-      width: 70%;
+      width: 55%;
     }
     &__right {
       margin-bottom: 10%;

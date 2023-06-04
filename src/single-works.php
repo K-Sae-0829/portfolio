@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 <article class="contents singleWorks bottom-city">
+    <div id="overlay" class="md-overlay"></div>
     <?php
     if (have_posts()) {
         while (have_posts()) {
@@ -11,7 +12,27 @@
             $spImg = SCF::get('works-sp');
             $point = SCF::get('works-point');
     ?>
-
+            <?php
+            $count = 0;
+            foreach ($pcImg as $fields) {
+                $img = get_post_meta($post->ID, 'pc-img', true);
+                $imageItem = wp_get_attachment_image_src($img, 'full');
+                //$count = $count++;
+            ?>
+                <div class="singleWorks__modal js-modal js-modal--<?php echo $count; ?>">
+                    <button type="button" class="singleWorks__bg js-modal-close"></button>
+                    <button type="button" class="js-modal-close singleWorks__close flex vcenter hcenter">
+                        <i class="singleWorks__closeIcon is-false icon-close"></i>
+                    </button>
+                    <div class="singleWorks__modalIn">
+                        <img src="<?php echo $imageItem[0] ?>" class="singleWorksModal__img">
+                    </div>
+                    <div class="singleWorks__nonScroll"></div>
+                </div>
+            <?php
+                $count++;
+            }
+            ?>
             <div class="wrap w1200 sp-wrap">
                 <h1 class="singleWorks__h1"><?php echo get_the_title(); ?></h1>
                 <div class="singleWorks__txt-area">
@@ -28,14 +49,19 @@
                 <h2 class="singleWorks__h2 aquatico txt-bright">PC<span class="singleWorks__h2-sub noto">（クリックでモーダル表示します）</span></h2>
                 <div class="singleWorks__img-area pc-flex bet break">
                     <?php
+                    $count = 0;
                     foreach ($pcImg as $fields) {
                         $img = get_post_meta($post->ID, 'pc-img', true);
                         $imageItem = wp_get_attachment_image_src($img, 'full');
+                        //$count = 1;
+                        //$count = $count++;
                     ?>
-                        <div class="singleWorks__image-pc">
+                        <button type="button" class="singleWorks__image-pc js-modal js-modal-open" data-modal="<?php echo $count; ?>">
                             <img src="<?php echo $imageItem[0] ?>" class="singleWorks__img">
-                        </div>
-                    <?php } ?>
+                        </button>
+
+                    <?php $count++;
+                    } ?>
                 </div>
                 <h2 class="singleWorks__h2 aquatico txt-bright">SP<span class="singleWorks__h2-sub noto">（クリックでモーダル表示します）</span></h2>
                 <div class="singleWorks__img-area flex bet">

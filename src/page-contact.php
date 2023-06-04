@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <article class="contents contact bottom-city">
-    <section class="contact__main wrap w1200 sp-wrap">
+    <section class="contact__main wrap w1200 sp-wrap js-in anime bottom-in">
         <h1 class="common__h2 contact__head pulsate">
             Contact
         </h1>

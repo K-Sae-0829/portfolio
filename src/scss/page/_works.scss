@@ -40,6 +40,7 @@
   }
   .worksItem {
     display: inline-block;
+    position: relative;
     margin-bottom: 6rem;
     width: 100%;
     max-width: 36rem;
@@ -70,6 +71,76 @@
     &__ttl {
       font-size: 1.8rem;
       font-weight: 700;
+    }
+  }
+  // ↓SPの幅
+  @media #{$media-sp} {
+    &__main {
+      margin: 2rem auto 1.1rem;
+    }
+    &__lead {
+      margin: 1rem auto 2rem;
+      font-size: 1.2rem;
+    }
+    &__list {
+      &::after,
+      ::before {
+        width: 100%;
+        max-width: 36rem;
+        height: 0;
+        content: "";
+      }
+    }
+    &__item {
+      margin-bottom: 3rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__search {
+      @include main-border;
+      margin: 4rem 0;
+      padding: 1.5rem;
+    }
+    .search {
+      &__ttl {
+        font-size: 1.4rem;
+      }
+      &__down {
+        margin-left: 1rem;
+      }
+    }
+    .worksItem {
+      margin: 0 auto 4rem;
+      width: 100%;
+      max-width: inherit;
+      //background-color: #fff;
+      //box-shadow: 0px 0px 40px rgba($yellow, 0.25);
+      &__img {
+        //width: fit-content;
+        //height: 50%;
+      }
+      &__cat {
+        display: inline;
+        position: absolute;
+        top: 0;
+        z-index: 3;
+        padding: 0.3rem 1rem;
+        font-size: 1.3rem;
+      }
+      &__txt-area {
+        padding: 1rem;
+        color: #040617;
+      }
+      &__tag {
+        margin-bottom: 0.5rem;
+        padding: 0.2rem 1rem;
+      }
+      &__ttl {
+        margin-right: 1rem;
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
     }
   }
 }
