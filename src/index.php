@@ -152,6 +152,8 @@
                             <div class="swiper-wrapper js-topOriginalSlide__wrap">
                                 <div class="swiper-slide topOriginal__img"><img src="<?php echo T_URL; ?>img/top_tv.png" alt=""></div>
                                 <div class="swiper-slide topOriginal__img"><img src="<?php echo T_URL; ?>img/top_tv_02.png" alt=""></div>
+                                <div class="swiper-slide topOriginal__img"><img src="<?php echo T_URL; ?>img/top_tv.png" alt=""></div>
+                                <div class="swiper-slide topOriginal__img"><img src="<?php echo T_URL; ?>img/top_tv_02.png" alt=""></div>
                             </div>
                         </div>
                     </div>

@@ -21,23 +21,6 @@ Swiper.use([Autoplay, Controller, EffectFade, Navigation, Pagination]) // Swiper
 //     ##  ##      ##  ##  ##  ##
 //  ####   ######  ##  ####    #####
 
-if (document.getElementById('js-topWorkSlide')) {
-  const swiper = new Swiper('.js-topWorkSlide', {
-    direction: 'vertical',
-    loop: true,
-    slidesPerView: 'auto',
-    loopedSlides: 6,
-    speed: 5000,
-    spaceBetween: 10,
-    allowTouchMove: false,
-    autoplay: {
-      delay: 0,
-      stopOnLastSlide: false,
-      disableOnInteraction: false,
-    },
-  })
-}
-
 if (document.getElementById('js-topOriginalSlide')) {
   const swiper = new Swiper('.js-topOriginalSlide', {
     effect: 'fade',
@@ -50,7 +33,24 @@ if (document.getElementById('js-topOriginalSlide')) {
       crossFade: true, // クロスフェード
     },
     autoplay: {
-      delay: 4000, // 待機時間
+      delay: 1000, // 待機時間
+      stopOnLastSlide: false,
+      disableOnInteraction: false,
+    },
+  })
+}
+
+if (document.getElementById('js-topWorkSlide')) {
+  const swiper = new Swiper('.js-topWorkSlide', {
+    direction: 'vertical',
+    loop: true,
+    slidesPerView: 'auto',
+    loopedSlides: 6,
+    speed: 5000,
+    spaceBetween: 10,
+    allowTouchMove: false,
+    autoplay: {
+      delay: 0,
       stopOnLastSlide: false,
       disableOnInteraction: false,
     },

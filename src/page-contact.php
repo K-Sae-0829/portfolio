@@ -5,7 +5,8 @@
             Contact
         </h1>
         <p class="contact__lead">お問い合わせはこちらから受け付けています。</p>
-        <?php echo do_shortcode('[mwform_formkey key="6"]'); ?>
+        <?php //echo do_shortcode('[mwform_formkey key="6"]');
+        ?>
     </section>
 </article>
 <?php get_footer();

@@ -33,7 +33,7 @@
             );
             ?>
 
-            <div class="aboutProfile pc-flex bet vcenter">
+            <div class="aboutProfile pc-flex bet vcenter js-in anime bottom-in">
                 <div class="">
                     <div class="aboutProfile__head flex h-center">
                         <p>きむら さえ</p>
@@ -136,37 +136,108 @@
             <div class="aboutSkills">
                 <div class="aboutSkillsIntroduction">
                     <h3 class="aboutSkillsIntroduction__head">
-                        <i class="icon icon-about_dot-mark aboutSkillsIntroduction__dot txt-bright"></i>１〜５のメモリについて
+                        <i class="icon icon-about_dot-mark aboutSkillsIntroduction__dot txt-bright"></i>バーのメモリについて
                     </h3>
                     <div class="aboutSkills__text flex break">
-                        <p class="aboutSkills__para">1 … 勉強を始めたばかり</p>
-                        <p class="aboutSkills__para">2 … 概要の理解はできた</p>
-                        <p class="aboutSkills__para">3 … 実践を重ねている最中</p>
-                        <p class="aboutSkills__para">4 … 時間短縮が課題</p>
-                        <p class="aboutSkills__para">5 … 実務で十分使用できる</p>
+                        <p class="aboutSkills__para">1 … 概要の理解をしている</p>
+                        <p class="aboutSkills__para">2 … 調べながら業務で使用できる</p>
+                        <p class="aboutSkills__para">3 … 実務で使えるが時短が目標</p>
+                        <p class="aboutSkills__para">4 … 十分使いこなせる</p>
                     </div>
                 </div>
-                <div class="aboutSkills__map">
-                    <div class="aboutSkillsMap flex vcenter">
-                        <div class="aboutSkillsMap__circle">
-                            <div class="aboutSkillsMap__inner">
-                                <img src="<?php echo T_URL; ?>img/about_icon-ps.png" class="aboutSkillsMap__icon">
-                                <p class="aboutSkillsMap__head">Photoshop</p>
+                <?php
+                //  ##      ##   ####  ######
+                //  ##      ##  ##       ##
+                //  ##      ##   ###     ##
+                //  ##      ##     ##    ##
+                //  ######  ##  ####     ##
+
+                $list = array(
+                    array(
+                        'img' => 'about_icon_xd.png',
+                        'head' => 'XD',
+                        'score' => '3',
+                    ),
+                    array(
+                        'img' => 'about_icon-ps.png',
+                        'head' => 'Photoshop',
+                        'score' => '3',
+                    ),
+                    array(
+                        'img' => 'about_icon_ai.png',
+                        'head' => ' Illustrator',
+                        'score' => '3',
+                    ),
+                    array(
+                        'img' => 'about_icon_figma.png',
+                        'head' => ' Figma',
+                        'score' => '1',
+                    ),
+                    array(
+                        'img' => 'about_icon_html.png',
+                        'head' => 'HTML',
+                        'score' => '3',
+                    ),
+                    array(
+                        'img' => 'about_icon_css.png',
+                        'head' => 'CSS',
+                        'score' => '3',
+                    ),
+                    array(
+                        'img' => 'about_icon_js.png',
+                        'head' => 'JavaScript',
+                        'score' => '3',
+                    ),
+                    array(
+                        'img' => 'about_icon_php.png',
+                        'head' => 'PHP',
+                        'score' => '2',
+                    ),
+                    array(
+                        'img' => 'about_icon_wp.png',
+                        'head' => 'Wordpress',
+                        'score' => '2',
+                    ),
+                );
+                foreach ($list as $key => $value) {
+                ?>
+                    <div class="aboutSkills__map">
+                        <div class="aboutSkillsMap flex vcenter">
+                            <div class="aboutSkillsMap__circle">
+                                <div class="aboutSkillsMap__inner">
+                                    <img src="<?php echo T_URL; ?>img/<?php echo $value['img']; ?>" class="aboutSkillsMap__icon">
+                                    <p class="aboutSkillsMap__head"><?php echo nl2br($value['head']); ?></p>
+                                </div>
+                            </div>
+                            <div class="aboutSkillsMap__gragh flex vcenter js-in anime flip-y">
+                                <?php
+                                $counter = 0;
+                                $score = $value['score'];
+                                while ($counter <= 3) {
+                                ?>
+                                    <?php
+                                    if ($counter == $score) {
+                                    ?>
+                                        <i class="icon icon-about_dot-mark aboutSkillsMap__dot aboutSkillsMap__dot--mark txt-bright"></i>
+                                    <?php } else {
+                                    ?>
+                                        <div class="aboutSkillsMap__dot aboutSkillsMap__dot--normal"></div>
+                                    <?php }
+                                    ?>
+                                    <?php
+                                    if ($counter !== 3) {
+                                    ?>
+                                        <div class="aboutSkillsMap__line"></div>
+                                <?php }
+                                    $counter++;
+                                }
+                                ?>
                             </div>
                         </div>
-                        <div class="aboutSkillsMap__gragh flex vcenter">
-                            <div class="aboutSkillsMap__dot aboutSkillsMap__dot--normal"></div>
-                            <div class="aboutSkillsMap__line"></div>
-                            <div class="aboutSkillsMap__dot aboutSkillsMap__dot--normal"></div>
-                            <div class="aboutSkillsMap__line"></div>
-                            <div class="aboutSkillsMap__dot aboutSkillsMap__dot--normal"></div>
-                            <div class="aboutSkillsMap__line"></div>
-                            <div class="aboutSkillsMap__dot aboutSkillsMap__dot--normal"></div>
-                            <div class="aboutSkillsMap__line"></div>
-                            <i class="icon icon-about_dot-mark aboutSkillsMap__dot aboutSkillsMap__dot--mark txt-bright"></i>
-                        </div>
                     </div>
-                </div>
+                <?php
+                }
+                ?>
             </div>
         </section>
         <?php get_template_part('parts-contact'); ?>
