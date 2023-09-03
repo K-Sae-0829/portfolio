@@ -41,14 +41,24 @@ $pale-white: rgba(#ffffff, 0.2);
 
 .common-bg {
   position: relative;
-  z-index: 1;
-  min-height: 100vh;
-  //height: 100%;
-  background-image: url(../img/common-bg.png);
-  background-repeat: no-repeat;
-  background-attachment: fixed; /*--背景画像の固定--*/
-  background-position: center;
-  background-size: cover;
+  &::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    //position: relative;
+    z-index: -1;
+    //min-width: 100vw;
+    height: 100vh;
+    width: 100%;
+    //height: auto;
+    background-image: url(../img/common-bg.png);
+    background-repeat: no-repeat;
+    //background-attachment: fixed; /*--背景画像の固定--*/
+    background-position: center center;
+    background-size: cover;
+  }
 }
 
 .double-border-box {

@@ -139,8 +139,8 @@
       &__head {
         font-size: 1.6rem;
         font-weight: 500;
-        text-align: center;
         color: $siteColor;
+        text-align: center;
       }
       &__gragh {
         width: 100%;
@@ -154,20 +154,20 @@
           //margin: 0 0 0 1rem;
         }
         &--normal {
-          margin: 0 2.4rem;
           display: inline-block;
+          margin: 0 2.4rem;
+          //background-color: #fff;
+          border: 2px solid rgba(#fff, 0.5);
           border-radius: 1000px;
           width: 2.7rem;
           min-width: 2.7rem;
           height: 2.7rem;
-          //background-color: #fff;
-          border: 2px solid rgba(#fff, 0.5);
           &:not(:first-child) {
           }
         }
         &--mark {
-          font-size: 6rem;
           margin: 0 1rem;
+          font-size: 6rem;
         }
       }
       &__line {

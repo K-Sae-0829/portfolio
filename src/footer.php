@@ -22,6 +22,7 @@
     </div>
 </footer>
 </div>
+</div>
 <script>
     {
         var tUrl = '<?php echo T_URL; ?>'
