@@ -49,7 +49,7 @@
   }
   &About {
     margin: 8rem 0 19rem;
-    padding: 6rem;
+    padding: 2rem 6rem 6rem;
     @include over-ray-navy;
     &__head {
       text-align: center;
@@ -140,11 +140,12 @@
   &Original {
     &__head {
       position: relative;
-      top: 16rem;
+      top: 20rem;
       z-index: 2;
+      font-size: 6.3vw;
     }
     &__tv {
-      margin-right: 10rem;
+      margin-right: 6rem;
       width: 55%;
     }
     &__right {

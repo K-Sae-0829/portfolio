@@ -35,10 +35,11 @@
 
             <div class="aboutProfile pc-flex bet vcenter js-in anime bottom-in">
                 <div class="">
-                    <div class="aboutProfile__head flex h-center">
-                        <p>きむら さえ</p>
-                        <p class="aboutProfile__lit">|</p>
-                        <p class="aboutProfile__eng aquatico">KIMURA SAE</p>
+                    <div class="aboutProfile__head flex h-center v-center">
+                        <p>きむら さえ
+                            <span class="aboutProfile__lit">|</span>
+                            <span class="aboutProfile__eng aquatico">KIMURA SAE</span>
+                        </p>
                     </div>
                     <table class="aboutProfile__table">
                         <?php
@@ -80,7 +81,7 @@
                 ),
                 array(
                     'ym' => '2019年 ~ 2020年',
-                    'ttl' => '株式会社SPC　デザイナーアシスタント',
+                    'ttl' => '株式会社PJC　デザイナーアシスタント',
                     'txt' => '桑沢では基本的なデザインツールの操作や一眼レフカメラでの撮影技術、グラフィックデザインやプロダクトデザインなど一通り学んだのちにファッションデザインを専攻しました。
                     ファッションイラストの授業で学んだことは、今のイラストに活かされています。',
                 ),
@@ -109,7 +110,7 @@
                     <?php
                     foreach ($list as $key => $value) {
                     ?>
-                        <div class="aboutCareer__tr flex js-in anime bottom-in">
+                        <div class="aboutCareer__tr pc-flex js-in anime bottom-in">
                             <p class="aboutCareer__th flex"><span class="aboutCareer__dot"></span>
                                 <?php echo nl2br($value['ym']); ?>
                             </p>
@@ -133,7 +134,8 @@
                 <span class="common__h3 common__h3--main">SKILLS</span>
                 <span class="common__h3 common__h3--sub">使えるツールや言語など</span>
             </h2>
-            <div class="aboutSkills">
+            <div class="aboutSkills flex break">
+                <?php /*
                 <div class="aboutSkillsIntroduction">
                     <h3 class="aboutSkillsIntroduction__head">
                         <i class="icon icon-about_dot-mark aboutSkillsIntroduction__dot txt-bright"></i>バーのメモリについて
@@ -145,6 +147,7 @@
                         <p class="aboutSkills__para">4 … 十分使いこなせる</p>
                     </div>
                 </div>
+                */ ?>
                 <?php
                 //  ##      ##   ####  ######
                 //  ##      ##  ##       ##
@@ -201,14 +204,15 @@
                 );
                 foreach ($list as $key => $value) {
                 ?>
-                    <div class="aboutSkills__map">
-                        <div class="aboutSkillsMap flex vcenter">
+                    <div class="aboutSkills__map flex">
+                        <div class="aboutSkillsMap">
                             <div class="aboutSkillsMap__circle">
                                 <div class="aboutSkillsMap__inner">
                                     <img src="<?php echo T_URL; ?>img/<?php echo $value['img']; ?>" class="aboutSkillsMap__icon">
                                     <p class="aboutSkillsMap__head"><?php echo nl2br($value['head']); ?></p>
                                 </div>
                             </div>
+                            <?php /*
                             <div class="aboutSkillsMap__gragh flex vcenter js-in anime flip-y">
                                 <?php
                                 $counter = 0;
@@ -233,6 +237,7 @@
                                 }
                                 ?>
                             </div>
+                            */ ?>
                         </div>
                     </div>
                 <?php

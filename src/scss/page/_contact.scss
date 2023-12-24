@@ -21,7 +21,7 @@
   }
   &__required {
     margin-left: 1rem;
-    padding: 0.1rem 1.2rem 0.2rem;
+    padding: 0.1rem 1.2rem 0.4rem;
     border-radius: 1000px;
     font-size: 1.2rem;
     font-weight: 500;
@@ -33,11 +33,11 @@
     font-size: 1.4rem;
     font-weight: 700;
   }
-  &__input {
+  /*&__input {
     padding: 0.8rem 1rem;
     border-radius: 3px;
     width: 100%;
-    color: #040617;
+    //color: #040617;
     background-color: #fff;
     &--name {
       max-width: 25rem;
@@ -96,7 +96,7 @@
         content: "";
       }
     }
-  }
+  }*/
   .contact__agree-label::after {
     //opacity: 1;
   }
@@ -153,8 +153,21 @@
   }
   &__submit-btn {
     margin: 5rem auto 0;
-    @include over-ray-navy;
+    padding: 0 1.5rem 0.5rem !important;
     cursor: pointer;
+    @include over-ray-navy;
+  }
+  &__thanks-box {
+    @include over-ray-navy;
+    padding: 6rem;
+  }
+  &__thanks-txt {
+    margin-top: 5rem;
+    line-height: 2em;
+    text-align: center;
+  }
+  &__thanks-btn-area {
+    text-align: center;
   }
 }
 .mw_wp_form_input {
@@ -162,16 +175,47 @@
     display: none;
   }
 }
-.mw_wp_form_confirm {
-  .confirm-hidden {
-    display: none;
-  }
-  .contact {
-    &__headline {
-      margin-bottom: 0.5rem;
-    }
-  }
-  .submit {
-    display: none;
-  }
+
+.wpcf7-text {
+  padding: 0.8rem 1rem;
+  border-radius: 3px;
+  width: 100%;
+  max-width: 40rem;
+  color: #040617 !important;
+  //color: #040617;
+  background-color: #fff;
+}
+
+.wpcf7-textarea {
+  padding: 1.5rem;
+  border-radius: 3px;
+  width: 100%;
+  max-width: 110rem;
+  height: 25rem;
+}
+
+.wpcf7-not-valid-tip {
+  margin-top: 0.5rem;
+  font-weight: 700 !important;
+}
+.wpcf7-spinner {
+  display: none !important;
+}
+.wpcf7-submit {
+  border: 0;
+  color: #fff;
+  background: 0;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output {
+  margin: 0 0 4rem !important;
+  padding: 2rem;
+  border-color: #dc3232 !important;
+  border-radius: 0.8rem;
+  font-weight: 500;
+  background-color: #dc3232;
+}
+
+.wpcf7 form.payment-required .wpcf7-response-output {
+  display: none !important;
 }

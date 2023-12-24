@@ -9,13 +9,16 @@
   }
   &__tag {
     display: inline-block;
-    padding: 0.6rem 1rem;
+    padding: 0.6rem 1.5rem;
     border: 1px solid rgba(#fff, 0.3);
     border-radius: 1000px;
     font-size: 1.4rem;
+    min-width: 8rem;
+    text-align: center;
+    margin-right: 0.6rem;
   }
   &__lead {
-    margin-top: 3rem;
+    margin: 3rem 0 8rem;
     font-weight: 500;
     line-height: 2em;
   }
@@ -25,6 +28,54 @@
     border-bottom: solid 2px rgba(#fff, 0.3);
     font-size: 2rem;
   }
+
+  &__tab-area {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 4rem;
+    li a {
+      opacity: 0.4;
+    }
+    li.active a {
+      opacity: 1;
+      @media #{$media-sp} {
+      }
+    }
+  }
+
+  &__li {
+    display: inline-block;
+    margin: 0 2.5rem;
+    width: 8rem;
+    height: 8rem;
+    font-size: 3.5rem;
+    text-align: center;
+    border: solid 2px #fff;
+    border-radius: 1000px;
+  }
+
+  &__main-area {
+    display: none; /*はじめは非表示*/
+    position: relative;
+    opacity: 0;
+
+    &.is-active {
+      display: block; /*表示*/
+      animation-name: displayAnime; /*ふわっと表示させるためのアニメーション*/
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes displayAnime {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+
   &__img-area {
     margin-top: 2rem;
   }
@@ -55,6 +106,38 @@
     padding: 5rem 5rem 3rem;
     @include over-ray-navy;
   }
+  &__data {
+    margin: 20rem 0;
+  }
+  &Data {
+    &__table {
+      display: inline-block;
+      width: 100%;
+      margin-bottom: -8px;
+    }
+    &__tr {
+      display: inline-block;
+      width: 100%;
+      border-bottom: solid 2px rgba(#fff, 0.3);
+      margin-top: -8px;
+      &:last-child {
+        border-bottom: none;
+      }
+      &:first-child {
+        margin-top: 0px;
+      }
+    }
+    &__th {
+      width: 30%;
+      max-width: 31rem;
+      padding: 2rem 4rem;
+      border-right: solid 2px rgba(#fff, 0.3);
+    }
+    &__td {
+      width: 200em;
+      padding-left: 4rem;
+    }
+  }
   &Point {
     &__sec {
       margin-bottom: 3rem;
@@ -75,8 +158,10 @@
   &__modal {
     position: fixed;
     top: 0;
+    bottom: 0;
     z-index: 10000;
     width: 100%;
+    height: 100%;
     transition-duration: 0.5s;
     &:not(.active) {
       //display: none;
@@ -108,21 +193,120 @@
     background-color: rgba(#040617, 0.6);
     background-position: center;
     background-size: cover;
+    -webkit-overflow-scrolling: touch;
   }
   &__modalIn {
     position: fixed;
     top: 50%;
     left: 50%;
     z-index: 10002;
-    width: 80%;
-    height: 90%;
-    overflow: auto;
+    width: 90%;
+    //height: 90%;
+    height: 80rem;
+    //overflow: auto;
+    overflow-y: scroll;
     transform: translate(-50%, -50%);
     overscroll-behavior: contain;
     /* IE, Edge 対応 */
     -ms-overflow-style: none;
     /* Firefox 対応 */
     scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &__pc {
+    position: relative;
+    //top: 10rem;
+    //border-right: 15px solid rgba(#fff, 0.3);
+    //border-bottom: 15px solid rgba(#fff, 0.3);
+    //border-left: 15px solid rgba(#fff, 0.3);
+    // width: calc(100% - 30px);
+    width: 100%;
+    height: 63.8rem;
+    background-image: url(../img/single-works_web-frame.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    /*
+    &::before {
+      display: inline-block;
+      position: absolute;
+      top: -4rem;
+      left: -15px;
+      width: calc(100% + 30px);
+      height: 33.3%;
+      background-image: url(../img/single-works_web-tab.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: "";
+    }
+    &::after {
+      display: inline-block;
+      position: absolute;
+      bottom: 30px;
+      left: -15px;
+      width: calc(100% + 30px);
+      height: 15px;
+      background-color: rgba(#fff, 0.3);
+      content: "";
+      z-index: 3;
+    }*/
+    &:first-of-type {
+      //margin-bottom: 6rem;
+    }
+  }
+  &__pc-inner {
+    position: absolute;
+    display: inline-block;
+    width: calc(100% - 32px);
+    margin: auto auto;
+    height: 58rem;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .js-singleWorks {
+    &__wrap {
+      overflow: hidden;
+      &--pc {
+        width: 100%;
+      }
+      &--sp {
+        width: 37.4rem;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__sp {
+    position: relative;
+    margin: 0 auto;
+    width: 37.4rem;
+    height: 64.3rem;
+    background-image: url(../img/single-works_sp-frame.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  &__sp-inner {
+    position: absolute;
+    display: inline-block;
+    width: calc(100% - 40px);
+    margin: auto auto;
+    height: 53.4rem;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
     &::-webkit-scrollbar {
       display: none;
     }

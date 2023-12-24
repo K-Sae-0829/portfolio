@@ -76,6 +76,26 @@ function scf_meta_box($settings, $post_type, $post_id)
             ),
         ));
         $settings[] = $Setting;
+        $Setting = SCF::add_setting('works-data', '基本データ');
+        $Setting->add_group('works-data', true, array(
+            array(
+                'type'      => 'text', //テキスト
+                'name'        => 'data-tt',
+                'instruction' => 'タイトル', //説明文
+                'notes'       => '幅750px', //注釈
+                'label'       => '', //nameの代替文字
+                'default'     => 'クライアント名,制作年月日,制作時間,ターゲットユーザー,この作品の狙いや目的,クライアントの意向や制作上の制約,使用ソフト、使用言語,担当領域とポジション',    //初期値
+            ),
+            array(
+                'type'      => 'textarea', //テキスト
+                'name'        => 'data-td',
+                'instruction' => '本文', //説明文
+                'notes'       => '', //注釈
+                'label'       => '', //nameの代替文字
+                'default'     => '',    //初期値
+            ),
+        ));
+        $settings[] = $Setting;
         $Setting = SCF::add_setting('works-point', 'ポイント');
         $Setting->add_group('works-point', true, array(
             array(

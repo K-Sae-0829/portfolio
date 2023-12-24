@@ -37,13 +37,20 @@ body {
 // 基本のフォント設定
 body,
 button,
-input,
-select,
-textarea {
+//input,
+select {
   font-family: $sans_serif;
   font-size: 1.6rem;
   font-weight: 400;
   color: $fontColor;
+  word-wrap: break-word;
+}
+
+input,
+textarea {
+  font-family: $sans_serif;
+  font-size: 1.6rem;
+  font-weight: 400;
   word-wrap: break-word;
 }
 

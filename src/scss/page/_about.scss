@@ -7,8 +7,12 @@
   }
   &__profile {
     margin: 11rem 0 13rem;
-    padding: 6rem;
+    padding: 6rem 10rem;
     @include over-ray-navy;
+    @media #{$media-sp} {
+      margin: 6rem 0 8rem;
+      padding: 3rem;
+    }
   }
   &Profile {
     &__head {
@@ -16,6 +20,10 @@
     }
     &__lit {
       margin: 0 3rem;
+      @media #{$media-sp} {
+        display: inline-block;
+        margin: 0 1.5rem;
+      }
     }
     &__eng {
       padding-top: 0.2rem;
@@ -34,9 +42,20 @@
     &__tr {
       display: block;
       margin: 1rem 0;
+      @media #{$media-sp} {
+        display: inline-block;
+        margin: 1rem 0 1.2rem;
+        width: 100%;
+      }
     }
     &__th {
       width: 14rem;
+      @media #{$media-sp} {
+        display: inline-block;
+        width: 100%;
+        font-size: 1.7rem;
+        font-weight: 700;
+      }
     }
   }
   &__career {
@@ -64,7 +83,7 @@
     }
     &__dot {
       display: inline-block;
-      margin-right: 5rem;
+      margin-right: 4rem;
       border-radius: 50%;
       width: 16px;
       height: 16px;
@@ -72,15 +91,21 @@
     }
     &__th {
       display: inline-block;
-      margin-right: 5rem;
+      margin-right: 4rem;
       width: 100%;
       max-width: 22rem;
       font-size: 2rem;
+      @media #{$media-sp} {
+        margin-right: 2rem;
+      }
     }
     &__td {
       &--head {
         margin-bottom: 1.2rem;
         font-size: 2rem;
+        @media #{$media-sp} {
+          margin-right: 2rem;
+        }
       }
       &--txt {
         font-size: 1.5rem;
@@ -91,7 +116,7 @@
     margin-bottom: 26rem;
   }
   &Skills {
-    margin-top: 6rem;
+    margin-top: 3rem;
     &Introduction {
       padding: 4rem;
       border: 2px solid $pale-white;
@@ -113,17 +138,18 @@
       }
     }
     &Map {
+      display: inline-block;
       margin-top: 5rem;
       &__circle {
         position: relative;
         margin-right: 2rem;
-        border: 2px solid rgba(#fff, 0.5);
+        border: 2px solid rgba(#fff, 0.3);
         border-radius: 1000px;
         width: 15rem;
         min-width: 15rem;
         height: 15rem;
         text-align: center;
-        background-color: rgba(#fff, 0.3);
+        background-color: rgba(#fff, 0.7);
       }
       &__inner {
         position: absolute;

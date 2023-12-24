@@ -34,11 +34,35 @@ if (document.getElementById('js-topOriginalSlide')) {
     },
     autoplay: {
       delay: 1000, // 待機時間
-      stopOnLastSlide: false,
+      //stopOnLastSlide: false,
       disableOnInteraction: false,
     },
   })
 }
+
+/*
+if (document.getElementById('js-topOriginalSlide')) {
+  // Swiperコンテナを検出したら実行
+  const slideItem = document.getElementById('js-topOriginalSlide')
+  // eslint-disable-next-line no-unused-vars
+  const topOriginalSlide = new Swiper(slideItem, {
+    effect: 'fade',
+    loop: true,
+    speed: 2000,
+    allowTouchMove: false,
+    preloadImages: true, // スライド内の画像を読み終えてから開始
+    fadeEffect: {
+      // フェードオプション
+      crossFade: true, // クロスフェード
+    },
+    autoplay: {
+      delay: 1000, // 待機時間
+      //stopOnLastSlide: false,
+      disableOnInteraction: false,
+    },
+  })
+}
+*/
 
 if (document.getElementById('js-topWorkSlide')) {
   const swiper = new Swiper('.js-topWorkSlide', {
@@ -53,6 +77,23 @@ if (document.getElementById('js-topWorkSlide')) {
       delay: 0,
       stopOnLastSlide: false,
       disableOnInteraction: false,
+    },
+  })
+}
+
+if (document.getElementById('js-workImgSlide')) {
+  const swiper = new Swiper('.js-workImgSlide', {
+    effect: 'fade',
+    loop: true,
+    slidesPerView: 1,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    preloadImages: true, // スライド内の画像を読み終えてから開始
+    fadeEffect: {
+      // フェードオプション
+      crossFade: true, // クロスフェード
     },
   })
 }
@@ -186,3 +227,49 @@ function modalClose() {
 window.onload = function () {
   luxy.init()
 }
+
+/*
+########    ###    ########
+   ##      ## ##   ##     ##
+   ##     ##   ##  ##     ##
+   ##    ##     ## ########
+   ##    ######### ##     ##
+   ##    ##     ## ##     ##
+   ##    ##     ## ########
+*/
+//任意のタブにURLからリンクするための設定
+function GethashID(hashIDName) {
+  if (hashIDName) {
+    //タブ設定
+    $('.singleWorks__tab-area li')
+      .find('a')
+      .each(function () {
+        //タブ内のaタグ全てを取得
+        var idName = $(this).attr('href') //タブ内のaタグのリンク名（例）#lunchの値を取得
+        if (idName == hashIDName) {
+          //リンク元の指定されたURLのハッシュタグ（例）http://example.com/#lunch←この#の値とタブ内のリンク名（例）#lunchが同じかをチェック
+          var parentElm = $(this).parent() //タブ内のaタグの親要素（li）を取得
+          $('.singleWorks__tab-area li').removeClass('active') //タブ内のliについているactiveクラスを取り除き
+          $(parentElm).addClass('active') //リンク元の指定されたURLのハッシュタグとタブ内のリンク名が同じであれば、liにactiveクラスを追加
+          //表示させるエリア設定
+          $('.singleWorks__main-area').removeClass('is-active') //もともとついているis-activeクラスを取り除き
+          $(hashIDName).addClass('is-active') //表示させたいエリアのタブリンク名をクリックしたら、表示エリアにis-activeクラスを追加
+        }
+      })
+  }
+}
+
+//タブをクリックしたら
+$('.singleWorks__tab-area a').on('click', function () {
+  var idName = $(this).attr('href') //タブ内のリンク名を取得
+  GethashID(idName) //設定したタブの読み込みと
+  return false //aタグを無効にする
+})
+
+// 上記の動きをページが読み込まれたらすぐに動かす
+$(window).on('load', function () {
+  $('.singleWorks__tab-area li:first-of-type').addClass('active') //最初のliにactiveクラスを追加
+  $('.singleWorks__main-area:first-of-type').addClass('is-active') //最初の.areaにis-activeクラスを追加
+  var hashName = location.hash //リンク元の指定されたURLのハッシュタグを取得
+  GethashID(hashName) //設定したタブの読み込み
+})

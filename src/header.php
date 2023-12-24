@@ -50,6 +50,9 @@
     <link href="<?php echo T_URL; ?>font/Aquatico-Regular.otf" rel="stylesheet" media="print" onload="this.media='all'">
     <?php wp_head(); ?>
     <meta name="theme-color" content="#000000">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Zen+Maru+Gothic:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body <?php body_class(); ?> class="">
