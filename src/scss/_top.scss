@@ -76,7 +76,7 @@
       margin: -5rem 2rem 15rem;
     }
     @media #{$media-sp} {
-      margin: -8rem 1.5rem 15rem;
+      margin: 0 1.5rem 10rem;
     }
   }
   &About {
@@ -84,6 +84,7 @@
     padding: 2rem 6rem 6rem;
     @include over-ray-navy;
     @media #{$media-sp} {
+      margin: 0;
       padding: 2rem 2.5rem 6rem;
     }
     &__head {
@@ -114,7 +115,7 @@
       min-height: 50rem;
     }
     @media #{$media-sp} {
-      min-height: 40rem;
+      min-height: 46rem;
     }
     &__bg {
       position: absolute;
@@ -147,29 +148,15 @@
         right: -15%;
       }
       @media #{$media-sp} {
-        min-height: -40%;
+        right: -15%;
       }
     }
     .js-topWorkSlide {
-      padding-right: 2rem;
-      @media #{$media-tab} {
-        padding-right: 1rem;
-      }
-      @media #{$media-sp} {
-        padding-right: 1rem;
-      }
+      padding-right: 1.5rem;
       &--return {
         padding-right: 0rem;
-        padding-left: 2rem;
+        padding-left: 1.5rem;
         transform: rotate(180deg);
-        @media #{$media-tab} {
-          padding-right: 0rem;
-          padding-left: 1rem;
-        }
-        @media #{$media-sp} {
-          padding-right: 0rem;
-          padding-left: 1rem;
-        }
       }
       &__wrap {
         transition-timing-function: linear;
@@ -202,6 +189,9 @@
     }
     &__head {
       margin-bottom: 3rem;
+      @media #{$media-sp} {
+        text-align: center;
+      }
     }
     &__txt {
       margin-bottom: 5rem;
@@ -209,6 +199,9 @@
   }
   &__original {
     margin: 2rem 0 20rem;
+    @media #{$media-sp} {
+      margin: 10rem 0 10rem;
+    }
   }
   &Original {
     &__head {
@@ -216,16 +209,29 @@
       top: 20rem;
       z-index: 2;
       font-size: 6.3vw;
+      @media #{$media-sp} {
+        top: 0;
+        text-align: center;
+        font-size: 5rem;
+        line-height: 1.2em;
+      }
     }
     &__tv {
       margin-right: 6rem;
       width: 55%;
+      @media #{$media-sp} {
+        margin: 3rem auto 3rem;
+        width: 60%;
+      }
     }
     &__right {
       margin-bottom: 10%;
     }
     &__txt {
       margin-bottom: 6rem;
+      @media #{$media-sp} {
+        margin-bottom: 3rem;
+      }
     }
   }
 }

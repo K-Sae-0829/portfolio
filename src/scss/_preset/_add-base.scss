@@ -186,6 +186,9 @@ $pale-white: rgba(#ffffff, 0.2);
     background: linear-gradient(rgba(#010112, 0), rgba(#010112, 0.7), rgba(#010112, 1));
     content: "";
   }
+  @media #{$media-sp} {
+    padding-bottom: 8rem;
+  }
 }
 
 .pulsate {

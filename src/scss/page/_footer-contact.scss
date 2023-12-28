@@ -3,7 +3,12 @@
   padding: 6rem;
   text-align: center;
   @include over-ray-navy;
-
+  @media #{$media-tab} {
+    //margin: -5rem 2rem 15rem;
+  }
+  @media #{$media-sp} {
+    margin: 8rem 2.5rem 0;
+  }
   &__head {
     //margin-bottom: 4rem;
   }
