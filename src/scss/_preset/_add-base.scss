@@ -78,6 +78,12 @@ $pale-white: rgba(#ffffff, 0.2);
     //letter-spacing: 0.18em;
     -webkit-text-stroke: 0.2px #fff;
     filter: drop-shadow (0px 0px 20px #fff);
+    @media #{$media-tab} {
+      font-size: 10rem;
+    }
+    @media #{$media-sp} {
+      font-size: 5rem;
+    }
   }
   &__h3 {
     text-align: center;
@@ -109,9 +115,6 @@ $pale-white: rgba(#ffffff, 0.2);
     }
   }
   @media #{$media-sp} {
-    &__h2 {
-      font-size: 3.5rem;
-    }
     &__h3 {
       &--main {
         display: block;
@@ -161,6 +164,10 @@ $pale-white: rgba(#ffffff, 0.2);
   &__icon {
     font-size: 2rem;
     text-shadow: 0px 0px 20px $yellow;
+  }
+  @media #{$media-sp} {
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 

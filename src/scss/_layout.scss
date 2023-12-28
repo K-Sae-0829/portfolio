@@ -44,6 +44,9 @@ select {
   font-weight: 400;
   color: $fontColor;
   word-wrap: break-word;
+  @media #{$media-sp} {
+    font-size: 1.4rem;
+  }
 }
 
 input,

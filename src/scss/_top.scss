@@ -15,22 +15,45 @@
       transform: rotateY(360deg);
     }
   }
+  &__logo {
+    @media #{$media-tab} {
+      width: 50%;
+      height: auto;
+    }
+    @media #{$media-sp} {
+      width: 60%;
+      height: auto;
+    }
+  }
   &__mv {
     position: relative;
     margin-top: 2rem;
     height: 100vh;
     text-align: center;
+    @media #{$media-tab} {
+      height: 45vh;
+    }
+    @media #{$media-sp} {
+      height: 50vh;
+    }
   }
   &__mv-city {
     position: absolute;
     top: 5rem;
     z-index: -1;
     mix-blend-mode: color-dodge;
+    @media #{$media-sp} {
+      top: auto;
+      bottom: 0;
+    }
     &--bg {
       top: -8rem;
       z-index: -2;
       mix-blend-mode: normal;
       opacity: 0.6;
+      @media #{$media-sp} {
+        top: -8rem;
+      }
     }
   }
   &__infomation {
@@ -41,16 +64,28 @@
     letter-spacing: 0.2em;
     transform: translateX(-50%);
     //writing-mode: vertical-rl;
+    @media #{$media-sp} {
+      width: 100%;
+    }
   }
   //.js-mvNewsSlide {
   //}
   &__about {
     margin: 20rem 0 15rem;
+    @media #{$media-tab} {
+      margin: -5rem 2rem 15rem;
+    }
+    @media #{$media-sp} {
+      margin: -8rem 1.5rem 15rem;
+    }
   }
   &About {
     margin: 8rem 0 19rem;
     padding: 2rem 6rem 6rem;
     @include over-ray-navy;
+    @media #{$media-sp} {
+      padding: 2rem 2.5rem 6rem;
+    }
     &__head {
       text-align: center;
     }
@@ -61,6 +96,10 @@
       width: 100%;
       max-width: 30.6rem;
       background-color: rgba(0, 0, 0, 0);
+      @media #{$media-sp} {
+        margin: 0 auto 3rem;
+        width: 60%;
+      }
     }
     &__btn-area {
       margin-top: 4rem;
@@ -71,6 +110,12 @@
     height: 100%;
     min-height: 74rem;
     overflow: hidden;
+    @media #{$media-tab} {
+      min-height: 50rem;
+    }
+    @media #{$media-sp} {
+      min-height: 40rem;
+    }
     &__bg {
       position: absolute;
       z-index: 4;
@@ -98,13 +143,33 @@
       height: 150%;
       overflow: hidden;
       transform: skew(-20deg, 20deg);
+      @media #{$media-tab} {
+        right: -15%;
+      }
+      @media #{$media-sp} {
+        min-height: -40%;
+      }
     }
     .js-topWorkSlide {
       padding-right: 2rem;
+      @media #{$media-tab} {
+        padding-right: 1rem;
+      }
+      @media #{$media-sp} {
+        padding-right: 1rem;
+      }
       &--return {
         padding-right: 0rem;
         padding-left: 2rem;
         transform: rotate(180deg);
+        @media #{$media-tab} {
+          padding-right: 0rem;
+          padding-left: 1rem;
+        }
+        @media #{$media-sp} {
+          padding-right: 0rem;
+          padding-left: 1rem;
+        }
       }
       &__wrap {
         transition-timing-function: linear;
@@ -114,12 +179,20 @@
         img {
           //width: auto;
           height: 100%;
+          @media #{$media-tab} {
+            width: 15rem;
+            height: auto;
+          }
+          @media #{$media-sp} {
+            width: 20rem;
+            height: auto;
+          }
         }
       }
     }
     &__content {
       position: absolute;
-      top: 50%;
+      top: 45%;
       left: 50%;
       z-index: 5;
       padding: 10rem 2rem;

@@ -224,8 +224,18 @@ function modalClose() {
 }
 
 //luxy
-window.onload = function () {
-  luxy.init()
+const windowWidth = window.innerWidth
+const breakPointA = 1024
+//const breakPointB = 769
+
+const isMobileSize = windowWidth < breakPointA
+//const isTabletSize = windowWidth <= breakPointB && windowWidth > breakPointA
+//const isPcSize = windowWidth > breakPointB
+if (isMobileSize) {
+} else {
+  window.onload = function () {
+    luxy.init()
+  }
 }
 
 /*
