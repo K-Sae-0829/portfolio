@@ -128,10 +128,9 @@
                         </div>
                     <?php } else { //制作物がWEB系以外の時
                     ?>
-                        <div class="">
-                            <p>サイトもの以外の内容</p>
-                            <h2 class="singleWorks__h2 aquatico txt-bright">PC<span class="singleWorks__h2-sub noto">（クリックでモーダル表示します）</span></h2>
-                            <div class="singleWorks__img-area pc-flex bet break">
+                        <div class="singleWorks__otherweb">
+                            <!--<h2 class="singleWorks__h2 aquatico txt-bright">PC<span class="singleWorks__h2-sub noto">（クリックでモーダル表示します）</span></h2>-->
+                            <div class="singleWorks__img-area pc-flex bet">
                                 <?php
                                 $count = 0;
                                 foreach ($pcImg as $fields) {
@@ -140,25 +139,10 @@
                                     $count = 1;
                                     $count = $count++;
                                 ?>
-                                    <button type="button" class="singleWorks__image-pc js-modal js-modal-open" data-modal="<?php echo $count; ?>">
+                                    <button type="button" class="singleWorks__image singleWorks__image--otherweb js-modal js-modal-open" data-modal="<?php echo $count; ?>">
                                         <img src="<?php echo $imageItem[0] ?>" class="singleWorks__img">
                                     </button>
 
-                                <?php $count++;
-                                } ?>
-                            </div>
-                            <h2 class="singleWorks__h2 aquatico txt-bright">SP<span class="singleWorks__h2-sub noto">（クリックでモーダル表示します）</span></h2>
-                            <div class="singleWorks__img-area flex bet">
-                                <?php
-                                foreach ($spImg as $fields) {
-                                    $img = get_post_meta($post->ID, 'sp-img', true);
-                                    $imageItem = wp_get_attachment_image_src($img, 'full');
-                                    $count = 1;
-                                    $count = $count++;
-                                ?>
-                                    <div class="singleWorks__image-sp">
-                                        <img src="<?php echo $imageItem[0] ?>" class="singleWorks__img">
-                                    </div>
                                 <?php $count++;
                                 } ?>
                             </div>
