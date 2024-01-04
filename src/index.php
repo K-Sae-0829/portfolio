@@ -26,21 +26,21 @@
                 ?>
             </div>
             <div class="js-in anime flip-x">
-                <div class="luxy-el" data-speed-y="4">
+                <div class="luxy-el" data-speed-y="1">
                     <img src="<?php echo T_URL; ?>img/logo.png" alt="KIMURASAE's Portpoliosite" class="top__logo">
                 </div>
             </div>
-            <div class="top__mv-city js-in anime bottom-in wave3" data-horizontal="1" data-speed-x="-5">
+            <div class="top__mv-city js-in anime bottom-in wave3" data-horizontal="1" data-speed-x="1">
                 <img src="<?php echo T_URL; ?>img/mv-city.png" alt="">
             </div>
-            <div class="top__mv-city top__mv-city--bg luxy-el" data-horizontal="1" data-speed-x="-5">
+            <div class="top__mv-city top__mv-city--bg luxy-el" data-horizontal="1" data-speed-x="-2">
                 <img src="<?php echo T_URL; ?>img/mv-city-bg.png" alt="">
             </div>
         </div>
         <section class="top__about wrap w1200 sp-wrap js-box js-in anime bottom-in" id="js-box1">
             <?php //<div class="luxy-el" data-speed-y="6" data-offset="-50">
             ?>
-            <div class="luxy-el" data-speed-y="4">
+            <div class="luxy-el" data-speed-y="1">
                 <div class="topAbout double-border-box">
                     <h2 class="common__h2 topAbout__head pulsate">
                         About
@@ -52,9 +52,9 @@
                         <div class="pc-1">
                             <p>
                                 ご覧いただきありがとうございます。<br>
-                                元来絵を描くこと、何かを生み出すことが大好きで、高校から美術科に進学し専門的な勉強を続けてきました。<br>
+                                元来、絵を描くことや創作することが大好きで、<br>高校から美術科に進学し専門的な勉強を続けてきました。<br>
                                 その後桑沢デザイン研究所にてファッションデザインを専攻したのち、紆余曲折を経て、<br>
-                                現在はWebデザイナー・フロントエンドエンジニアとしてキャリアを積んでいる最中です。<br>
+                                現在はWebデザイナー<!--・フロントエンドエンジニアとして-->キャリアを積んでいる最中です。<br>
                                 詳しい経歴やスキルは下記からご覧いただけます。
                             </p>
                             <div class="topAbout__btn-area">
@@ -122,8 +122,7 @@
                         </h2>
                         <p class="topWorks__txt js-in anime bottom-in">
                             お仕事で制作したもの（主にWebデザイン）を掲載しています。<br>
-                            下記ボタンから一覧をご覧いただけます。<br>
-                            ※こちらのページは一時的にパスワードで保護することがあります
+                            下記ボタンから一覧をご覧いただけます。
                         </p>
                         <div class="topAbout__btn-area js-in anime bottom-in">
                             <a href="#" class="mainBtn">
@@ -142,7 +141,7 @@
                     </h2>
                     <div class="pc-flex vend">
                         <div class="topOriginal__tv js-in anime bottom-in">
-                            <div class="swiper js-topOriginalSlide" id="js-topOriginalSlide">
+                            <div class="swiper swiper-container js-topOriginalSlide" id="js-topOriginalSlide">
                                 <div class="swiper-wrapper js-topOriginalSlide__wrap">
                                     <div class="swiper-slide topOriginal__img"><img src="<?php echo T_URL; ?>img/top_tv.png" alt=""></div>
                                     <div class="swiper-slide topOriginal__img"><img src="<?php echo T_URL; ?>img/top_tv_02.png" alt=""></div>
@@ -155,7 +154,7 @@
                             <p class="topOriginal__txt js-in anime bottom-in">
                                 趣味で自主制作したイラストやグラフィック、Webサイトや、<br>
                                 学生時代に描いた絵画・作品などはこちらに掲載しています。<br>
-                                作品の世界観を通して”きむらさえ”という人物像により深みを与えることができたら嬉しいです。
+                                <!--作品の世界観を通して私自身の人物像により深みを与えることができたら嬉しいです。-->
                             </p>
                             <div class="topOriginal__btn-area js-in anime bottom-in">
                                 <a href="<?php echo H_URL; ?>" class="mainBtn">

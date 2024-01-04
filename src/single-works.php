@@ -2,24 +2,25 @@
 <article class="contents singleWorks bottom-city">
     <div id="modalOverlay" class="md-overlay"></div>
     <?php
+
+    $postID = get_the_ID();
+    $tag = get_the_terms($postID, 'works-tag');
+    $cat = get_the_terms($postID, 'works-cat');
+    $lead = get_post_meta($postID, 'lead-txt', true);
+    $pcImg = SCF::get('works-pc');
+    $spImg = SCF::get('works-sp');
+    $data = SCF::get('works-data');
+    $point = SCF::get('works-point');
+
     if (have_posts()) {
         while (have_posts()) {
             the_post();
-            $postID = get_the_ID();
-            $tag = get_the_terms($postID, 'works-tag');
-            $cat = get_the_terms($postID, 'works-cat');
-            $data = get_the_terms($postID, 'works-data');
-            $lead = get_post_meta($postID, 'lead-txt', true);
-            $pcImg = SCF::get('works-pc');
-            $spImg = SCF::get('works-sp');
-            $point = SCF::get('works-point');
     ?>
             <?php
             $count = 0;
             foreach ($pcImg as $fields) {
-                $img = get_post_meta($post->ID, 'pc-img', true);
+                $img = get_post_meta($post->ID, 'pc-img', false);
                 $imageItem = wp_get_attachment_image_src($img, 'full');
-                //$count = $count++;
             ?>
                 <div class="singleWorks__modal js-modal js-modal--<?php echo $count; ?>">
                     <button type="button" class="singleWorks__bg js-modal-close"></button>
@@ -27,7 +28,7 @@
                         <i class="singleWorks__closeIcon is-false icon-close"></i>
                     </button>
                     <div class="singleWorks__modalIn">
-                        <img src="<?php echo $imageItem[0] ?>" class="singleWorksModal__img">
+                        <img src="<?php echo $imageItem ?>" class="singleWorksModal__img">
                     </div>
                     <div class="singleWorks__nonScroll"></div>
                 </div>
@@ -35,12 +36,12 @@
                 $count++;
             }
             ?>
+
             <?php
             $count = 0;
             foreach ($spImg as $fields) {
                 $img = get_post_meta($post->ID, 'sp-img', true);
                 $imageItem = wp_get_attachment_image_src($img, 'full');
-                //$count = $count++;
             ?>
                 <div class="singleWorks__modal js-modal js-modal--sp-<?php echo $count; ?>">
                     <button type="button" class="singleWorks__bg js-modal-close"></button>
@@ -78,50 +79,63 @@
                             <li><a href="#tab-sp" class="singleWorks__li no-move"><i class="icon icon-smartphone"></i></a></li>
 
                         </ul>
-                        <div class="singleWorks__main-area is-active" id="tab-pc">
-                            <div class="swiper js-workImgSlide" id="js-workImgSlide">
-                                <div class="singleWorks__img-area singleWorks__web">
-                                    <div class="swiper-wrapper js-singleWorks__wrap js-singleWorks__wrap--pc">
-                                        <?php
-                                        $count = 0;
-                                        foreach ($pcImg as $fields) {
-                                            $img = get_post_meta($post->ID, 'pc-img', true);
-                                            $imageItem = wp_get_attachment_image_src($img, 'full');
-                                            //$count = 1;
-                                            //$count = $count++;
-                                        ?>
-                                            <div class="swiper-slide">
-                                                <div class="singleWorks__pc">
-                                                    <button type="button" class="singleWorks__pc-inner js-modal js-modal-open" data-modal="<?php echo $count; ?>">
-                                                        <img src="<?php echo $imageItem[0] ?>" class="singleWorks__img">
-                                                    </button>
-                                                </div>
-                                            </div>
+                        <?php
+                        if (!empty($pcImg)) {
+                        ?>
 
-                                        <?php $count++;
-                                        } ?>
+                            <div class="singleWorks__main-area is-active" id="tab-pc">
+                                <div class="singleWorks__img-area singleWorks__web">
+                                    <div class="swiper swiper-container js-workImgSlide js-singleWorks__wrap js-singleWorks__wrap--pc" id="js-workImgSlide">
+                                        <div class="swiper-wrapper">
+                                            <?php
+                                            $count = 0;
+                                            //var_dump($pcImg);
+                                            foreach ($pcImg as $key => $keys) {
+                                                $img = get_post_meta($post->ID, 'pc-img', false);
+                                                $imageItem = wp_get_attachment_image_url($img[$key], 'full');
+                                                //$count = 1;
+                                                //$count = $count++;
+                                            ?>
+                                                <div class="swiper-slide">
+                                                    <div class="singleWorks__pc">
+                                                        <button type="button" class="singleWorks__pc-inner js-modal js-modal-open" data-modal="<?php echo $count; ?>">
+                                                            <img src="<?php echo $imageItem ?>" class="singleWorks__img">
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                            <?php $count++;
+                                            } ?>
+                                        </div>
+                                        <div class="singleWorks__dot">
+                                            <div class="singleWorks__pagination swiper-pagination"></div>
+                                        </div>
                                     </div>
-                                    <div class="swiper-pagination"></div>
                                 </div>
+
                             </div>
-                        </div>
+                        <?php
+                        } ?>
                         <div class="singleWorks__main-area" id="tab-sp">
-                            <div class="swiper js-workImgSlide" id="js-workImgSlide">
-                                <div class="singleWorks__img-area">
+                            <div class="singleWorks__img-area">
+                                <div class="swiper js-workImgSlide-sp swiper-container js-singleWorks__sp-slide" id="js-workImgSlide-sp">
                                     <div class="swiper-wrapper js-singleWorks__wrap js-singleWorks__wrap--sp">
                                         <?php
                                         foreach ($spImg as $fields) {
-                                            $img = get_post_meta($post->ID, 'sp-img', true);
-                                            $imageItem = wp_get_attachment_image_src($img, 'full');
+                                            $img = get_post_meta($post->ID, 'sp-img', false);
+                                            $imageItem = wp_get_attachment_image_url($img[$key], 'full');
                                         ?>
                                             <div class="swiper-slide">
                                                 <div class="singleWorks__sp">
                                                     <button type="button" class="singleWorks__sp-inner js-modal js-modal-open" data-modal="sp-<?php echo $count; ?>">
-                                                        <img src="<?php echo $imageItem[0] ?>" class="singleWorks__img">
+                                                        <img src="<?php echo $imageItem ?>" class="singleWorks__img">
                                                     </button>
                                                 </div>
                                             </div>
                                         <?php } ?>
+                                    </div>
+                                    <div class="singleWorks__dot">
+                                        <div class="singleWorks__pagination swiper-pagination-sp"></div>
                                     </div>
                                 </div>
                             </div>
@@ -130,61 +144,96 @@
                     ?>
                         <div class="singleWorks__otherweb">
                             <!--<h2 class="singleWorks__h2 aquatico txt-bright">PC<span class="singleWorks__h2-sub noto">（クリックでモーダル表示します）</span></h2>-->
-                            <div class="singleWorks__img-area pc-flex bet">
-                                <?php
-                                $count = 0;
-                                foreach ($pcImg as $fields) {
-                                    $img = get_post_meta($post->ID, 'pc-img', true);
-                                    $imageItem = wp_get_attachment_image_src($img, 'full');
-                                    $count = 1;
-                                    $count = $count++;
-                                ?>
-                                    <button type="button" class="singleWorks__image singleWorks__image--otherweb js-modal js-modal-open" data-modal="<?php echo $count; ?>">
-                                        <img src="<?php echo $imageItem[0] ?>" class="singleWorks__img">
-                                    </button>
+                            <?php
+                            if (!empty($pcImg)) {
+                            ?>
+                                <div class="singleWorks__img-area pc-flex bet">
+                                    <?php
+                                    $img = get_post_meta($post->ID, 'pc-img', false);
+                                    $count = 0;
+                                    foreach ($pcImg as $key => $keys) {
+                                        //$imageItem = wp_get_attachment_image_src($img, 'full');
+                                        $imageItem = wp_get_attachment_image_url($img[$key], 'full');
+                                        $count = 1;
+                                        $count = $count++;
+                                    ?>
+                                        <button type="button" class="singleWorks__image singleWorks__image--otherweb js-modal js-modal-open" data-modal="<?php echo $count; ?>">
+                                            <img src="<?php echo $imageItem ?>" class="singleWorks__img">
+                                        </button>
 
-                                <?php $count++;
-                                } ?>
-                            </div>
+                                    <?php $count++;
+                                    } ?>
+                                </div>
+                            <?php }
+                            ?>
                         </div>
                 <?php }
                 } ?>
+                <?php
+                if (!empty($data)) {
+                ?>
+                    <div class="singleWorks__data double-border-box">
+                        <table class="singleWorksData__table pc-flex bet">
 
-                <div class="singleWorks__data double-border-box">
-                    <table class="singleWorksData__table pc-flex bet">
+                            <?php
+                            $datatt = get_post_meta($post->ID, 'data-tt', false);
+                            $datadd = get_post_meta($post->ID, 'data-td', false);
+                            $count = 0;
+                            foreach ($data as $key => $keys) {
+                            ?>
+                                <tr class="singleWorksData__tr">
+                                    <th class="singleWorksData__th">
+                                        <?php echo nl2br($datatt[$key]);
+                                        ?>
+                                        <?php //echo $key['data-tt'];
+                                        ?>
+                                    </th>
+                                    <td class="singleWorksData__td">
+                                        <?php echo nl2br($datadd[$key]);
+                                        ?>
+                                        <?php //echo $key['data-td'];
+                                        ?>
+                                    </td>
+                                    <?php //echo $count;
+                                    ?>
+                                </tr>
+                            <?php
+                                //}
+                            }
+                            ?>
+                        </table>
+
+                    </div>
+                <?php
+                }
+                ?>
+
+                <?php
+                if (!empty($point)) {
+                ?>
+                    <div class="singleWorks__point double-border-box">
+                        <h2 class="singleWorks__h3 common__h3"><span class="common__h3 common__h3--main">POINT</span><span class="common__h3 common__h3--sub noto">デザインポイント</span></h2>
                         <?php
-                        foreach ($data as $fields) {
-                            $datatt = get_post_meta($post->ID, 'data-tt', true);
-                            $datadd = get_post_meta($post->ID, 'data-td', true);
+                        $pointTxt = get_post_meta($post->ID, 'point-txt', false);
+                        $pointImg = get_post_meta($post->ID, 'point-img', false);
+                        foreach ($point as $key => $keys) {
+                            $pointImgItem = wp_get_attachment_image_url($pointImg[$key], 'full');
                         ?>
-                            <tr class="singleWorksData__tr">
-                                <th class="singleWorksData__th"><?php echo nl2br($datatt); ?></th>
-                                <td class="singleWorksData__td"><?php echo nl2br($datadd); ?></td>
-                            </tr>
-                        <?php
-                        }
-                        ?>
-                    </table>
+                            <div class="singleWorksPoint__sec pc-flex bet">
+                                <p class="singleWorksPoint__txt"><?php echo nl2br($pointTxt[$key]); ?></p>
+                                <?php if (!empty($pointImgItem)) { ?>
+                                    <img src="<?php echo $pointImgItem ?>">
+                                <?php } ?>
+                            </div>
+                        <?php } ?>
+                    </div>
 
-                </div>
+                <?php } ?>
 
-                <div class="singleWorks__point double-border-box">
-                    <h2 class="singleWorks__h3 common__h3"><span class="common__h3 common__h3--main">POINT</span><span class="common__h3 common__h3--sub noto">デザインポイント</span></h2>
-                    <?php
-                    foreach ($point as $fields) {
-                        $pointTxt = get_post_meta($post->ID, 'point-txt', true);
-                        $pointImg = get_post_meta($post->ID, 'point-img', true);
-                        $pointImgItem = wp_get_attachment_image_src($pointImg, 'full');
-                    ?>
-                        <div class="singleWorksPoint__sec pc-flex bet">
-                            <p class="singleWorksPoint__txt"><?php echo nl2br($pointTxt); ?></p>
-                            <img src="<?php echo $pointImgItem[0] ?>">
-                        </div>
-                    <?php } ?>
-                </div>
             </div>
     <?php
         }
+        wp_reset_postdata();
     } ?>
     <?php get_template_part('parts-contact'); ?>
 </article>

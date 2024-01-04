@@ -57,7 +57,7 @@ function scf_meta_box($settings, $post_type, $post_id)
             array(
                 'type'      => 'image', //テキスト
                 'name'        => 'pc-img',
-                'instruction' => 'PC画像', //説明文
+                'instruction' => 'PC画像またはDTP/ペラ画像', //説明文
                 'notes'       => '幅1920px', //注釈
                 'label'       => '', //nameの代替文字
                 'default'     => '',    //初期値

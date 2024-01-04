@@ -83,7 +83,7 @@
     &-pc {
       width: 59rem;
       height: 29.4rem;
-      overflow: hidden;
+      //overflow: hidden;
       @media #{$media-notfull} {
         width: 100%;
         height: 46.8vw;
@@ -92,14 +92,21 @@
     &-sp {
       width: 32.5%;
       height: 60rem;
-      overflow: hidden;
+      //overflow: hidden;
       @media #{$media-notfull} {
         height: 48.8vw;
       }
     }
     &--otherweb {
-      width: 48%;
-      height: auto;
+      //width: 48%;
+      //height: auto;
+      margin: 1rem;
+      &:first-child {
+        margin: 0 1rem 0 0;
+      }
+      &:last-child {
+        margin: 0 0 0 1rem;
+      }
     }
   }
   &__img {
@@ -200,16 +207,16 @@
     -webkit-overflow-scrolling: touch;
   }
   &__modalIn {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    z-index: 10002;
+    //position: fixed;
+    //top: 50vh;
+    //left: 50%;
+    //z-index: 10002;
     width: 90%;
     //height: 90%;
-    height: 80rem;
+    height: 70vh;
     //overflow: auto;
     overflow-y: scroll;
-    transform: translate(-50%, -50%);
+    //transform: translate(-50%, -50%);
     overscroll-behavior: contain;
     /* IE, Edge 対応 */
     -ms-overflow-style: none;
@@ -278,7 +285,6 @@
   }
   .js-singleWorks {
     &__wrap {
-      overflow: hidden;
       &--pc {
         width: 100%;
       }
@@ -286,6 +292,28 @@
         margin: 0 auto;
         width: 37.4rem;
       }
+    }
+    &__sp-slide {
+      width: 37.4rem;
+    }
+  }
+  &__dot {
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 4rem;
+  }
+  .swiper-pagination-bullet {
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 1000rem;
+    margin: 0 1rem !important;
+    background-color: red !important;
+    cursor: pointer;
+    &-active {
+      background-color: #fff !important;
     }
   }
 

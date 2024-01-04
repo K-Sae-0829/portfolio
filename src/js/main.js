@@ -27,7 +27,7 @@ if (document.getElementById('js-topOriginalSlide')) {
     loop: true,
     speed: 2000,
     allowTouchMove: false,
-    preloadImages: true, // スライド内の画像を読み終えてから開始
+    //preloadImages: true, // スライド内の画像を読み終えてから開始
     fadeEffect: {
       // フェードオプション
       crossFade: true, // クロスフェード
@@ -65,7 +65,7 @@ if (document.getElementById('js-topOriginalSlide')) {
 */
 
 if (document.getElementById('js-topWorkSlide')) {
-  const swiper = new Swiper('.js-topWorkSlide', {
+  const swiper02 = new Swiper('.js-topWorkSlide', {
     direction: 'vertical',
     loop: true,
     slidesPerView: 'auto',
@@ -82,22 +82,42 @@ if (document.getElementById('js-topWorkSlide')) {
 }
 
 if (document.getElementById('js-workImgSlide')) {
-  const swiper = new Swiper('.js-workImgSlide', {
-    effect: 'fade',
-    loop: true,
+  const swiper03 = new Swiper('.js-workImgSlide', {
+    //effect: 'fade',
     slidesPerView: 1,
+    loop: true,
+    //slidesPerView: 1,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
+      type: 'bullets',
     },
-    preloadImages: true, // スライド内の画像を読み終えてから開始
-    fadeEffect: {
-      // フェードオプション
-      crossFade: true, // クロスフェード
-    },
+    //preloadImages: true, // スライド内の画像を読み終えてから開始
+    //fadeEffect: {
+    // フェードオプション
+    //crossFade: true, // クロスフェード
+    //},
   })
 }
 
+if (document.getElementById('js-workImgSlide-sp')) {
+  const swiper04 = new Swiper('.js-workImgSlide-sp', {
+    //effect: 'fade',
+    slidesPerView: 1,
+    loop: true,
+    //slidesPerView: 1,
+    pagination: {
+      el: '.swiper-pagination-sp',
+      clickable: true,
+      type: 'bullets',
+    },
+    //preloadImages: true, // スライド内の画像を読み終えてから開始
+    //fadeEffect: {
+    // フェードオプション
+    //crossFade: true, // クロスフェード
+    //},
+  })
+}
 /*if (document.getElementById('js-mvNewsSlide')) {
   const swiper = new Swiper('.js-mvNewsSlide', {
     loop: true,
@@ -256,7 +276,7 @@ function GethashID(hashIDName) {
       .each(function () {
         //タブ内のaタグ全てを取得
         var idName = $(this).attr('href') //タブ内のaタグのリンク名（例）#lunchの値を取得
-        if (idName == hashIDName) {
+        if (idName === hashIDName) {
           //リンク元の指定されたURLのハッシュタグ（例）http://example.com/#lunch←この#の値とタブ内のリンク名（例）#lunchが同じかをチェック
           var parentElm = $(this).parent() //タブ内のaタグの親要素（li）を取得
           $('.singleWorks__tab-area li').removeClass('active') //タブ内のliについているactiveクラスを取り除き
