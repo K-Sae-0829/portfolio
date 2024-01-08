@@ -6,10 +6,10 @@
                     <div class="footerLogo__img">
                         <img src="<?php echo T_URL; ?>img/logo.png" alt="ロゴ画像">
                     </div>
-                    <div class="footerLogo__text aquatico">KIMURA SAE<br>DESIGN & ILLUSTRATION<br>PORTFOLIO SITE</div>
+                    <div class="footerLogo__text aquatico">KIMURA SAE<br>PORTFOLIO SITE</div>
                 </a>
             </div>
-            <div class="footerLink aquatico">
+            <div class="footerLink aquatico pc">
                 <ul class="footerLink__list pc-flex vcenter">
                     <li class="footerLink__item"><a class="footerLink__link" href="<?php echo H_URL; ?>about/" target="">ABOUT</a></li>
                     <li class="footerLink__item"><a class="footerLink__link" href="<?php echo H_URL; ?>works/" target="">WORKS</a></li>

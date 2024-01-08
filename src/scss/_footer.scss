@@ -15,6 +15,16 @@
         color: #fff;
       }
     }
+    @media #{$media-sp} {
+      &__img {
+        margin-right: 2rem;
+        width: 7rem;
+      }
+      &__text {
+        font-size: 1rem;
+        color: #fff;
+      }
+    }
   }
   &Link {
     &__item {

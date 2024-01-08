@@ -28,7 +28,7 @@
                 ),
                 array(
                     'th' => '好きな音楽',
-                    'td' => 'AOR',
+                    'td' => 'AOR・R&B',
                 ),
             );
             ?>
@@ -40,6 +40,9 @@
                             <span class="aboutProfile__lit">|</span>
                             <span class="aboutProfile__eng aquatico">KIMURA SAE</span>
                         </p>
+                    </div>
+                    <div class="aboutProfile__image sp">
+                        <img src="<?php echo T_URL; ?>img/portrait.png" alt="">
                     </div>
                     <table class="aboutProfile__table">
                         <?php
@@ -54,7 +57,7 @@
                         ?>
                     </table>
                 </div>
-                <div class="aboutProfile__image">
+                <div class="aboutProfile__image pc">
                     <img src="<?php echo T_URL; ?>img/portrait.png" alt="">
                 </div>
             </div>
@@ -69,39 +72,63 @@
 
             $list = array(
                 array(
-                    'ym' => '2013年 ~ 2016年',
+                    'ym' => '2016年　3月',
                     'ttl' => '茨城県立取手松陽高校美術課程 修了',
-                    'txt' => '元来、絵を描くことや何かを創造したり表現することが大好きで、高校は美術科に進学し、作品作りに没頭しました。デッサンに明け暮れ、油画を描き、版画を作ったり、平面構成をしたり…。美術に思う存分没頭した高校生活は、私の宝物です。',
+                    'txt' => '元来「絵を描く」「何かを生み出す・作る」ということが好きで、美術分野を極めたいという思いから、高校は美術科に進学しました。基礎であるデッサンをはじめ、主に油絵とデザインを学びました。<br>当時は放課後も美術棟に籠って毎日モチーフや石膏に向き合っていました。やればやるだけ技術が高まっていくのもとても嬉しかったですが、この時の「物事を多角的に捉える視点」「情報を整理して絵を見た人に何を伝えていくか？」という心掛けは今も制作などをする上で強く繋がっている思考です。',
+                    'img' => array(
+                        '1' => 'small-high01.jpg',
+                        '2' => 'small-high02.jpg',
+                        '3' => 'small-high03.jpg',
+                        '4' => 'small-high04.jpg',
+                    ),
                 ),
                 array(
-                    'ym' => '2016年 ~ 2019年',
+                    'ym' => '2019年　3月',
                     'ttl' => '桑沢デザイン研究所 ファッションデザイン科　修了',
-                    'txt' => '桑沢では基本的なデザインツールの操作や一眼レフカメラでの撮影技術、グラフィックデザインやプロダクトデザインなど多ジャンルのデザイン大枠を学んだのちにファッションデザインを専攻しました。
-                    ファッションイラストの授業で学んだことは、今のイラストに活かされています。',
+                    'txt' => '高校卒業後は桑沢デザイン研究所に進学し、Adobeソフトの扱い方や、一眼レフを用いた写真撮影方法などの基礎的なスキルを身に付けました。<br>2年次からはファッションデザイン科を専攻し、パターンや縫製などの授業で、服の構造や成り立ち方を論理的に理解していきました。元来直感的に物事を捉える傾向がありましたが、構造などをきちんと知った上で考えるデザインは一回りも二回りも説得力が生まれることを体感しました。桑沢での様々な学びを通して、論理的視点からもものづくりをしていくことを意識するようになりました。<br>卒業制作では「スモッキング」という、布を糸でかがり寄せて浮き上がる面白いテキスタイル表現を用いた洋服を制作しました。',
+                    'img' => array(
+                        '1' => 'small-kuwa01.jpg',
+                        '2' => 'small-kuwa02.jpg',
+                        '3' => 'small-kuwa03.jpg',
+                        '4' => 'small-kuwa04.jpg',
+                    ),
                 ),
                 array(
-                    'ym' => '2019年 ~ 2020年',
-                    'ttl' => '株式会社PJC　デザイナーアシスタント',
-                    'txt' => '桑沢では基本的なデザインツールの操作や一眼レフカメラでの撮影技術、グラフィックデザインやプロダクトデザインなど一通り学んだのちにファッションデザインを専攻しました。
-                    ファッションイラストの授業で学んだことは、今のイラストに活かされています。',
+                    'ym' => '2020年　4月',
+                    'ttl' => '株式会社PJC　デザイナーアシスタント　退職',
+                    'txt' => 'オリジナルの刺繍生地から衣類・雑貨の企画をし販売まで一貫して行うミセス向けアパレルブランドで企画アシスタントとして1年間、企画補佐や在庫管理、生産管理、接客、事務作業など様々な業務を経験しました。業務内容が多義にわたっていたため、優先順位を付けて効率よくこなせるように心掛けていました。',
+                    'img' => array(
+                        '1' => '',
+                        '2' => '',
+                        '3' => '',
+                        '4' => '',
+                        '5' => '',
+                    ),
                 ),
                 array(
                     'ym' => '2020年　12月',
-                    'ttl' => 'テラハウスICA　マークアップWEBデザイン実践科修了',
-                    'txt' => '桑沢では基本的なデザインツールの操作や一眼レフカメラでの撮影技術、グラフィックデザインやプロダクトデザインなど一通り学んだのちにファッションデザインを専攻しました。
-                    ファッションイラストの授業で学んだことは、今のイラストに活かされています。',
+                    'ttl' => 'テラハウスICA　マークアップWEBデザイン実践科　修了',
+                    'txt' => '元来興味のあったWeb業界に挑戦したいという思いから、自主学習と4ヶ月間の職業訓練校でマークアップ言語とWEBデザインの基礎知識を習得。',
+                    'img' => '',
                 ),
                 array(
-                    'ym' => '2021年～現在',
+                    'ym' => '2021年　5月',
+                    'ttl' => '株式会社フライングハイワークス　アルバイト　退職',
+                    'txt' => '訓練校の伝手で半年弱、WEB制作会社の企画部にて既存サイトの更新業務やディレクター職補佐を担当。',
+                    'img' => '',
+                ),
+                array(
+                    'ym' => '2021年～',
                     'ttl' => '株式会社SPC　WEBクリエイター',
                     'txt' => '桑沢では基本的なデザインツールの操作や一眼レフカメラでの撮影技術、グラフィックデザインやプロダクトデザインなど一通り学んだのちにファッションデザインを専攻しました。
                     ファッションイラストの授業で学んだことは、今のイラストに活かされています。',
+                    'img' => '',
                 ),
             );
             ?>
 
             <h2 class="common__h3 about__h3">
-                <span class="common__h3 common__h3--main">career</span>
+                <span class="common__h3 common__h3--main">CAREER</span>
                 <span class="common__h3 common__h3--sub">経歴</span>
             </h2>
             <div class="aboutCareer">
@@ -134,7 +161,7 @@
                 <span class="common__h3 common__h3--main">SKILLS</span>
                 <span class="common__h3 common__h3--sub">使えるツールや言語など</span>
             </h2>
-            <div class="aboutSkills flex break">
+            <div class="aboutSkills flex break sp-bet">
                 <?php /*
                 <div class="aboutSkillsIntroduction">
                     <h3 class="aboutSkillsIntroduction__head">
@@ -205,7 +232,7 @@
                 foreach ($list as $key => $value) {
                 ?>
                     <div class="aboutSkills__map flex">
-                        <div class="aboutSkillsMap">
+                        <div class="aboutSkillsMap js-in anime bottom-in">
                             <div class="aboutSkillsMap__circle">
                                 <div class="aboutSkillsMap__inner">
                                     <img src="<?php echo T_URL; ?>img/<?php echo $value['img']; ?>" class="aboutSkillsMap__icon">

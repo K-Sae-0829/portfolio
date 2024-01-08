@@ -13,8 +13,8 @@
                 管理者宛にメールを送信しました。<br>
                 1週間以内に折り返しご連絡いたしますので、今しばらくお待ちください。
             </p>
-            <a href="<?php echo H_URL; ?>" class=" contact__comfirm-btn mainBtn">
-                <span class="blink-2">BACK TO TOP</span><i class="icon icon-up-arrow mainBtn__icon blink"></i>
+            <a href="<?php echo H_URL; ?>" class="contact__comfirm-btn mainBtn mainBtn--back">
+                <i class="icon icon-up-arrow mainBtn__icon blink"></i><span class="blink-2">BACK TO TOP</span>
             </a>
         </div>
 

@@ -26,13 +26,15 @@
   }
   &__search {
     @include main-border;
+    @include over-ray-navy;
     margin: 10rem 0 8.4rem;
-    padding: 2.5rem;
+    padding: 2.5rem 4rem;
     border-radius: 1rem;
   }
   .search {
     &__ttl {
       text-align: center;
+      cursor: pointer;
     }
     &__down {
       margin-left: 1rem;
@@ -146,5 +148,96 @@
         font-weight: 700;
       }
     }
+  }
+  /*
+##    ##    ###    ########  ########   #######  ##      ##
+###   ##   ## ##   ##     ## ##     ## ##     ## ##  ##  ##
+####  ##  ##   ##  ##     ## ##     ## ##     ## ##  ##  ##
+## ## ## ##     ## ########  ########  ##     ## ##  ##  ##
+##  #### ######### ##   ##   ##   ##   ##     ## ##  ##  ##
+##   ### ##     ## ##    ##  ##    ##  ##     ## ##  ##  ##
+##    ## ##     ## ##     ## ##     ##  #######   ###  ###
+*/
+  &SelectBlock {
+    &__searchResult {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 2px solid rgba(#ffffff, 0.2);
+    }
+    &__wrapper {
+      padding-bottom: 2rem;
+    }
+    input {
+      display: none;
+    }
+    &__selectBlock label {
+      display: inline;
+    }
+    &__check label .el_checkbox {
+      display: inline-block;
+      position: relative;
+      top: 3px;
+      margin-right: 5px;
+      border: 1px solid $siteColor;
+      width: 2rem;
+      height: 2rem;
+      background-color: #fff;
+    }
+    &__check label {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      cursor: pointer;
+      .el_checkbox:after {
+        position: absolute;
+        top: 3px;
+        right: 3px;
+        bottom: 3px;
+        left: 3px;
+        content: "";
+      }
+    }
+    &__check input[type="checkbox"]:checked + label .el_checkbox:after {
+      background-color: #a61165;
+    }
+    &__ttl {
+      display: inline-block;
+      margin: 2rem 0 1rem;
+      padding-left: 1rem;
+      border-left: solid 0.5rem rgba(#fff, 0.7);
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 1.2em;
+      color: rgba(#fff, 0.7);
+    }
+    &__check {
+      display: inline-block;
+      margin-right: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    &__check:last-child {
+      margin-right: 0;
+    }
+    &__release {
+      position: relative;
+      margin: 2rem auto 1rem;
+      font-size: 1.3rem;
+      text-align: center;
+      i {
+        position: absolute;
+        top: 50%;
+        right: 2rem;
+        font-size: 1.3rem;
+        transform: translateY(-50%);
+      }
+    }
+    .js_release {
+      cursor: pointer;
+    }
+  }
+  .js_target {
+    display: none;
+  }
+  .js_target.js_selected {
+    display: block;
   }
 }

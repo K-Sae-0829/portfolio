@@ -43,6 +43,7 @@
     <title>
         <?php wp_title('|', true, 'right'); ?>
     </title>
+    <link rel="shortcut icon" href="<?php echo T_URL; ?>img/favicon.ico">
     <link rel="stylesheet" type="text/css" media="all" href="<?php echo T_URL; ?>css/common.css?v<?php echo filemtime(T_PATH . 'css/common.css'); ?>" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -57,29 +58,31 @@
 
 <body <?php body_class(); ?> class="">
     <div class="common-bg">
-        <div id="luxy">
-            <div id="overlay" class="md-overlay"></div>
-            <header id="header" class="header" itemscope="" itemtype="https://schema.org/WPHeader">
-                <div class="header__frame">
-                    <div class="header__base flex bet str">
-                        <?php if (is_home() || is_front_page()) { ?>
-                            <div class="header__left flex vcenter">
-                                <a class="header__mailform" href="<?php echo H_URL; ?>">
-                                    <i class="icon icon-mail txt-bright"></i>
-                                </a>
-                            </div>
-                        <?php } else { ?>
-                            <div class="header__left flex vcenter">
-                                <a class="headerLogo" href="<?php echo H_URL; ?>">
-                                    <?php echo IS_HOME ? '<h1 class="headerLogo__in flex vcenter">' : '<span class="headerLogo__in flex vcenter">'; ?>
-                                    <img class="headerLogo__img" src="<?php echo T_URL; ?>img/logo.png" alt="KIMURASAE's Portpoliosite" />
-                                    <span class="headerLogo__text aquatico">KIMURA SAE<br>PORTFOLIO SITE</span>
-                                    <?php echo IS_HOME ?  '</h1>' : '</span>'; ?>
-                                </a>
-                            </div>
-                        <?php }; ?>
-                        <div class="header__right flex">
-                            <!--<div class="pc headerPulldown">
+        <div id="overlay" class="md-overlay"></div>
+        <header id="header" class="header" itemscope="" itemtype="https://schema.org/WPHeader">
+            <div class="header__frame">
+                <div class="header__base flex bet str">
+                    <?php //if (is_home() || is_front_page()) {
+                    ?>
+                    <!--<div class="header__left flex vcenter">
+                            <a class="header__mailform" href="<?php echo H_URL; ?>">
+                                <i class="icon icon-mail txt-bright"></i>
+                            </a>
+                        </div>-->
+                    <?php //} else {
+                    ?>
+                    <div class="header__left flex vcenter">
+                        <a class="headerLogo" href="<?php echo H_URL; ?>">
+                            <?php echo IS_HOME ? '<h1 class="headerLogo__in flex vcenter">' : '<span class="headerLogo__in flex vcenter">'; ?>
+                            <img class="headerLogo__img" src="<?php echo T_URL; ?>img/logo.png" alt="KIMURASAE's Portpoliosite" />
+                            <span class="headerLogo__text aquatico">KIMURA SAE<br>PORTFOLIO SITE</span>
+                            <?php echo IS_HOME ?  '</h1>' : '</span>'; ?>
+                        </a>
+                    </div>
+                    <?php //};
+                    ?>
+                    <div class="header__right flex">
+                        <!--<div class="pc headerPulldown">
                         <span class="md-uline headerPulldown__head flex vcenter hcenter">
                             プルダウン1
                         </span>
@@ -116,70 +119,77 @@
                     <a href="<?php echo H_URL; ?>entry/" class="pc headerNav__btn md-btn black stay">
                         エントリー
                     </a>-->
-                            <button type="button" id="gNav-open" class="gNavBtn">
-                                <div class="gNavBtn__box">
-                                    <span class="gNavBtn__bar bright"></span>
-                                    <span class="gNavBtn__bar bright"></span>
-                                    <span class="gNavBtn__bar bright"></span>
-                                </div>
-                            </button>
-                        </div>
+                        <button type="button" id="gNav-open" class="gNavBtn">
+                            <div class="gNavBtn__box">
+                                <span class="gNavBtn__bar bright"></span>
+                                <span class="gNavBtn__bar bright"></span>
+                                <span class="gNavBtn__bar bright"></span>
+                            </div>
+                        </button>
                     </div>
                 </div>
-            </header>
+            </div>
+        </header>
 
-            <?php
-            /*
+        <?php
+        /*
  ######           ##    ##    ###    ##     ##
 ##                ####  ##  ##   ##  ##     ##
 ##   #### ####### ## ## ## ##     ## ##     ##
 ##    ##          ##  #### #########  ##   ##
  ######           ##    ## ##     ##    ###
 */
-            ?>
-            <nav id="gNav" class="gNav" itemscope="" itemtype="https://schema.org/SiteNavigationElement">
-                <div class="gNav__close">
-                    <button type="button" id="gNav-open" class="gNavBtn">
-                        <div class="gNavBtn__box">
-                            <span class="gNavBtn__bar bright"></span>
-                            <span class="gNavBtn__bar bright"></span>
-                            <span class="gNavBtn__bar bright"></span>
-                        </div>
-                    </button>
-                </div>
-                <div class="gNav__menu md-acc">
-                    <div class="gNav__box">
-                        <input id="gNav1" class="acc-check" type="checkbox" value="" />
-                        <label for="gNav1" class="acc-btn gNav__item flex vcenter aquatico">
-                            <a href="<?php echo H_URL; ?>about/">ABOUT</a>
-                            <i class="gNav__icon gNav__icon icon-down"></i>
-                        </label>
-                        <div class="acc-body">
-                            <div class="acc-in">
-                                <a href="<?php echo H_URL; ?>about/#career" class="acc-hide gNav__item gNav__item--sub flex vcenter">
-                                    経歴
-                                </a>
-                                <a href="<?php echo H_URL; ?>about/#skills" class="acc-hide gNav__item gNav__item--sub flex vcenter">
-                                    スキルマップ
-                                </a>
-                            </div>
+        ?>
+        <nav id="gNav" class="gNav" itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+            <div class="gNav__close">
+                <button type="button" id="gNav-open" class="gNavBtn">
+                    <div class="gNavBtn__box">
+                        <span class="gNavBtn__bar bright"></span>
+                        <span class="gNavBtn__bar bright"></span>
+                        <span class="gNavBtn__bar bright"></span>
+                    </div>
+                </button>
+            </div>
+            <div class="gNav__menu md-acc">
+                <a href="<?php echo H_URL; ?>" class="gNav__item flex vcenter aquatico">
+                    TOP
+                </a>
+                <div class="gNav__box">
+                    <input id="gNav1" class="acc-check" type="checkbox" value="" />
+                    <label for="gNav1" class="acc-btn gNav__item flex vcenter aquatico">
+                        <a href="<?php echo H_URL; ?>about/">ABOUT</a>
+                        <i class="gNav__icon gNav__icon icon-down"></i>
+                    </label>
+                    <div class="acc-body">
+                        <div class="acc-in">
+                            <a href="<?php echo H_URL; ?>about/#career" class="acc-hide gNav__item gNav__item--sub flex vcenter">
+                                経歴
+                            </a>
+                            <a href="<?php echo H_URL; ?>about/#skills" class="acc-hide gNav__item gNav__item--sub flex vcenter">
+                                スキルマップ
+                            </a>
                         </div>
                     </div>
-                    <a href="<?php echo H_URL; ?>works/" class="gNav__item flex vcenter aquatico">
-                        WORKS
-                    </a>
-                    <a href="<?php echo H_URL; ?>" class="gNav__item flex vcenter aquatico">
-                        original WORKS
-                    </a>
-                    <a href="<?php echo H_URL; ?>" class="gNav__item flex vcenter aquatico">
-                        CONCEPT
-                    </a>
                 </div>
-                <!--<div class="gNav__contact">
+                <a href="<?php echo H_URL; ?>works/" class="gNav__item flex vcenter aquatico">
+                    WORKS
+                </a>
+                <a href="<?php echo H_URL; ?>original/" class="gNav__item flex vcenter aquatico">
+                    ORIGINAL WORKS
+                </a>
+                <a href="<?php echo H_URL; ?>" class="gNav__item flex vcenter aquatico">
+                    CONCEPT
+                </a>
+                <a href="https://www.instagram.com/kimu.sae/?igsh=aGdvdm9rNXJoaDN1&utm_source=qr" target="_blank" class="gNav__item flex vcenter aquatico">
+                    INSTAGRAM<i class="icon icon-newtab gNav__icon gNav__icon--tab"></i>
+                </a>
+            </div>
+            <!--<div class="gNav__contact">
                 <a href="<?php echo H_URL; ?>contact/" class="gNav__btn gNav__btn--mail md-btn black">
                     お問い合わせ
                 </a>
             </div>-->
-            </nav>
+        </nav>
 
-            <div class="headerPad"></div>
+        <div class="headerPad"></div>
+        <!--<div id="luxy">-->

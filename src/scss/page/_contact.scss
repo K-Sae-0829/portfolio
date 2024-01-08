@@ -12,6 +12,9 @@
   &__input-area {
     padding: 4rem;
     @include over-ray-navy;
+    @media #{$media-sp} {
+      padding: 2rem;
+    }
   }
   &__item {
     margin-bottom: 3rem;
@@ -160,6 +163,10 @@
   &__thanks-box {
     @include over-ray-navy;
     padding: 6rem;
+    @media #{$media-sp} {
+      margin-top: 2rem;
+      padding: 2rem 2rem 4rem;
+    }
   }
   &__thanks-txt {
     margin-top: 5rem;

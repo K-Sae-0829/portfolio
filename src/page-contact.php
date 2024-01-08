@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <article class="contents contact bottom-city">
     <section class="contact__main wrap w1200 sp-wrap js-in anime bottom-in">
-        <h1 class="common__h2 contact__head pulsate">
+        <h1 class="common__h2 contact__head pulsate js-in anime flip-x">
             Contact
         </h1>
         <p class="contact__lead">お問い合わせはこちらから受け付けています。</p>

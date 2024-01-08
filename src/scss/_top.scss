@@ -76,7 +76,7 @@
       margin: -5rem 2rem 15rem;
     }
     @media #{$media-sp} {
-      margin: 0 1.5rem 10rem;
+      margin: 0 0 10rem;
     }
   }
   &About {
@@ -209,6 +209,7 @@
       top: 20rem;
       z-index: 2;
       font-size: 6.3vw;
+      text-align: center;
       @media #{$media-sp} {
         top: 0;
         font-size: 5rem;
@@ -220,8 +221,14 @@
       margin-right: 6rem;
       width: 55%;
       @media #{$media-sp} {
-        margin: 3rem auto;
-        width: 60%;
+        position: relative;
+        top: -7rem;
+        margin: 0 auto;
+        width: 90%;
+        img {
+          width: 100%;
+          height: auto;
+        }
       }
     }
     &__right {
@@ -230,7 +237,16 @@
     &__txt {
       margin-bottom: 6rem;
       @media #{$media-sp} {
-        margin-bottom: 3rem;
+        position: relative;
+        top: -5rem;
+        margin: 0 auto 3rem;
+        width: 90%;
+      }
+    }
+    &__btn-area {
+      @media #{$media-sp} {
+        position: relative;
+        top: -2rem;
       }
     }
   }

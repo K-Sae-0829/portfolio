@@ -125,7 +125,7 @@
                             下記ボタンから一覧をご覧いただけます。
                         </p>
                         <div class="topAbout__btn-area js-in anime bottom-in">
-                            <a href="#" class="mainBtn">
+                            <a href="<?php echo H_URL; ?>works/" class="mainBtn">
                                 <span class="blink-2">MORE</span><i class="icon icon-up-arrow mainBtn__icon blink"></i>
                             </a>
                         </div>
@@ -137,27 +137,26 @@
             <div class="topOriginal">
                 <div class="topOriginal__content wrap w1200 sp-wrap">
                     <h2 class="common__h2 topOriginal__head pulsate js-in anime bottom-in">
-                        Original works
+                        Original Works
                     </h2>
                     <div class="pc-flex vend">
                         <div class="topOriginal__tv js-in anime bottom-in">
                             <div class="swiper swiper-container js-topOriginalSlide" id="js-topOriginalSlide">
                                 <div class="swiper-wrapper js-topOriginalSlide__wrap">
-                                    <div class="swiper-slide topOriginal__img"><img src="<?php echo T_URL; ?>img/top_tv.png" alt=""></div>
-                                    <div class="swiper-slide topOriginal__img"><img src="<?php echo T_URL; ?>img/top_tv_02.png" alt=""></div>
-                                    <div class="swiper-slide topOriginal__img"><img src="<?php echo T_URL; ?>img/top_tv.png" alt=""></div>
-                                    <div class="swiper-slide topOriginal__img"><img src="<?php echo T_URL; ?>img/top_tv_02.png" alt=""></div>
+                                    <?php for ($i = 1; $i < 14; $i++) { ?>
+                                        <div class="swiper-slide topOriginal__img"><img src="<?php echo T_URL; ?>img/top_tv_0<?php echo $i; ?>.png" alt=""></div>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>
                         <div class="topOriginal__right">
                             <p class="topOriginal__txt js-in anime bottom-in">
-                                趣味で自主制作したイラストやグラフィック、Webサイトや、<br>
+                                趣味で自主制作したイラストやグラフィック、Webサイトや、<br class="pc">
                                 学生時代に描いた絵画・作品などはこちらに掲載しています。<br>
                                 <!--作品の世界観を通して私自身の人物像により深みを与えることができたら嬉しいです。-->
                             </p>
                             <div class="topOriginal__btn-area js-in anime bottom-in">
-                                <a href="<?php echo H_URL; ?>" class="mainBtn">
+                                <a href="<?php echo H_URL; ?>original/" class="mainBtn">
                                     <span class="blink-2">MORE</span><i class="icon icon-up-arrow mainBtn__icon blink"></i>
                                 </a>
                             </div>

@@ -27,16 +27,19 @@ $headerSP: 6rem;
 ##     ## ######## ##     ## ########  ######## ##     ##
 */
 .header {
-  position: fixed;
+  position: fixed !important;
   top: 0;
   left: 0;
   z-index: 1000;
   width: 100%;
   white-space: nowrap;
-  box-shadow: 0 0 10px rgba(#000, 0.1);
+  //box-shadow: 0 0 10px rgba(#000, 0.1);
   &__frame {
     padding: 0 0 0 2rem;
     //background: #000;
+    @media #{$media-sp} {
+      background: $siteColor;
+    }
   }
   &__base {
   }
@@ -72,6 +75,7 @@ $headerSP: 6rem;
 ########  #######   ######    #######
 */
 .headerLogo {
+  margin-top: 1.5rem;
   &__img {
     display: block;
     width: auto;
@@ -85,10 +89,15 @@ $headerSP: 6rem;
 
   // ↓ SP相当幅
   @media #{$media-sp} {
+    margin-top: 0;
     &__img {
-      max-width: 10rem;
+      max-width: 6rem;
+      height: auto;
     }
     &__text {
+      margin-left: 1rem;
+      font-size: 1rem;
+      line-height: 1.7em;
     }
   }
   // ↑ SP相当幅
@@ -158,23 +167,29 @@ $headerSP: 6rem;
 */
 // グローバルナビ
 .gNavBtn {
+  display: inline-block;
+  position: fixed;
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 10000;
+  border: 0;
+  vertical-align: middle;
+  background: $siteColor;
+  cursor: pointer;
   $btnSize: $headerSP; //ボタン一辺の長さ
+  width: $btnSize;
+  height: $btnSize;
   $bar: 2px; //バーの太さ
   $posX: 1.5rem; //バーの左右の余白
   $posY: 1.75rem; //1,3本目のバーの上下の余白
-  $barRadius: 50%; //バーの角丸
+  $barRadius: 0; //バーの角丸
   $barOffBG: #fff; //バーの背景OFF時
   $barOnBG: #fff; //バーの背景ON時
   $time: 0.5s; //アニメ時間　0.1s以上
-  display: inline-block;
-  position: relative;
-  //background: $siteColor;
-  z-index: 10000;
-  border: 0;
-  width: $btnSize;
-  height: $btnSize;
-  vertical-align: middle;
-  cursor: pointer;
+  @media #{$media-sp} {
+    background: none;
+  }
   &__box {
     position: absolute;
     top: 0;
@@ -259,11 +274,18 @@ $headerSP: 6rem;
     height: 0;
     content: "";
   }
+  @media #{$media-notfull} {
+    width: 30%;
+  }
   // ↓SP以外の幅
   @media #{$media-notsp} {
     top: 0;
   }
   // ↑SP以外の幅
+  @media #{$media-sp} {
+    top: 0;
+    width: 100%;
+  }
   &:not(.active) {
     transform: rotateY(-90deg);
     visibility: hidden;
@@ -289,6 +311,10 @@ $headerSP: 6rem;
         content: "";
       }
     }
+    @media #{$media-sp} {
+      padding: 1rem 3rem;
+      font-size: 1.8rem;
+    }
   }
   &__icon {
     position: relative;
@@ -301,6 +327,11 @@ $headerSP: 6rem;
     .acc-check:checked ~ .acc-btn & {
       transform: translate(0%, -50%) rotate(180deg);
       transform: rotate(180deg);
+    }
+    &--tab {
+      padding-top: 0.2rem;
+      font-size: 1.4rem;
+      color: #fff;
     }
   }
   &__contact {
