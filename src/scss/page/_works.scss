@@ -44,10 +44,15 @@
     display: inline-block;
     position: relative;
     margin-bottom: 6rem;
-    width: 100%;
+    width: 32%;
     max-width: 36rem;
     background-color: #fff;
     box-shadow: 0px 0px 40px rgba($yellow, 0.25);
+    border-radius: 8px;
+    overflow: hidden;
+    &:hover {
+      opacity: 0.8;
+    }
     &__thumb {
       position: relative;
       image {
@@ -236,8 +241,10 @@
   }
   .js_target {
     display: none;
+    transition-duration: 1s;
   }
   .js_target.js_selected {
     display: block;
+    transition-duration: 1s;
   }
 }

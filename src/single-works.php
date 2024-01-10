@@ -126,7 +126,7 @@
                                     <div class="swiper-wrapper js-singleWorks__wrap js-singleWorks__wrap--sp">
                                         <?php
                                         $count = 0;
-                                        foreach ($spImg as $fields) {
+                                        foreach ($spImg as $key => $keys) {
                                             $img = get_post_meta($post->ID, 'sp-img', false);
                                             $imageItem = wp_get_attachment_image_url($img[$key], 'full');
                                         ?>

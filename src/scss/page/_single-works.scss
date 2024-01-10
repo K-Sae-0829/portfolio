@@ -13,6 +13,7 @@
   &__tag {
     display: inline-block;
     margin: 0 0.6rem 0.8rem 0;
+    padding: 0.2rem 1.5rem;
     border: 1px solid rgba(#fff, 0.3);
     border-radius: 1000px;
     min-width: 8rem;
@@ -162,7 +163,7 @@
     }
   }
   &__btn-area {
-    margin: 6rem auto 27rem;
+    margin: 15rem auto 27rem;
     @media #{$media-notfull} {
       margin: 6rem auto 15rem;
     }
@@ -217,7 +218,7 @@
       }
     }
     &__td {
-      padding-left: 4rem;
+      padding: 1rem 2rem;
       width: 200em;
       a {
         text-decoration: underline;
@@ -226,7 +227,7 @@
         }
       }
       @media #{$media-sp} {
-        padding: 0 1.5rem;
+        padding: 0.7rem 1.5rem;
       }
     }
   }

@@ -199,6 +199,11 @@
                         'score' => '3',
                     ),
                     array(
+                        'img' => 'about_icon_ae.png',
+                        'head' => ' AfterEffect',
+                        'score' => '3',
+                    ),
+                    array(
                         'img' => 'about_icon_figma.png',
                         'head' => ' Figma',
                         'score' => '1',
@@ -226,6 +231,16 @@
                     array(
                         'img' => 'about_icon_wp.png',
                         'head' => 'Wordpress',
+                        'score' => '2',
+                    ),
+                    array(
+                        'img' => 'about_icon_webflow.png',
+                        'head' => 'webflow',
+                        'score' => '2',
+                    ),
+                    array(
+                        'img' => 'about_icon_github.png',
+                        'head' => 'github',
                         'score' => '2',
                     ),
                 );

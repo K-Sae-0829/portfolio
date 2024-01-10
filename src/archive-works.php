@@ -88,22 +88,30 @@ $tag_query = get_categories(array(
                         $terms = get_the_terms($postID, 'works-cat');
                         $tag = get_the_terms($postID, 'works-tag');
                 ?>
-                        <a href="<?php the_permalink(); ?>" class="worksItem js-in anime bottom-in js_target" data-category="<?php foreach ($terms as $termsdata) {
-                                                                                                                                    echo $termsdata->name;
-                                                                                                                                } ?>" data-tag="<?php foreach ($tag as $tagdata) {
-                                                                                                                                                    echo $tagdata->name . ',';
-                                                                                                                                                } ?>">
-                            <div class="worksItem__thumb">
-                                <?php foreach ($terms as $terms) { ?>
-                                    <p class="worksItem__cat"><?php echo $terms->name; ?></p>
-                                <?php } ?>
-                                <div class="worksItem__img">
-                                    <?php if (has_post_thumbnail()) { ?>
-                                        <img src="<?php echo the_post_thumbnail_url(); ?>" alt="">
-                                    <?php } else { ?>
-                                        <img src="<?php echo T_URL; ?>img/thumb_noimg.png" alt="">
+                        <div class="worksItem js_target js-in anime bottom-in" data-category="<?php foreach ($terms as $termsdata) {
+                                                                                                    echo $termsdata->name;
+                                                                                                } ?>" data-tag="<?php foreach ($tag as $tagdata) {
+                                                                                                                    echo $tagdata->name . ',';
+                                                                                                                } ?>">
+                            <a href="<?php the_permalink(); ?>" class="">
+
+                                <div class="worksItem__thumb">
+                                    <?php foreach ($terms as $terms) { ?>
+                                        <p class="worksItem__cat"><?php echo $terms->name; ?></p>
                                     <?php } ?>
+                                    <div class="worksItem__img">
+                                        <div class="md-lay zoom">
+                                            <div class="lay-bg">
+                                                <?php if (has_post_thumbnail()) { ?>
+                                                    <img src="<?php echo the_post_thumbnail_url(); ?>" alt="">
+                                                <?php } else { ?>
+                                                    <img src="<?php echo T_URL; ?>img/thumb_noimg.png" alt="">
+                                                <?php } ?>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+
                                 <div class="worksItem__txt-area">
                                     <div class="worksItem__tag-area">
                                         <?php foreach ($tag as $tag) { ?>
@@ -112,8 +120,8 @@ $tag_query = get_categories(array(
                                     </div>
                                     <p class="worksItem__ttl"><?php echo get_the_title(); ?></p>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     <?php } ?>
                 <?php } ?>
                 <?php wp_reset_postdata(); ?>

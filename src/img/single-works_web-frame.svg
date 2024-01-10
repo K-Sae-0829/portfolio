@@ -1,9 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="643" viewBox="0 0 1200 643">
   <g id="single-works_web-frame" transform="translate(-327 -628)">
-    <g id="長方形_190" data-name="長方形 190" transform="translate(327 668)" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="14">
-      <path d="M0,0H1200a0,0,0,0,1,0,0V587a16,16,0,0,1-16,16H16A16,16,0,0,1,0,587V0A0,0,0,0,1,0,0Z" stroke="none"/>
-      <path d="M7,7H1193a0,0,0,0,1,0,0V587a9,9,0,0,1-9,9H16a9,9,0,0,1-9-9V7A0,0,0,0,1,7,7Z" fill="none"/>
-    </g>
+    <path id="長方形_190" data-name="長方形 190" d="M0,0H1200a0,0,0,0,1,0,0V587a16,16,0,0,1-16,16H16A16,16,0,0,1,0,587V0A0,0,0,0,1,0,0Z" transform="translate(327 668)" fill="rgba(255,255,255,0.3)"/>
     <path id="長方形_443" data-name="長方形 443" d="M16,0H1184a16,16,0,0,1,16,16V40a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V16A16,16,0,0,1,16,0Z" transform="translate(327 628)" fill="rgba(255,255,255,0.3)"/>
     <circle id="楕円形_11" data-name="楕円形 11" cx="12" cy="12" r="12" transform="translate(1487 638)" fill="#fff"/>
     <circle id="楕円形_12" data-name="楕円形 12" cx="12" cy="12" r="12" transform="translate(1453 638)" fill="#fff"/>
