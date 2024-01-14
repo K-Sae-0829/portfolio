@@ -58,7 +58,7 @@
                                 詳しい経歴やスキルは下記からご覧いただけます。
                             </p>
                             <div class="topAbout__btn-area">
-                                <a href="#" class="mainBtn">
+                                <a href="<?php echo H_URL; ?>about/" class="mainBtn">
                                     <span class="blink-2">MORE</span><i class="icon icon-up-arrow mainBtn__icon blink"></i>
                                 </a>
                             </div>
@@ -143,7 +143,7 @@
                         <div class="topOriginal__tv js-in anime bottom-in">
                             <div class="swiper swiper-container js-topOriginalSlide" id="js-topOriginalSlide">
                                 <div class="swiper-wrapper js-topOriginalSlide__wrap">
-                                    <?php for ($i = 1; $i < 14; $i++) { ?>
+                                    <?php for ($i = 1; $i < 12; $i++) { ?>
                                         <div class="swiper-slide topOriginal__img"><img src="<?php echo T_URL; ?>img/top_tv_0<?php echo $i; ?>.png" alt=""></div>
                                     <?php } ?>
                                 </div>

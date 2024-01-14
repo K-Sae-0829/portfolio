@@ -154,6 +154,10 @@
                 <a href="<?php echo H_URL; ?>" class="gNav__item flex vcenter aquatico">
                     TOP
                 </a>
+                <a href="<?php echo H_URL; ?>about/" class="gNav__item flex vcenter aquatico">
+                    ABOUT
+                </a>
+                <?php /*
                 <div class="gNav__box">
                     <input id="gNav1" class="acc-check" type="checkbox" value="" />
                     <label for="gNav1" class="acc-btn gNav__item flex vcenter aquatico">
@@ -170,15 +174,16 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> */
+                ?>
                 <a href="<?php echo H_URL; ?>works/" class="gNav__item flex vcenter aquatico">
                     WORKS
                 </a>
                 <a href="<?php echo H_URL; ?>original/" class="gNav__item flex vcenter aquatico">
                     ORIGINAL WORKS
                 </a>
-                <a href="<?php echo H_URL; ?>" class="gNav__item flex vcenter aquatico">
-                    CONCEPT
+                <a href="<?php echo H_URL; ?>contact/" class="gNav__item flex vcenter aquatico">
+                    CONTACT
                 </a>
                 <a href="https://www.instagram.com/kimu.sae/?igsh=aGdvdm9rNXJoaDN1&utm_source=qr" target="_blank" class="gNav__item flex vcenter aquatico">
                     INSTAGRAM<i class="icon icon-newtab gNav__icon gNav__icon--tab"></i>

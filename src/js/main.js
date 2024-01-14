@@ -1,5 +1,5 @@
 /* global  */ // tUrl等のグローバル変数を宣言する
-import luxy from 'luxy.js'
+//import luxy from 'luxy.js'
 import 'core-js/features/number/is-nan' // SwiperのIE対応
 import 'custom-event-polyfill' // SwiperのIE対応
 import scrollLock from './functions/_scrollLock.js' // スクロールロック
@@ -244,19 +244,21 @@ function modalClose() {
 }
 
 //luxy
-const windowWidth = window.innerWidth
-const breakPointA = 1024
+//const windowWidth = window.innerWidth
+//const breakPointA = 1024
 //const breakPointB = 769
 
-const isMobileSize = windowWidth < breakPointA
+//const isMobileSize = windowWidth < breakPointA
 //const isTabletSize = windowWidth <= breakPointB && windowWidth > breakPointA
 //const isPcSize = windowWidth > breakPointB
+/*
 if (isMobileSize) {
 } else {
   window.onload = function () {
     luxy.init()
   }
 }
+*/
 
 /*
 ########    ###    ########

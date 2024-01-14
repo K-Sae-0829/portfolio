@@ -11,11 +11,11 @@
             </div>
             <div class="footerLink aquatico pc">
                 <ul class="footerLink__list pc-flex vcenter">
+                    <li class="footerLink__item"><a class="footerLink__link" href="<?php echo H_URL; ?>" target="">TOP</a></li>
                     <li class="footerLink__item"><a class="footerLink__link" href="<?php echo H_URL; ?>about/" target="">ABOUT</a></li>
                     <li class="footerLink__item"><a class="footerLink__link" href="<?php echo H_URL; ?>works/" target="">WORKS</a></li>
                     <li class="footerLink__item"><a class="footerLink__link" href="<?php echo H_URL; ?>original/" target="_blank">ORIGINAL WORKS</a></li>
                     <li class="footerLink__item"><a class="footerLink__link" href="<?php echo H_URL; ?>contact/" target="_blank">CONTACT</a></li>
-                    <li class="footerLink__item"><a class="footerLink__link" href="<?php echo H_URL; ?>contact/" target="_blank">CONCEPT</a></li>
                 </ul>
             </div>
         </div>

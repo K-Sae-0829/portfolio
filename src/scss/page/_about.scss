@@ -75,8 +75,92 @@
       }
     }
   }
+  /*
+##     ##  #######  ########     ###    ##
+###   ### ##     ## ##     ##   ## ##   ##
+#### #### ##     ## ##     ##  ##   ##  ##
+## ### ## ##     ## ##     ## ##     ## ##
+##     ## ##     ## ##     ## ######### ##
+##     ## ##     ## ##     ## ##     ## ##
+##     ##  #######  ########  ##     ## ########
+  */
+  &__modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    transition-duration: 0.5s;
+    &:not(.active) {
+      //display: none;
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  &__close {
+    position: fixed;
+    top: calc(10vh - 6rem);
+    right: 5%;
+    z-index: 10005;
+    width: 6rem;
+    height: 6rem;
+    font-size: 2.4rem;
+    color: #fff;
+    //background: $base;
+    background-color: rgba(#040617, 0.6);
+    &Icon {
+    }
+    @media #{$media-sp} {
+      right: 0;
+    }
+  }
+  &__bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10002;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#040617, 0.6);
+    background-position: center;
+    background-size: cover;
+    -webkit-overflow-scrolling: touch;
+  }
+  &__modalIn {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 10003;
+    height: 80vh;
+    transform: translate(-50%, -50%);
+    img {
+      width: auto;
+      max-height: 100%;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    @media #{$media-sp} {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  /*
+ ######     ###    ########  ######## ######## ########
+##    ##   ## ##   ##     ## ##       ##       ##     ##
+##        ##   ##  ##     ## ##       ##       ##     ##
+##       ##     ## ########  ######   ######   ########
+##       ######### ##   ##   ##       ##       ##   ##
+##    ## ##     ## ##    ##  ##       ##       ##    ##
+ ######  ##     ## ##     ## ######## ######## ##     ##
+*/
   &__career {
     margin-bottom: 13rem;
+    @media #{$media-sp} {
+      margin-bottom: 6rem;
+    }
   }
   &Career {
     position: relative;
@@ -150,15 +234,33 @@
         margin-left: 3.6rem;
       }
     }
+    &__img {
+      margin-top: 2rem;
+      @media #{$media-sp} {
+        margin-left: 3.6rem;
+      }
+    }
   }
+  /*
+ ######  ##    ## #### ##       ##
+##    ## ##   ##   ##  ##       ##
+##       ##  ##    ##  ##       ##
+ ######  #####     ##  ##       ##
+      ## ##  ##    ##  ##       ##
+##    ## ##   ##   ##  ##       ##
+ ######  ##    ## #### ######## ########
+  */
   &__skills {
-    margin-bottom: 26rem;
+    margin-bottom: 13rem;
     @media #{$media-sp} {
-      margin-bottom: 10rem;
+      margin-bottom: 6rem;
     }
   }
   &Skills {
     margin-top: 3rem;
+    @media #{$media-notfull} {
+      justify-content: space-around !important;
+    }
     @media #{$media-sp} {
       margin-top: 1rem;
     }
@@ -263,6 +365,170 @@
         //min-width: 100%;
         background-color: rgba(#fff, 0.5);
       }
+    }
+  }
+  /*
+########  ##     ## #### ##        #######   ######   #######  ########  ##     ## ##    ##
+##     ## ##     ##  ##  ##       ##     ## ##    ## ##     ## ##     ## ##     ##  ##  ##
+##     ## ##     ##  ##  ##       ##     ## ##       ##     ## ##     ## ##     ##   ####
+########  #########  ##  ##       ##     ##  ######  ##     ## ########  #########    ##
+##        ##     ##  ##  ##       ##     ##       ## ##     ## ##        ##     ##    ##
+##        ##     ##  ##  ##       ##     ## ##    ## ##     ## ##        ##     ##    ##
+##        ##     ## #### ########  #######   ######   #######  ##        ##     ##    ##
+  */
+  &__philosophy {
+  }
+  &Philosophy {
+    &__box {
+      @include over-ray-navy;
+      position: relative;
+      margin-top: 6rem;
+      padding: 6rem 4rem;
+      @media #{$media-sp} {
+        position: inherit;
+        padding: 3rem 3rem 1rem;
+      }
+    }
+    &__top {
+      position: absolute;
+      top: 4rem;
+      left: 50%;
+      width: calc(100% - 8rem);
+      transform: translateX(-50%);
+      @media #{$media-notfull} {
+        width: calc(100% - 6rem);
+      }
+      @media #{$media-sp} {
+        position: inherit;
+        left: inherit;
+        width: 100%;
+        transform: inherit;
+      }
+    }
+    &__bottom {
+      position: absolute;
+      bottom: 4rem;
+      left: 50%;
+      width: calc(100% - 8rem);
+      transform: translateX(-50%);
+      @media #{$media-notfull} {
+        width: calc(100% - 6rem);
+      }
+      @media #{$media-sp} {
+        position: inherit;
+        bottom: 0;
+        left: inherit;
+        width: 100%;
+        transform: inherit;
+      }
+    }
+    &__point {
+      width: 25%;
+      &--right {
+        text-align: right;
+        @media #{$media-sp} {
+          text-align: left;
+        }
+      }
+      @media #{$media-notfull} {
+        width: 30%;
+      }
+      @media #{$media-sp} {
+        margin-bottom: 2rem;
+        width: 100%;
+      }
+    }
+    &__title {
+      position: relative;
+      margin-bottom: 3rem;
+      font-size: 2rem;
+      font-weight: 700;
+      &::after {
+        position: absolute;
+        bottom: -1.5rem;
+        left: 0;
+        width: 3rem;
+        height: 3px;
+        background-color: #fff;
+        content: "";
+      }
+      &--right {
+        &::after {
+          right: 0;
+          left: inherit;
+          @media #{$media-sp} {
+            right: auto;
+            left: 0;
+          }
+        }
+      }
+      @media #{$media-notfull} {
+        margin-bottom: 2.6rem;
+        font-size: 1.8rem;
+        font-weight: 700;
+        &::after {
+          bottom: -1.3rem;
+        }
+      }
+      @media #{$media-sp} {
+        font-size: 1.8rem;
+      }
+    }
+    &__int {
+      font-size: 1.5rem;
+      line-height: 2em;
+      opacity: 0.6;
+      @media #{$media-notfull} {
+        font-size: 1.4rem;
+        line-height: 1.7em;
+      }
+    }
+    &__image {
+      margin: 0 auto;
+      width: 50%;
+      height: auto;
+      @media #{$media-notfull} {
+        margin: 6rem auto;
+        width: 40%;
+        height: auto;
+      }
+      @media #{$media-sp} {
+        margin: 0 auto 2rem;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  /*
+ ######   #######  ##    ##  ######  ######## ########  ########
+##    ## ##     ## ###   ## ##    ## ##       ##     ##    ##
+##       ##     ## ####  ## ##       ##       ##     ##    ##
+##       ##     ## ## ## ## ##       ######   ########     ##
+##       ##     ## ##  #### ##       ##       ##           ##
+##    ## ##     ## ##   ### ##    ## ##       ##           ##
+ ######   #######  ##    ##  ######  ######## ##           ##
+  */
+  &__concept {
+    margin-top: 12rem;
+    @media #{$media-sp} {
+      margin-top: 6rem;
+    }
+  }
+  &Concept {
+    &__txt {
+      margin-top: 4rem;
+      line-height: 2em;
+      text-align: center;
+      @media #{$media-sp} {
+        margin-top: 3rem;
+        text-align: left;
+      }
+    }
+  }
+  &__contact {
+    margin-top: 26rem;
+    @media #{$media-sp} {
+      margin-top: 10rem;
     }
   }
 }

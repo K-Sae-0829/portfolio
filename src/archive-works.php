@@ -128,5 +128,6 @@ $tag_query = get_categories(array(
             </div>
         </div>
     </section>
+    <?php get_template_part('parts-contact'); ?>
 </article>
 <?php get_footer();

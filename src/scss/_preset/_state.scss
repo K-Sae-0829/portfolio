@@ -23,7 +23,11 @@ State
   }
 }
 // ↑SP以外の幅
-
+@media #{$media-notfull} {
+  .notfull {
+    display: none !important;
+  }
+}
 // ↓SP相当幅
 @media #{$media-sp} {
   .pc {

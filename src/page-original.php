@@ -4,7 +4,7 @@
         <h1 class="common__h2 original__head pulsate js-in anime flip-x">
             Original Works
         </h1>
-        <p class="original__lead">自主制作したものを掲載しています。<br class="sp">クリックするとインスタグラムにジャンプします。</p>
+        <p class="original__lead">自主制作したものを掲載しています。<br class="sp">クリックするとInstagramにジャンプします。</p>
         <?php //echo do_shortcode('[mwform_formkey key="6"]');
         ?>
         <div class="original__sns js-in anime bottom-in">

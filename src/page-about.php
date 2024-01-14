@@ -1,5 +1,93 @@
 <?php get_header(); ?>
 <article class="about bottom-city">
+    <div id="modalOverlay" class="md-overlay"></div>
+    <?php
+    /*
+ ######     ###    ########  ######## ######## ########
+##    ##   ## ##   ##     ## ##       ##       ##     ##
+##        ##   ##  ##     ## ##       ##       ##     ##
+##       ##     ## ########  ######   ######   ########
+##       ######### ##   ##   ##       ##       ##   ##
+##    ## ##     ## ##    ##  ##       ##       ##    ##
+ ######  ##     ## ##     ## ######## ######## ##     ##
+            */
+    //  ##      ##   ####  ######
+    //  ##      ##  ##       ##
+    //  ##      ##   ###     ##
+    //  ##      ##     ##    ##
+    //  ######  ##  ####     ##
+
+    $careerlist = array(
+        array(
+            'ym' => '2016年　3月',
+            'ttl' => '茨城県立取手松陽高校美術課程 修了',
+            'txt' => '元来「絵を描く」「何かを生み出す・作る」ということが好きで、美術分野を極めたいという思いから、高校は美術科に進学しました。基礎であるデッサンをはじめ、主に油絵とデザインを学びました。<br>この時の「物事を多角的に捉える視点」「情報を整理して絵を見た人に何を伝えていくか？」という心掛けは今も制作などをする上で強く繋がっている思考です。',
+            'img' => array(
+                'high01',
+                'high02',
+                'high03',
+                'high04',
+            ),
+        ),
+        array(
+            'ym' => '2019年　3月',
+            'ttl' => '桑沢デザイン研究所 ファッションデザイン科　修了',
+            'txt' => '高校卒業後は桑沢デザイン研究所に進学し、Adobeソフトの扱い方や、一眼レフを用いた写真撮影方法などの基礎的なスキルを身に付けました。<br>2年次からはファッションデザイン科を専攻し、パターンや縫製などの授業で、服の構造や成り立ち方を論理的に理解していきました。元来直感的に物事を捉える傾向がありましたが、構造などをきちんと知った上で考えるデザインは一回りも二回りも説得力が生まれることを体感しました。桑沢での様々な学びを通して、論理的視点からもものづくりをしていくことを意識するようになりました。<br>卒業制作では「スモッキング」という、布を糸でかがり寄せて浮き上がる面白いテキスタイル表現を用いた洋服を制作しました。',
+            'img' => array(
+                'kuwa01',
+                'kuwa02',
+                'kuwa03',
+                'kuwa04',
+            ),
+        ),
+        array(
+            'ym' => '2020年　4月',
+            'ttl' => '株式会社PJC　デザイナーアシスタント　退職',
+            'txt' => 'オリジナルの刺繍生地から衣類・雑貨の企画をし販売まで一貫して行うミセス向けアパレルブランドで企画アシスタントとして1年間、企画補佐や在庫管理、生産管理、接客、事務作業など様々な業務を経験しました。業務内容が多義にわたっていたため、優先順位を付けて効率よくこなせるように心掛けていました。',
+            'img' => '',
+        ),
+        array(
+            'ym' => '2020年　12月',
+            'ttl' => 'テラハウスICA　マークアップWEBデザイン実践科　修了',
+            'txt' => '元来興味のあったWeb業界に挑戦したいという思いから、自主学習と4ヶ月間の職業訓練でマークアップ言語とWEBデザインの基礎知識を習得。',
+            'img' => '',
+        ),
+        array(
+            'ym' => '2021年　5月',
+            'ttl' => '株式会社フライングハイワークス　アルバイト　退職',
+            'txt' => '訓練校の紹介で約半年弱、WEB制作会社の企画部にて既存サイトの更新業務やディレクター職補佐を担当。',
+            'img' => '',
+        ),
+        array(
+            'ym' => '2021年～',
+            'ttl' => '株式会社SPC　WEBクリエイター',
+            'txt' => 'WEBサイトやECサイトのデザイン、UI設計、フロント構築などを担当。',
+            'img' => '',
+        ),
+    );
+    ?>
+
+    <?php
+    foreach ($careerlist as $key => $value) {
+        if ($value['img'] !== '') {
+            $count = 0;
+            foreach ($value['img'] as $img => $imgvalue) {    ?>
+                <div class="about__modal js-modal js-modal--small-<?php echo nl2br($imgvalue); ?>">
+                    <button type="button" class="about__bg js-modal-close"></button>
+                    <button type="button" class="js-modal-close about__close flex vcenter hcenter">
+                        <i class="about__closeIcon is-false icon-close"></i>
+                    </button>
+                    <div class="about__modalIn">
+                        <img src="<?php echo T_URL; ?>img/big-<?php echo nl2br($imgvalue); ?>.jpg" class="aboutModal__img">
+                    </div>
+                    <div class="about__nonScroll"></div>
+                </div>
+    <?php
+                $count++;
+            }
+        }
+    }
+    ?>
     <div class="about__main wrap w1200 sp-wrap">
         <h1 class="common__h2 about__head pulsate js-in anime flip-x">
             About
@@ -64,67 +152,20 @@
         </section>
         <section class="about__career" id="career">
             <?php
+            /*
+ ######     ###    ########  ######## ######## ########
+##    ##   ## ##   ##     ## ##       ##       ##     ##
+##        ##   ##  ##     ## ##       ##       ##     ##
+##       ##     ## ########  ######   ######   ########
+##       ######### ##   ##   ##       ##       ##   ##
+##    ## ##     ## ##    ##  ##       ##       ##    ##
+ ######  ##     ## ##     ## ######## ######## ##     ##
+            */
             //  ##      ##   ####  ######
             //  ##      ##  ##       ##
             //  ##      ##   ###     ##
             //  ##      ##     ##    ##
             //  ######  ##  ####     ##
-
-            $list = array(
-                array(
-                    'ym' => '2016年　3月',
-                    'ttl' => '茨城県立取手松陽高校美術課程 修了',
-                    'txt' => '元来「絵を描く」「何かを生み出す・作る」ということが好きで、美術分野を極めたいという思いから、高校は美術科に進学しました。基礎であるデッサンをはじめ、主に油絵とデザインを学びました。<br>当時は放課後も美術棟に籠って毎日モチーフや石膏に向き合っていました。やればやるだけ技術が高まっていくのもとても嬉しかったですが、この時の「物事を多角的に捉える視点」「情報を整理して絵を見た人に何を伝えていくか？」という心掛けは今も制作などをする上で強く繋がっている思考です。',
-                    'img' => array(
-                        '1' => 'small-high01.jpg',
-                        '2' => 'small-high02.jpg',
-                        '3' => 'small-high03.jpg',
-                        '4' => 'small-high04.jpg',
-                    ),
-                ),
-                array(
-                    'ym' => '2019年　3月',
-                    'ttl' => '桑沢デザイン研究所 ファッションデザイン科　修了',
-                    'txt' => '高校卒業後は桑沢デザイン研究所に進学し、Adobeソフトの扱い方や、一眼レフを用いた写真撮影方法などの基礎的なスキルを身に付けました。<br>2年次からはファッションデザイン科を専攻し、パターンや縫製などの授業で、服の構造や成り立ち方を論理的に理解していきました。元来直感的に物事を捉える傾向がありましたが、構造などをきちんと知った上で考えるデザインは一回りも二回りも説得力が生まれることを体感しました。桑沢での様々な学びを通して、論理的視点からもものづくりをしていくことを意識するようになりました。<br>卒業制作では「スモッキング」という、布を糸でかがり寄せて浮き上がる面白いテキスタイル表現を用いた洋服を制作しました。',
-                    'img' => array(
-                        '1' => 'small-kuwa01.jpg',
-                        '2' => 'small-kuwa02.jpg',
-                        '3' => 'small-kuwa03.jpg',
-                        '4' => 'small-kuwa04.jpg',
-                    ),
-                ),
-                array(
-                    'ym' => '2020年　4月',
-                    'ttl' => '株式会社PJC　デザイナーアシスタント　退職',
-                    'txt' => 'オリジナルの刺繍生地から衣類・雑貨の企画をし販売まで一貫して行うミセス向けアパレルブランドで企画アシスタントとして1年間、企画補佐や在庫管理、生産管理、接客、事務作業など様々な業務を経験しました。業務内容が多義にわたっていたため、優先順位を付けて効率よくこなせるように心掛けていました。',
-                    'img' => array(
-                        '1' => '',
-                        '2' => '',
-                        '3' => '',
-                        '4' => '',
-                        '5' => '',
-                    ),
-                ),
-                array(
-                    'ym' => '2020年　12月',
-                    'ttl' => 'テラハウスICA　マークアップWEBデザイン実践科　修了',
-                    'txt' => '元来興味のあったWeb業界に挑戦したいという思いから、自主学習と4ヶ月間の職業訓練校でマークアップ言語とWEBデザインの基礎知識を習得。',
-                    'img' => '',
-                ),
-                array(
-                    'ym' => '2021年　5月',
-                    'ttl' => '株式会社フライングハイワークス　アルバイト　退職',
-                    'txt' => '訓練校の伝手で半年弱、WEB制作会社の企画部にて既存サイトの更新業務やディレクター職補佐を担当。',
-                    'img' => '',
-                ),
-                array(
-                    'ym' => '2021年～',
-                    'ttl' => '株式会社SPC　WEBクリエイター',
-                    'txt' => '桑沢では基本的なデザインツールの操作や一眼レフカメラでの撮影技術、グラフィックデザインやプロダクトデザインなど一通り学んだのちにファッションデザインを専攻しました。
-                    ファッションイラストの授業で学んだことは、今のイラストに活かされています。',
-                    'img' => '',
-                ),
-            );
             ?>
 
             <h2 class="common__h3 about__h3">
@@ -135,7 +176,7 @@
                 <div class="aboutCareer__line"></div>
                 <div class="aboutCareer__table">
                     <?php
-                    foreach ($list as $key => $value) {
+                    foreach ($careerlist as $key => $value) {
                     ?>
                         <div class="aboutCareer__tr pc-flex js-in anime bottom-in">
                             <p class="aboutCareer__th flex"><span class="aboutCareer__dot"></span>
@@ -148,6 +189,25 @@
                                 <div class="aboutCareer__td aboutCareer__td--txt">
                                     <p><?php echo nl2br($value['txt']); ?></p>
                                 </div>
+                                <?php
+                                if ($value['img'] !== '') { ?>
+                                    <div class="aboutCareer__imageline flex bet">
+                                        <?php
+                                        foreach ($value['img'] as $img => $imgvalue) {
+                                        ?>
+                                            <div class="aboutCareer__img">
+                                                <button type="button" class="js-modal js-modal-open" data-modal="small-<?php echo nl2br($imgvalue); ?>">
+                                                    <img src="<?php echo T_URL; ?>img/small-<?php echo nl2br($imgvalue); ?>.jpg" alt="">
+                                                </button>
+                                            </div>
+                                        <?php
+                                        }
+                                        ?>
+                                    </div>
+                                <?php
+                                } else { ?>
+                                <?php }
+                                ?>
                             </div>
                         </div>
                     <?php
@@ -255,7 +315,7 @@
                                 </div>
                             </div>
                             <?php /*
-                            <div class="aboutSkillsMap__gragh flex vcenter js-in anime flip-y">
+                            <div class="aboutSkillsMap__gragh flex vc enter js-in anime flip-y">
                                 <?php
                                 $counter = 0;
                                 $score = $value['score'];
@@ -287,7 +347,71 @@
                 ?>
             </div>
         </section>
-        <?php get_template_part('parts-contact'); ?>
+        <?php /*
+########  ##     ## #### ##        #######   ######   #######  ########  ##     ## ##    ##
+##     ## ##     ##  ##  ##       ##     ## ##    ## ##     ## ##     ## ##     ##  ##  ##
+##     ## ##     ##  ##  ##       ##     ## ##       ##     ## ##     ## ##     ##   ####
+########  #########  ##  ##       ##     ##  ######  ##     ## ########  #########    ##
+##        ##     ##  ##  ##       ##     ##       ## ##     ## ##        ##     ##    ##
+##        ##     ##  ##  ##       ##     ## ##    ## ##     ## ##        ##     ##    ##
+##        ##     ## #### ########  #######   ######   #######  ##        ##     ##    ##
+  */ ?>
+        <section class="about__philosophy aboutPhilosophy" id="philosophy">
+            <h2 class="common__h3 about__h3">
+                <span class="common__h3 common__h3--main">PHILOSOPHY</span>
+                <span class="common__h3 common__h3--sub">大切にしていること</span>
+            </h2>
+            <div class="aboutPhilosophy__box double-border-box js-in anime bottom-in">
+                <div class="aboutPhilosophy__image">
+                    <img src="<?php echo T_URL; ?>img/ben_outline.png" alt="">
+                </div>
+                <div class="aboutPhilosophy__top">
+                    <div class="pc-flex bet">
+                        <div class="aboutPhilosophy__point">
+                            <p class="aboutPhilosophy__title">周囲から学ぶ</p>
+                            <p class="aboutPhilosophy__int">たとえ自身が上に立つ場面であって<br class="pc notfull">も常に謙虚な姿勢でいることを<br class="pc notfull">心がけます。<br class="pc notfull">他者のよいところから学び、<br class="pc notfull">反省と改善から自己成長に繋げる<br class="pc notfull">ことを意識しています。</p>
+                        </div>
+                        <div class="aboutPhilosophy__point aboutPhilosophy__point--right">
+                            <p class="aboutPhilosophy__title aboutPhilosophy__title--right">チームワークを重んじる</p>
+                            <p class="aboutPhilosophy__int">チームでは周囲に目を配り<br class="pc notfull">声掛けとコミュニケーションを<br class="pc notfull">率先するポジションです。<br class="pc notfull">互いが対等に意見を出し合える<br class="pc notfull">環境を作ることで、クオリティの<br class="pc notfull">向上に繋がると信じています。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="aboutPhilosophy__bottom">
+                    <div class="pc-flex bet vend">
+                        <div class="aboutPhilosophy__point">
+                            <p class="aboutPhilosophy__title">傾聴する</p>
+                            <p class="aboutPhilosophy__int">相手に興味を持ち、様々な質問<br class="pc notfull">をします。クライアントワーク<br class="pc notfull">では他者理解と共感を深めること<br class="pc notfull">で問題解決の糸口を探ります。<br class="pc notfull">傾聴することで、多角的な視点で<br class="pc notfull">考えるクセが付くように思います。</p>
+                        </div>
+                        <div class="aboutPhilosophy__point aboutPhilosophy__point--right">
+                            <p class="aboutPhilosophy__title aboutPhilosophy__title--right">日々インプットする</p>
+                            <p class="aboutPhilosophy__int">WEBやデザインなど<br class="sp-hide notfull">仕事に関係する知識はもちろん、<br class="sp-hide notfull">日常の些細なことまで<br class="sp-hide notfull">あらゆることに疑問を投げかけ、<br class="sp-hide notfull">放置せず調べたり勉強したりする<br class="sp-hide notfull">姿勢を大切にしています。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <?php /*
+ ######   #######  ##    ##  ######  ######## ########  ########
+##    ## ##     ## ###   ## ##    ## ##       ##     ##    ##
+##       ##     ## ####  ## ##       ##       ##     ##    ##
+##       ##     ## ## ## ## ##       ######   ########     ##
+##       ##     ## ##  #### ##       ##       ##           ##
+##    ## ##     ## ##   ### ##    ## ##       ##           ##
+ ######   #######  ##    ##  ######  ######## ##           ##
+  */ ?>
+        <section class="about__concept aboutConcept" id="concept">
+            <h2 class="common__h3 about__h3 js-in anime bottom-in">
+                <span class="common__h3 common__h3--main">SMALL TALK</span>
+                <span class="common__h3 common__h3--sub">このサイトのコンセプト</span>
+            </h2>
+            <p class="aboutConcept__txt js-in anime bottom-in">
+                私の好きなものの一つが、80年代のあらゆるポップカルチャーです。<br class="sp-hide">音楽、ゲーム、ファッション、映画…<br class="sp-hide">おこがましくも、なぜだか「80年代への郷愁」を感じずにはいられません。<br class="sp-hide">その中でも「サイバーパンク」「シンセウェイブ」など<br class="sp-hide">レトロだけど近未来的な、妖しい世界観をサイトに落とし込もうと決めました。<br class="sp-hide"><br>このポートフォリオサイトは<br class="sp-hide">私の表現や日々の思考を具現化した一つの「街」のような空間です。<br class="sp-hide">都会のキラキラしたネオンも大好きな私は、<br class="sp-hide">それらを見るとドキドキやワクワクを感じます。<br class="sp-hide">自身がアートワークを通して生涯追求したいことの一つは<br class="sp-hide">「見た人にときめきやワクワクを感じてもらうこと」です。<br class="sp-hide"><br>このサイト≒街を訪れて下さった方にも<br class="sp-hide">そんな気持ちを感じてもらえたら嬉しいな、と思いながら制作しました。
+            </p>
+        </section>
+        <div class="about__contact">
+            <?php get_template_part('parts-contact'); ?>
+        </div>
     </div>
 </article>
 <?php get_footer();

@@ -10,12 +10,16 @@
     text-align: center;
   }
   &__list {
+    margin-bottom: 20rem;
     &::after,
     ::before {
       width: 100%;
       max-width: 36rem;
       height: 0;
       content: "";
+    }
+    @media #{$media-sp} {
+      margin-bottom: 0rem;
     }
   }
   &__item {
@@ -44,12 +48,12 @@
     display: inline-block;
     position: relative;
     margin-bottom: 6rem;
+    border-radius: 8px;
     width: 32%;
     max-width: 36rem;
+    overflow: hidden;
     background-color: #fff;
     box-shadow: 0px 0px 40px rgba($yellow, 0.25);
-    border-radius: 8px;
-    overflow: hidden;
     &:hover {
       opacity: 0.8;
     }

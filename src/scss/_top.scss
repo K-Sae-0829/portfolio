@@ -58,7 +58,7 @@
   }
   &__infomation {
     position: absolute;
-    bottom: 15vh;
+    bottom: 20vh;
     left: 50%;
     text-align: center;
     letter-spacing: 0.2em;
@@ -208,8 +208,12 @@
       position: relative;
       top: 20rem;
       z-index: 2;
-      font-size: 6.3vw;
+      font-size: 11rem;
       text-align: center;
+      @media #{$media-notfull} {
+        top: 16vw;
+        font-size: 9.5vw;
+      }
       @media #{$media-sp} {
         top: 0;
         font-size: 5rem;

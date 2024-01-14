@@ -97,8 +97,6 @@
                                             foreach ($pcImg as $key => $keys) {
                                                 $img = get_post_meta($post->ID, 'pc-img', false);
                                                 $imageItem = wp_get_attachment_image_url($img[$key], 'full');
-                                                //$count = 1;
-                                                //$count = $count++;
                                             ?>
                                                 <div class="swiper-slide">
                                                     <div class="singleWorks__pc">
