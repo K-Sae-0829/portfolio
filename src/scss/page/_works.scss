@@ -60,6 +60,8 @@
     &__thumb {
       position: relative;
       image {
+        position: absolute;
+        top: 0;
         width: 100%;
         height: auto;
       }
@@ -70,6 +72,7 @@
       left: 0;
       padding: 0.6rem 1rem;
       background-color: #040617;
+      z-index: 5;
     }
     &__txt-area {
       padding: 1.5rem;

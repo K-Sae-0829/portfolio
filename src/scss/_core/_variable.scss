@@ -81,6 +81,8 @@ $media-ipad: "screen and (min-width:#{$tab-width - 1}))"; //iPad相当
 $media-notsp: "screen and (min-width:#{$tab-width})"; //SP以外
 $media-sp: "screen and (max-width:#{$sp-width})"; //SP相当
 $media-spland: "screen and (max-width:#{$sp-width}) and (orientation:landscape)"; //SPランドスケープ
+$media-tabtate: "screen and (max-width:1000px)"; //タブレット縦相当以下
+$media-mac: "screen and (max-width:1440px)"; //mac縦相当以下
 
 //コンテンツ最大幅
 @media #{$media-full} {

@@ -73,10 +73,11 @@ if (document.getElementById('js-topWorkSlide')) {
     speed: 5000,
     spaceBetween: 10,
     allowTouchMove: false,
+    loopAdditionalSlides: 20,
     autoplay: {
       delay: 0,
-      stopOnLastSlide: false,
-      disableOnInteraction: false,
+      //stopOnLastSlide: false,
+      //disableOnInteraction: false,
     },
   })
 }

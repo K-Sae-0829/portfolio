@@ -370,9 +370,15 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    @media #{$media-mac} {
+      width: 80%;
+      height: 40vw;
+      margin: 0 auto;
+    }
     @media #{$media-notfull} {
-      width: 100%;
-      height: 53vw;
+      width: 80%;
+      height: 42.4vw;
+      margin: 0 auto;
     }
     @media #{$media-sp} {
       width: 100%;
@@ -394,11 +400,17 @@
     &::-webkit-scrollbar {
       display: none;
     }
+    @media #{$media-mac} {
+      bottom: 3%;
+      width: calc(100% - 2.4%);
+      height: calc(40vw - 11%);
+    }
     @media #{$media-notfull} {
       bottom: 2.6%;
       width: calc(100% - 2.4%);
-      height: calc(53vw - 11%);
+      height: calc(42.4vw - 11%);
     }
+
     @media #{$media-sp} {
       bottom: 5%;
       width: calc(100% - 2.6%);
@@ -455,6 +467,12 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    @media #{$media-mac} {
+      width: 48vw;
+      max-width: calc(37.4rem * 0.8);
+      height: 82.4vw;
+      max-height: calc(64.3rem * 0.8);
+    }
     @media #{$media-sp} {
       width: 60vw;
       max-width: 37.4rem;
@@ -476,6 +494,14 @@
     scrollbar-width: none;
     &::-webkit-scrollbar {
       display: none;
+    }
+    @media #{$media-mac} {
+      bottom: 3.2vw;
+      width: calc(100% - 10%);
+      height: calc(100% * 0.83);
+    }
+    @media #{$media-tabtate} {
+      bottom: 8%;
     }
     @media #{$media-sp} {
       bottom: 8%;
