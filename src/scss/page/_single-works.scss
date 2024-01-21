@@ -371,14 +371,14 @@
     background-position: center;
     background-size: contain;
     @media #{$media-mac} {
+      margin: 0 auto;
       width: 80%;
       height: 40vw;
-      margin: 0 auto;
     }
     @media #{$media-notfull} {
+      margin: 0 auto;
       width: 80%;
       height: 42.4vw;
-      margin: 0 auto;
     }
     @media #{$media-sp} {
       width: 100%;

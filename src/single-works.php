@@ -28,7 +28,7 @@
                         <i class="singleWorks__closeIcon is-false icon-close"></i>
                     </button>
                     <div class="singleWorks__modalIn<?php foreach ($cat as $cat2) {
-                                                        if ($cat2->name !== 'WEBサイト') {
+                                                        if ($cat2->name == 'WEBバナー' || $cat2->name == 'DTP') {
                                                             echo ' singleWorks__modalIn--otherweb';
                                                         }
                                                     } ?>">
@@ -62,8 +62,8 @@
             }
             ?>
             <div class="wrap w1200 sp-wrap">
-                <h1 class="singleWorks__h1 js-in anime"><?php echo get_the_title(); ?></h1>
-                <div class="singleWorks__txt-area js-in anime">
+                <h1 class="singleWorks__h1  js-in anime bottom-in"><?php echo get_the_title(); ?></h1>
+                <div class="singleWorks__txt-area  js-in anime bottom-in">
                     <div class="singleWorks__tag-area">
                         <?php
                         foreach ($tag as $tag) { ?>
@@ -76,7 +76,8 @@
                 </div>
 
                 <?php foreach ($cat as $cat) {
-                    if ($cat->name == 'WEBサイト') { //制作物がWEB系の時
+                    $catName = $cat->name;
+                    if ($catName !== 'DTP' && $catName !== 'WEBバナー') { //制作物がWEB系の時
                 ?>
                         <ul class="singleWorks__tab-area flex hcenter">
                             <li><a href="#tab-pc" class="singleWorks__li no-move"><i class="icon icon-imac"></i></a></li>
@@ -146,7 +147,7 @@
                         </div>
                     <?php } else { //制作物がWEB系以外の時
                     ?>
-                        <div class="singleWorks__otherweb">
+                        <div class="singleWorks__otherweb js-in anime bottom-in">
                             <!--<h2 class="singleWorks__h2 aquatico txt-bright">PC<span class="singleWorks__h2-sub noto">（クリックでモーダル表示します）</span></h2>-->
                             <?php
                             if (!empty($pcImg)) {
@@ -176,7 +177,7 @@
                 <?php
                 if (!empty($data)) {
                 ?>
-                    <div class="singleWorks__data double-border-box">
+                    <div class="singleWorks__data double-border-box js-in anime bottom-in">
                         <table class="singleWorksData__table pc-flex bet">
 
                             <?php
@@ -215,7 +216,7 @@
                 <?php
                 if (!empty($point)) {
                 ?>
-                    <div class="singleWorks__point double-border-box">
+                    <div class="singleWorks__point double-border-box js-in anime bottom-in">
                         <h2 class="singleWorks__h3 common__h3"><span class="common__h3 common__h3--main">POINT</span><span class="common__h3 common__h3--sub noto">デザインポイント</span></h2>
                         <?php
                         $pointTxt = get_post_meta($post->ID, 'point-txt', false);

@@ -367,9 +367,14 @@
                 </div>
                 <div class="aboutPhilosophy__top">
                     <div class="pc-flex bet">
+                        <?php /*
                         <div class="aboutPhilosophy__point">
                             <p class="aboutPhilosophy__title">周囲から学ぶ</p>
                             <p class="aboutPhilosophy__int">たとえ自身が上に立つ場面であって<br class="pc notfull">も常に謙虚な姿勢でいることを<br class="pc notfull">心がけます。<br class="pc notfull">他者のよいところから学び、<br class="pc notfull">反省と改善から自己成長に繋げる<br class="pc notfull">ことを意識しています。</p>
+                        </div> */ ?>
+                        <div class="aboutPhilosophy__point">
+                            <p class="aboutPhilosophy__title">ユーザー視点に立つ</p>
+                            <p class="aboutPhilosophy__int">デザインをする時は必ず小まめに<br class="pc notfull">ユーザー視点に立ち返ることを<br class="pc notfull">徹底します。<br class="pc notfull">使う人にとって、分かりやすいか？<br class="pc notfull">伝わりやすいか？易しいか？<br class="pc notfull">はデザインの原点だと考えます。</p>
                         </div>
                         <div class="aboutPhilosophy__point aboutPhilosophy__point--right">
                             <p class="aboutPhilosophy__title aboutPhilosophy__title--right">チームワークを重んじる</p>
