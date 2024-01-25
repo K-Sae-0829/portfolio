@@ -425,10 +425,15 @@
       &--sp {
         margin: 0 auto;
         width: 37.4rem;
+        @media #{$media-sp} {
+          width: 100%;
+          max-height: 37.4rem;
+        }
       }
     }
     &__sp-slide {
-      width: 37.4rem;
+      width: 100%;
+      max-width: 37.4rem;
     }
   }
   &__dot {
@@ -439,6 +444,9 @@
     transform: translateX(-50%);
     @media #{$media-sp} {
       margin-top: 2rem;
+      &--sp {
+        margin-top: 4rem;
+      }
     }
   }
   .swiper-pagination-bullet {
@@ -506,7 +514,7 @@
     @media #{$media-sp} {
       bottom: 8%;
       width: calc(100% - 10%);
-      height: 91vw;
+      height: 86vw;
     }
   }
 }

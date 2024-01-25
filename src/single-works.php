@@ -139,7 +139,7 @@
                                         <?php $count++;
                                         } ?>
                                     </div>
-                                    <div class="singleWorks__dot">
+                                    <div class="singleWorks__dot singleWorks__dot--sp">
                                         <div class="singleWorks__pagination swiper-pagination-sp"></div>
                                     </div>
                                 </div>

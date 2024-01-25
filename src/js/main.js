@@ -3,7 +3,9 @@
 import 'core-js/features/number/is-nan' // SwiperのIE対応
 import 'custom-event-polyfill' // SwiperのIE対応
 import scrollLock from './functions/_scrollLock.js' // スクロールロック
-import { Autoplay, Controller, EffectFade, Navigation, Pagination, Swiper } from 'swiper'
+import Swiper from 'swiper'
+import { Autoplay, Controller, EffectFade, Navigation, Pagination } from 'swiper/modules'
+//import { Autoplay, Controller, EffectFade, Navigation, Pagination, Swiper } from 'swiper'
 Swiper.use([Autoplay, Controller, EffectFade, Navigation, Pagination]) // Swiper宣言
 // その他、Swiperで使う機能があったら上に追加で宣言する
 // A11y, Autoplay, Controller, EffectCoverflow, EffectCube, EffectFade, EffectFlip, HashNavigation, History, Keyboard, Lazy, Mousewheel, Navigation, Pagination, Parallax, Scrollbar, Thumbs, Virtual, Zoom,
@@ -20,13 +22,32 @@ Swiper.use([Autoplay, Controller, EffectFade, Navigation, Pagination]) // Swiper
 //   ###   ##      ##  ##  ##  #####
 //     ##  ##      ##  ##  ##  ##
 //  ####   ######  ##  ####    #####
-
+/*
 if (document.getElementById('js-topOriginalSlide')) {
   const swiper = new Swiper('.js-topOriginalSlide', {
     effect: 'fade',
     loop: true,
     speed: 2000,
     allowTouchMove: false,
+    //preloadImages: true, // スライド内の画像を読み終えてから開始
+    fadeEffect: {
+      // フェードオプション
+      crossFade: true, // クロスフェード
+    },
+    autoplay: {
+      delay: 1000, // 待機時間
+      //stopOnLastSlide: false,
+      disableOnInteraction: false,
+    },
+  })
+}*/
+if (document.getElementById('js-topOriginalSlide')) {
+  const swiper = new Swiper('.js-topOriginalSlide', {
+    effect: 'fade',
+    loop: true,
+    speed: 2000,
+    allowTouchMove: false,
+    slidesPerView: '1',
     //preloadImages: true, // スライド内の画像を読み終えてから開始
     fadeEffect: {
       // フェードオプション
@@ -68,16 +89,34 @@ if (document.getElementById('js-topWorkSlide')) {
   const swiper02 = new Swiper('.js-topWorkSlide', {
     direction: 'vertical',
     loop: true,
-    slidesPerView: 'auto',
-    loopedSlides: 6,
+    slidesPerView: 15,
+    loopedSlides: 48,
     speed: 5000,
     spaceBetween: 10,
     allowTouchMove: false,
-    loopAdditionalSlides: 20,
+    //loopAdditionalSlides: 20,
     autoplay: {
       delay: 0,
       //stopOnLastSlide: false,
       //disableOnInteraction: false,
+    },
+    breakpoints: {
+      1200: {
+        slidesPerView: 7,
+        loopedSlides: 12,
+      },
+      1024: {
+        slidesPerView: 8,
+        loopedSlides: 16,
+      },
+      750: {
+        slidesPerView: 9,
+        loopedSlides: 18,
+      },
+      375: {
+        slidesPerView: 10,
+        loopedSlides: 40,
+      },
     },
   })
 }

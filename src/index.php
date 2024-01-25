@@ -77,11 +77,18 @@
                             <?php }
                             for ($i = 1; $i < 6; $i++) { ?>
                                 <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work0<?php echo $i; ?>.jpg" alt=""></div>
+                            <?php }
+                            for ($i = 1; $i < 6; $i++) { ?>
+                                <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work0<?php echo $i; ?>.jpg" alt=""></div>
                             <?php } ?>
+
                         </div>
                     </div>
                     <div class="swiper js-topWorkSlide js-topWorkSlide--return" id="js-topWorkSlide">
                         <div class="swiper-wrapper js-topWorkSlide__wrap">
+                            <?php for ($i = 6; $i < 11; $i++) { ?>
+                                <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work0<?php echo $i; ?>.jpg" alt=""></div>
+                            <?php } ?>
                             <?php for ($i = 6; $i < 11; $i++) { ?>
                                 <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work0<?php echo $i; ?>.jpg" alt=""></div>
                             <?php } ?>
@@ -98,6 +105,9 @@
                             <?php for ($i = 11; $i < 15; $i++) { ?>
                                 <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work<?php echo $i; ?>.jpg" alt=""></div>
                             <?php } ?>
+                            <?php for ($i = 11; $i < 15; $i++) { ?>
+                                <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work<?php echo $i; ?>.jpg" alt=""></div>
+                            <?php } ?>
                         </div>
                     </div>
                     <div class="swiper js-topWorkSlide js-topWorkSlide--return" id="js-topWorkSlide">
@@ -112,6 +122,9 @@
                             <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work08.jpg" alt=""></div>
                             <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work09.jpg" alt=""></div>
                             <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work10.jpg" alt=""></div>
+                            <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work08.jpg" alt=""></div>
+                            <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work09.jpg" alt=""></div>
+                            <div class="swiper-slide js-topWorkSlide__img"><img src="<?php echo T_URL; ?>img/top_work06.jpg" alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -143,6 +156,7 @@
                         Original Works
                     </h2>
                     <div class="pc-flex vend">
+
                         <div class="topOriginal__tv js-in anime bottom-in">
                             <div class="swiper swiper-container js-topOriginalSlide" id="js-topOriginalSlide">
                                 <div class="swiper-wrapper js-topOriginalSlide__wrap">
@@ -152,6 +166,21 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!--
+                        <div class="topOriginal__tv js-in anime bottom-in">
+                            <div class="swiper">
+                                <div class="swiper-container js-topOriginalSlide" id="js-topOriginalSlide">
+                                    <div class="swiper-wrapper">
+                                        <div class=" js-topOriginalSlide__wrap">
+                                            <?php for ($i = 0; $i < 11; $i++) { ?>
+                                                <div class="swiper-slide topOriginal__img"><img src="<?php echo T_URL; ?>img/top_tv_0<?php echo $i + 1; ?>.png" alt=""></div>
+                                            <?php } ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
                         <div class="topOriginal__right">
                             <p class="topOriginal__txt js-in anime bottom-in">
                                 趣味で自主制作したイラストやグラフィック、Webサイトや、<br class="pc">
