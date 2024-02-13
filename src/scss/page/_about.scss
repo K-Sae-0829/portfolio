@@ -223,16 +223,17 @@
     &__th {
       display: inline-block;
       margin-right: 2rem;
-      width: 100%;
-      max-width: 22rem;
-      font-size: 2rem;
+      width: 26rem;
+      min-width: 26rem;
+      font-size: 1.8rem;
       @media #{$media-tabtate} {
         margin-right: 1rem;
-        max-width: 18rem;
+        width: 24rem;
+        min-width: 24rem;
       }
       @media #{$media-sp} {
+        width: auto;
         margin-right: 2rem;
-        font-size: 1.8rem;
         font-weight: 700;
       }
     }
@@ -248,6 +249,7 @@
       }
       &--txt {
         font-size: 1.5rem;
+        opacity: 0.6;
       }
       @media #{$media-sp} {
         margin-left: 3.6rem;
