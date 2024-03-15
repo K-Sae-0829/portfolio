@@ -19,7 +19,8 @@ add_filter('excerpt_more', function ($more) {
     return $html;
 });
 
-
+//アップした画像が勝手に縮小されないようにする
+add_filter("big_image_size_threshold", "__return_false");
 /*
 ##      ## ########          ##     ##    ###    #### ##
 ##  ##  ## ##     ##         #### ####  ##   ##   ##  ##
