@@ -76,6 +76,7 @@
     }
     &__th {
       width: 14rem;
+      vertical-align :top;
       @media #{$media-tabtate} {
         width: 12rem;
       }

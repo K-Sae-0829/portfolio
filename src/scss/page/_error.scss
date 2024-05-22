@@ -1,0 +1,25 @@
+.error404 {
+    &__main {
+      margin: 5rem auto 1.1rem;
+      padding-top: 10rem;
+      @media #{$media-sp} {
+        padding-top: 0rem;
+    }
+    }
+    &__head {
+      font-size: 13rem;
+      line-height: 1.1em;
+      text-align: center;
+    }
+    &__lead {
+      margin: 4rem auto;
+      text-align: center;
+    }
+    &__btn-area {
+      margin: 6rem 0 20rem;
+      @media #{$media-sp} {
+        margin: 6rem 0 10rem;
+      }
+    }
+  }
+  
