@@ -41,6 +41,7 @@
     position: absolute;
     top: 5rem;
     z-index: -1;
+    width: 100%;
     mix-blend-mode: color-dodge;
     @media #{$media-sp} {
       top: auto;
@@ -54,6 +55,9 @@
       @media #{$media-sp} {
         top: -8rem;
       }
+    }
+    img {
+      width: 100%;
     }
   }
   &__infomation {

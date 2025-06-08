@@ -45,6 +45,7 @@
     </title>
     <link rel="shortcut icon" href="<?php echo T_URL; ?>img/favicon.ico">
     <link rel="stylesheet" type="text/css" media="all" href="<?php echo T_URL; ?>css/common.css?v<?php echo filemtime(T_PATH . 'css/common.css'); ?>" />
+    <link rel="stylesheet" type="text/css" media="all" href="<?php echo T_URL; ?>css/top_add.css?v<?php echo filemtime(T_PATH . 'css/common.css'); ?>" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <link href="<?php echo T_URL; ?>font/Virna-Regular.ttf" rel="stylesheet" media="print" onload="this.media='all'">
